@@ -6,20 +6,23 @@ const GiveAways = () => {
   return (
     <div className="relative bg-gray-700">
       <div className="h-64 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
-        {/* <img
+        <img
           className="w-full h-full object-cover"
-          src={gif_dance_party}
+          src="https://media.giphy.com/media/LPURTqEAOrucpw0Nvw/giphy.gif"
           alt="people at a party dancing"
-        /> */}
-        <video
+        />
+        {/* <video
           className="w-full h-full object-cover"
           autoPlay
           playsInline
           muted
           loop
         >
-          <source src={dance_party} type="video/mp4" />
-        </video>
+          <source
+            src="https://media.giphy.com/media/4WS0yI6PXqd3i/giphy.mp4"
+            type="video/mp4"
+          />
+        </video> */}
       </div>
       <div className="relative max-w-screen-xl mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <div className="md:ml-auto md:w-1/2 md:pl-10">
