@@ -1,22 +1,37 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
-import Image from "../components/image"
+import Nav from "./Menu/Nav"
 import SEO from "../components/seo"
+import Hero from "./hero-section/Hero"
+import JoinNewsletter from "./Newsletter/JoinNewsletter"
+import Features from "./features-section/Features"
+import FeaturedGadgets from "./Gadgets/Featured-Gadgets"
+import Banner from "./Announcements/Banner"
+import GiveAways from "./GiveAways/GiveAways"
+import FeaturedBooks from "./Books/FeaturedBooks"
+import FeaturedOnlineCourses from "./Online-Courses/Featured-Online-Courses"
+import LifestyleBanner from "./Lifestyle/LifestyleBanner"
+import ContactForm from "./Contact/contact-form"
+import Footer from "./Footer/Footer"
 
 const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
+  <>
+    <Nav />
+    <Layout>
+      <SEO title="Dev Gadgets is the #1 gadgets resource blog for developers and technology enthusiasts" />
+      <Banner />
+      <Hero />
+      <Features />
+      <JoinNewsletter />
+      <FeaturedGadgets />
+      <GiveAways />
+      <FeaturedOnlineCourses />
+      <LifestyleBanner />
+      <FeaturedBooks />
+    </Layout>
+    <ContactForm />
+    <Footer />
+  </>
 )
 
 export default IndexPage
