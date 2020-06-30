@@ -1,8 +1,11 @@
 import React from "react"
 import hero_img from "../../images/hero-gadgets.svg"
 import love_heart from "../../images/love-heart.gif"
+import TechnologyBlogDefinition from "./technology-blog-definition"
 
 const Hero = () => {
+  const [open, setOpen] = React.useState(false)
+  console.log("open: ", open)
   return (
     <div className="max-w-7xl mx-auto">
       <div>
@@ -19,10 +22,13 @@ const Hero = () => {
 
             <p className="pr-6 md:p-0 mt-3 text-base text-gray-600 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl lg:text-center">
               the{" "}
-              <span className="text-orange-500 font-semibold underline">
+              <button
+                onClick={() => setOpen(!open)}
+                className="inline-block text-orange-500 font-semibold underline focus:outline-none"
+              >
                 technology blog
-              </span>{" "}
-              that developers and technology enthusiasts{` `}
+              </button>{" "}
+              that developers & technology enthusiasts{` `}
               <span className="text-orange-500 font-semibold">#love</span>
               <span className="-mb-2 inline-block align-baseline">
                 <img className="h-8 w-8" src={love_heart} alt="heart" />
@@ -39,6 +45,7 @@ const Hero = () => {
                 </svg> */}
               </span>
             </p>
+            <TechnologyBlogDefinition open={open} />
           </div>
         </div>
 

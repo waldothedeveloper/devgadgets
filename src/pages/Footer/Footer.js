@@ -63,6 +63,11 @@ const Footer = () => {
                 <ul className="mt-4">
                   <li>
                     <button className="text-base leading-6 text-gray-400 hover:text-gray-300">
+                      All
+                    </button>
+                  </li>
+                  <li className="mt-4">
+                    <button className="text-base leading-6 text-gray-400 hover:text-gray-300">
                       Keyboards
                     </button>
                   </li>
@@ -99,6 +104,11 @@ const Footer = () => {
                 </h4>
                 <ul className="mt-4">
                   <li>
+                    <button className="text-base leading-6 text-gray-400 hover:text-gray-300">
+                      All
+                    </button>
+                  </li>
+                  <li className="mt-4">
                     <button className="text-base leading-6 text-gray-400 hover:text-gray-300">
                       Javascript
                     </button>
@@ -165,6 +175,11 @@ const Footer = () => {
                 </h4>
                 <ul className="mt-4">
                   <li>
+                    <button className="text-base leading-6 text-gray-400 hover:text-gray-300">
+                      All
+                    </button>
+                  </li>
+                  <li className="mt-4">
                     <button className="text-base leading-6 text-gray-400 hover:text-gray-300">
                       Daily tips
                     </button>

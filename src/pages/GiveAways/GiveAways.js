@@ -1,6 +1,5 @@
 import React from "react"
-import dance_party from "../../assets/dance_party.mp4"
-// import gif_dance_party from "../../images/party.gif"
+// import dance_party from "../../assets/dance_party.mp4"
 
 const GiveAways = () => {
   return (
@@ -8,7 +7,7 @@ const GiveAways = () => {
       <div className="h-64 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
         <img
           className="w-full h-full object-cover"
-          src="https://media.giphy.com/media/LPURTqEAOrucpw0Nvw/giphy.gif"
+          src="https://media.giphy.com/media/26AHNZUiCai8sBmmY/giphy.gif"
           alt="people at a party dancing"
         />
         {/* <video
