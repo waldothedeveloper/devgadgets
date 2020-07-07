@@ -1,25 +1,22 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { MDXProvider } from "@mdx-js/react"
-// import MDXRenderer from "gatsby-plugin-mdx"
+import MDXRenderer from "gatsby-plugin-mdx"
 import Nav from "../pages/Menu/Nav"
 import TitleAndAuthorTemplate from "./title-and-author"
 import ImageCarousel from "./image-carousel"
-import Whatsup from "./Whatsup"
+
 //
 export default ({ data }) => {
   console.log("data: ", data)
   const { frontmatter, body, fields } = data.mdx
-  const shortcodes = { Whatsup }
+
   return (
     <>
       <div className=" mt-12 mx-6 md:mx-24 md:mt-24">
-        <MDXProvider components={shortcodes}>
-          <Nav />
-          <TitleAndAuthorTemplate frontmatter={frontmatter} fields={fields} />
-          <ImageCarousel frontmatter={frontmatter} />
-          {/* <MDXRenderer>{body}</MDXRenderer> */}
-        </MDXProvider>
+        <Nav />
+        <TitleAndAuthorTemplate frontmatter={frontmatter} fields={fields} />
+        <ImageCarousel frontmatter={frontmatter} />
+        <MDXRenderer>{body}</MDXRenderer>
       </div>
     </>
   )

@@ -5,6 +5,8 @@ module.exports = {
     title: `Dev Gadgets`,
     description: `The #1 gadgets resource for developers and technology enthusiasts.`,
     author: `@waldothedeveloper`,
+    copyright: `Copyright © 2020 Dev Gadgets. All rights reserved`,
+    siteUrl: `https://devgadgets.com`,
     keywords: [
       `Technology Gadgets`,
       `Gadgets`,
@@ -33,6 +35,12 @@ module.exports = {
       options: {
         name: `posts`,
         path: `${__dirname}/content/posts/`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-page-creator`,
+      options: {
+        path: `${__dirname}/content/posts`,
       },
     },
     {
