@@ -3,7 +3,7 @@ const path = require(`path`)
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
-  const blogPostTemplate = path.resolve(`src/templates/blogPostTemplate.js`)
+  const blogPostTemplate = path.resolve("src/templates/blogPostTemplate.js")
 
   return graphql(`
     {
@@ -38,12 +38,12 @@ exports.createPages = ({ actions, graphql }) => {
     const posts = result.data.allMdx.nodes
 
     // create page for each mdx file
-    posts.forEach(node => {
+    posts.forEach(post => {
       createPage({
-        path: node.fields.slug,
+        path: post.fields.slug,
         component: blogPostTemplate,
         context: {
-          slug: node.fields.slug,
+          slug: post.fields.slug,
         },
       })
     })

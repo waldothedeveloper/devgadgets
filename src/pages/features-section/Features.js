@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import smartwatch from "../../images/smart-watch.gif"
 import coffee from "../../images/coffee.gif"
 import ebook from "../../images/ebook-reader.gif"
@@ -42,9 +43,13 @@ const Features = () => {
                     mechanic keyboards, mouses, monitors and more.
                   </p>
                   <div className="mt-3">
-                    <button className="text-base leading-6 font-semibold text-teal-600 hover:text-orange-500 transition ease-in-out duration-150 active:text-orange-500 focus:text-orange-500 focus:outline-none focus:text-orange-500">
+                    <Link
+                      state={{ section: "gadgets" }}
+                      to="/gadgets/all"
+                      className="text-base leading-6 font-semibold text-teal-600 hover:text-orange-500 transition ease-in-out duration-150 active:text-orange-500 focus:text-orange-500 focus:outline-none"
+                    >
                       Learn more
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -64,9 +69,13 @@ const Features = () => {
                     Javascript, Ruby, SQL and more.
                   </p>
                   <div className="mt-3">
-                    <button className="text-base leading-6 font-semibold text-teal-600 hover:text-orange-500 transition ease-in-out duration-150 active:text-orange-500 focus:text-orange-500 focus:outline-none focus:text-orange-500">
+                    <Link
+                      to="/books/all"
+                      state={{ section: "books" }}
+                      className="text-base leading-6 font-semibold text-teal-600 hover:text-orange-500 transition ease-in-out duration-150 active:text-orange-500 focus:text-orange-500 focus:outline-none"
+                    >
                       Learn more
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -90,9 +99,13 @@ const Features = () => {
                     leverage your skills in no time.
                   </p>
                   <div className="mt-3">
-                    <button className="text-base leading-6 font-semibold text-teal-600 hover:text-orange-500 transition ease-in-out duration-150 active:text-orange-500 focus:text-orange-500 focus:outline-none focus:text-orange-500">
+                    <Link
+                      to="/courses/all"
+                      state={{ section: "courses" }}
+                      className="text-base leading-6 font-semibold text-teal-600 hover:text-orange-500 transition ease-in-out duration-150 active:text-orange-500 focus:text-orange-500 focus:outline-none"
+                    >
                       Learn more
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -112,9 +125,13 @@ const Features = () => {
                     champion.
                   </p>
                   <div className="mt-3">
-                    <button className="text-base leading-6 font-semibold text-teal-600 hover:text-orange-500 transition ease-in-out duration-150 active:text-orange-500 focus:text-orange-500 focus:outline-none focus:text-orange-500">
+                    <Link
+                      to="/books/all"
+                      state={{ section: "lifestyle" }}
+                      className="text-base leading-6 font-semibold text-teal-600 hover:text-orange-500 transition ease-in-out duration-150 active:text-orange-500 focus:text-orange-500 focus:outline-none"
+                    >
                       Learn more
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>

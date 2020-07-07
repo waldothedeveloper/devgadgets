@@ -19,9 +19,9 @@ const FeaturedGadgets = () => {
             style={{
               background:
                 "linear-gradient(0deg, rgba(79,209,197,1) 0%, rgba(237,137,54,1) 100%)",
-              backgroundSize: "cover",
-              backgroundClip: "text",
               WebkitBackgroundClip: "text",
+              backgroundClip: "text",
+              color: "transparent",
             }}
             className="text-left md:text-center pb-2 px-2 text-4xl leading-9 tracking-tight text-transparent font-extrabold sm:text-5xl sm:leading-10"
           >
@@ -44,7 +44,7 @@ const FeaturedGadgets = () => {
               <div className="flex-shrink-0">
                 <img
                   className="h-48 w-full object-cover"
-                  src={content.node.frontmatter.image.publicURL}
+                  src={content.node.frontmatter.featuredImage.publicURL}
                   alt=""
                 />
               </div>

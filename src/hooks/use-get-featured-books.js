@@ -12,11 +12,11 @@ export const useGetFeaturedBooks = () => {
             frontmatter {
               category
               category_color
-              date(formatString: "dddd DD MMMM YYYY")
+              last_updated(formatString: "ddd DD MMMM YYYY")
               title
               author
               book_author
-              image {
+              featuredImage {
                 publicURL
               }
               author_image {

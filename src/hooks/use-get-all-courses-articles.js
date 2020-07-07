@@ -1,13 +1,14 @@
 import { useStaticQuery, graphql } from "gatsby"
 
-export const useGetFeaturedGadgets = () => {
+export const useGetAllCoursesArticles = () => {
   const data = useStaticQuery(graphql`
-    query monthArticles {
-      allMdx(filter: { frontmatter: { featured: { eq: true } } }, limit: 6) {
+    query allCoursesArticles {
+      allMdx(filter: { frontmatter: { article_category: { eq: "courses" } } }) {
         edges {
           node {
             frontmatter {
               category
+              category_color
               last_updated(formatString: "ddd DD MMMM YYYY")
               title
               author

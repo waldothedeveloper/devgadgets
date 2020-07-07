@@ -88,7 +88,7 @@ const Footer = () => {
                   </li>
                   <li className="mt-4">
                     <button className="text-base leading-6 text-gray-400 hover:text-gray-300">
-                      Office Desks & Chairs
+                      Office Products
                     </button>
                   </li>
                   <li className="mt-4">
@@ -159,7 +159,7 @@ const Footer = () => {
                   </li>
                   <li className="mt-4">
                     <button className="text-base leading-6 text-gray-400 hover:text-gray-300">
-                      Tyler McGinnis UI.dev
+                      Tyler McGinnis
                     </button>
                   </li>
                   <li className="mt-4">

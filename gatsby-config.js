@@ -22,6 +22,9 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
+        defaultLayouts: {
+          default: require.resolve(`./src/templates/blogPostTemplate.js`),
+        },
       },
     },
     `gatsby-remark-reading-time`,
@@ -30,6 +33,13 @@ module.exports = {
       options: {
         name: `posts`,
         path: `${__dirname}/content/posts/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
       },
     },
     {

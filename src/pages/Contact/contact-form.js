@@ -35,6 +35,7 @@ const ContactForm = () => {
                 </label>
                 <div className="mt-1 relative rounded-md shadow-sm">
                   <input
+                    aria-label="text"
                     id="name"
                     className="form-input block w-full transition ease-in-out duration-150 sm:text-sm sm:leading-5"
                   />
@@ -49,6 +50,7 @@ const ContactForm = () => {
                 </label>
                 <div className="mt-1 relative rounded-md shadow-sm">
                   <input
+                    aria-label="text"
                     id="email"
                     type="email"
                     className="form-input block w-full transition ease-in-out duration-150 sm:text-sm sm:leading-5"
@@ -69,6 +71,7 @@ const ContactForm = () => {
                 </div>
                 <div className="mt-1 relative rounded-md shadow-sm">
                   <textarea
+                    aria-labelledby="how_can_we_help"
                     id="how_can_we_help"
                     rows="4"
                     className="form-textarea block w-full transition ease-in-out duration-150 sm:text-sm sm:leading-5"

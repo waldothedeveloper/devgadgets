@@ -12,12 +12,12 @@ export const useGetFeaturedOnlineCourses = () => {
             frontmatter {
               category
               category_color
-              date(formatString: "dddd DD MMMM YYYY")
+              last_updated(formatString: "ddd DD MMMM YYYY")
               title
               author
               vendor
               vendor_color
-              image {
+              featuredImage {
                 publicURL
               }
               author_image {
