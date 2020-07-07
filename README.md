@@ -10,5 +10,5 @@
 The technology blog that developers & technology enthusiasts #love
 
 <p align="center">
-    <img alt="dev-gadgets" src="https://github.com/waldothedeveloper/devgadgets/blob/development/src/images/dev-gadgets.png" width="60" />
+    <img alt="dev-gadgets" src="https://github.com/waldothedeveloper/devgadgets/blob/development/src/images/dev-gadgets.png" width="auto" />
 </p>
