@@ -7,6 +7,7 @@ import computer_display from "../../images/computer-display.gif"
 import robot from "../../images/robot.gif"
 import truck from "../../images/truck.gif"
 import plug from "../../images/plug.gif"
+import { Link } from "gatsby"
 
 const Nav = () => {
   const [openGadgets, setOpenGadgets] = React.useState(false)
@@ -26,16 +27,16 @@ const Nav = () => {
   }
 
   return (
-    <div className="z-50 fixed w-full top-0 bg-white">
+    <div className="z-30 fixed w-full top-0 bg-white">
       <div className="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
         <div>
-          <button className="flex">
+          <Link to="/" className="flex">
             <img
               className="h-8 w-auto sm:h-10"
               src={devgadgetslogo}
               alt="Workflow"
             />
-          </button>
+          </Link>
         </div>
         <div className="-mr-2 -my-2 md:hidden">
           <button

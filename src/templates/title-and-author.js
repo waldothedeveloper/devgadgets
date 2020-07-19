@@ -2,9 +2,9 @@ import React from "react"
 
 const TitleAndAuthorTemplate = ({ frontmatter, fields }) => {
   return (
-    <div className="flex flex-col justify-center md:flex-row mx-6 mt-24 md:my-32 md:mx-24">
+    <div className="flex flex-col justify-center md:flex-row md:items-end mx-6 mt-24 md:my-32 md:mx-0">
       {/* picture of author */}
-      <div className="mt-6 flex items-center md:w-2/4">
+      <div className="mt-8 md:mt-0 flex flex-col md:w-3/4">
         <div className="flex-shrink-0">
           <button>
             <img
@@ -14,7 +14,7 @@ const TitleAndAuthorTemplate = ({ frontmatter, fields }) => {
             />
           </button>
         </div>
-        <div className="ml-3">
+        <div className="mb-2">
           <p className="text-sm leading-5 font-medium text-gray-900">
             <button className="hover:underline">{frontmatter.author}</button>
           </p>
@@ -32,7 +32,7 @@ const TitleAndAuthorTemplate = ({ frontmatter, fields }) => {
         >
           {frontmatter.category}
         </div>
-        <h1 className="mt-3 font-bold text-2xl md:text-4xl">
+        <h1 className="mt-3 font-semibold text-2xl md:text-3xl lg:text-4xl">
           {frontmatter.title}
         </h1>
       </div>

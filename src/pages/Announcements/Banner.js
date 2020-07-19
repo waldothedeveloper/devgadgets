@@ -34,7 +34,7 @@ const Banner = () => {
                   </span>
                   <span className="block sm:ml-2 sm:inline-block">
                     <Link
-                      to="/black-lives-matter/"
+                      to="/announcements/black-lives-matter"
                       className="text-teal-300 font-bold underline text-sm"
                     >
                       Learn more &rarr;

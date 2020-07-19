@@ -4,7 +4,7 @@ const validateEmail = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/
 export const useJoinNewsletter = () => {
   const [email, setEmail] = React.useState("")
   const [errors, setErrors] = React.useState({ message: "" })
-  console.log("errors: ", errors)
+  // console.log("errors: ", errors)
 
   const handleEmailChange = event => {
     if (event) event.persist()

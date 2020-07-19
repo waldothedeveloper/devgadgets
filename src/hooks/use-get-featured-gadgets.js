@@ -11,6 +11,7 @@ export const useGetFeaturedGadgets = () => {
               last_updated(formatString: "ddd DD MMMM YYYY")
               title
               author
+              the_gist
               featuredImage {
                 publicURL
               }
@@ -24,7 +25,6 @@ export const useGetFeaturedGadgets = () => {
                 text
               }
             }
-            excerpt(pruneLength: 250)
             id
           }
         }

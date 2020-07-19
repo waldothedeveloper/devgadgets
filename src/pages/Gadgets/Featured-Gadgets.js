@@ -6,7 +6,7 @@ import { useGetFeaturedGadgets } from "../../hooks/use-get-featured-gadgets"
 //  #4fd1c5 teal
 const FeaturedGadgets = () => {
   const data = useGetFeaturedGadgets()
-  // console.log("data: ", data)
+  console.log("data: ", data)
 
   return (
     <div className="relative pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
@@ -40,7 +40,6 @@ const FeaturedGadgets = () => {
               key={content.node.id}
               className="flex flex-col rounded-lg shadow-lg overflow-hidden"
             >
-              {/* <Link to={content.node.fields.slug}> */}
               <div className="flex-shrink-0">
                 <img
                   className="h-48 w-full object-cover"
@@ -60,7 +59,7 @@ const FeaturedGadgets = () => {
                       {content.node.frontmatter.title}
                     </h3>
                     <p className="mt-3 text-base leading-6 text-gray-500">
-                      {content.node.excerpt}
+                      {content.node.frontmatter.the_gist.slice(0, 180)}...
                     </p>
                   </Link>
                 </div>

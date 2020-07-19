@@ -9,15 +9,21 @@ exports.createPages = ({ actions, graphql }) => {
     {
       allMdx {
         nodes {
-          fields {
-            slug
-          }
+          body
           frontmatter {
             title
             last_updated(formatString: "YYYY MMMM Do")
             author
             article_category
             category
+            the_gist
+            image_captions
+            rating
+            ratings_count
+            amazon_choice
+            price
+            down_the_line
+            buy_link
             category_color
             featured
             featuredImage {
@@ -25,6 +31,12 @@ exports.createPages = ({ actions, graphql }) => {
             }
             author_image {
               publicURL
+            }
+          }
+          fields {
+            slug
+            readingTime {
+              text
             }
           }
         }
@@ -36,6 +48,7 @@ exports.createPages = ({ actions, graphql }) => {
     }
 
     const posts = result.data.allMdx.nodes
+    // console.log("posts on gatsby-node: ", posts)
 
     // create page for each mdx file
     posts.forEach(node => {

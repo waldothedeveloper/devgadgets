@@ -38,12 +38,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-page-creator`,
-      options: {
-        path: `${__dirname}/content/posts`,
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,

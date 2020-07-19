@@ -1,9 +1,17 @@
 import { MDXProvider } from "@mdx-js/react"
 import React from "react"
-import Whatsup from "./src/templates/whatsup"
+import Response from "./src/templates/response"
+import Carousel from "./src/templates/carousel"
+import TechDetails from "./src/templates/tech-details"
+import Question from "./src/templates/question"
+//
+const shortcodes = {
+  Response,
+  Carousel,
+  TechDetails,
+  Question,
+}
 
-const shortcodes = { Whatsup }
-
-export const wrapRootElement = ({ element }) => (
-  <MDXProvider components={shortcodes}>{element}</MDXProvider>
-)
+export const wrapRootElement = ({ element }) => {
+  return <MDXProvider components={shortcodes}>{element}</MDXProvider>
+}

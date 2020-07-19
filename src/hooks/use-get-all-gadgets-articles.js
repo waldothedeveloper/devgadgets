@@ -11,6 +11,7 @@ export const useGetAllGadgetsArticles = () => {
               category_color
               last_updated(formatString: "ddd DD MMMM YYYY")
               title
+              the_gist
               author
               featuredImage {
                 publicURL
@@ -25,7 +26,6 @@ export const useGetAllGadgetsArticles = () => {
                 text
               }
             }
-            excerpt(pruneLength: 150)
             id
           }
         }

@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 import "../css/hidescrollbar.css"
 
 const MostPopularArticlesLayout = ({ data }) => {
-  console.log("data: ", data)
   return (
     <div className="pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
       <div className="absolute inset-0"></div>
@@ -21,13 +20,13 @@ const MostPopularArticlesLayout = ({ data }) => {
         </div>
         <div
           id="scrolling_wrapper"
-          className="md:mt-12 flex flex-no-wrap overflow-x-scroll md:grid gap-5 md:max-w-lg md:mx-auto lg:grid-cols-3 lg:max-w-none"
+          className="md:mt-12 flex flex-no-wrap overflow-x-scroll lg:grid gap-5 lg:grid-cols-3 lg:max-w-none"
         >
           {data.map(elem => {
             return (
               <div
                 key={elem.node.id}
-                className="flex flex-none max-w-xs mx-2 my-6 md:max-w-none md:m-0"
+                className="flex flex-none max-w-xs mx-2 my-6 lg:max-w-none lg:m-0"
               >
                 <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
                   <div className="flex-shrink-0">
@@ -50,7 +49,7 @@ const MostPopularArticlesLayout = ({ data }) => {
                           {elem.node.frontmatter.title}
                         </h3>
                         <p className="mt-3 text-base leading-6 text-gray-500">
-                          {elem.node.excerpt}
+                          {elem.node.frontmatter.the_gist.slice(0, 150)}...
                         </p>
                       </Link>
                     </div>

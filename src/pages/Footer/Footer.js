@@ -1,5 +1,6 @@
 import React from "react"
 import logo from "../../images/logo-teal-3.svg"
+import { Link } from "gatsby"
 
 const Footer = () => {
   return (
@@ -7,7 +8,10 @@ const Footer = () => {
       <div className="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="xl:col-span-1">
-            <img className="h-10" src={logo} alt="Company name" />
+            <Link to="/">
+              <img className="h-10" src={logo} alt="Company name" />
+            </Link>
+
             <p className="mt-8 text-gray-400 text-base leading-6">
               Making the world a better place one tech article at a time.
               Empowering developers all over the world and technology
