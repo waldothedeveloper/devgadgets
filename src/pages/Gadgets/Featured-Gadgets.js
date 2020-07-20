@@ -6,7 +6,7 @@ import { useGetFeaturedGadgets } from "../../hooks/use-get-featured-gadgets"
 //  #4fd1c5 teal
 const FeaturedGadgets = () => {
   const data = useGetFeaturedGadgets()
-  console.log("data: ", data)
+  // console.log("data: ", data)
 
   return (
     <div className="relative pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">

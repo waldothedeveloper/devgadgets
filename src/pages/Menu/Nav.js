@@ -8,18 +8,24 @@ import robot from "../../images/robot.gif"
 import truck from "../../images/truck.gif"
 import plug from "../../images/plug.gif"
 import { Link } from "gatsby"
+import useOnClickOutside from "../../hooks/use-on-click-outside"
 
 const Nav = () => {
   const [openGadgets, setOpenGadgets] = React.useState(false)
-  const [openBooks, setOpenBooks] = React.useState(false)
+  const [openMore, setopenMore] = React.useState(false)
   const [menuMobile, setMenuMobile] = React.useState(false)
+  const ref = React.createRef()
+  const ref2 = React.createRef()
+  useOnClickOutside(ref, () => setOpenGadgets(false))
+  useOnClickOutside(ref2, () => setopenMore(false))
 
+  //
   const handleGadgets = () => {
     setOpenGadgets(!openGadgets)
   }
 
-  const handleBooks = () => {
-    setOpenBooks(!openBooks)
+  const handleMore = () => {
+    setopenMore(!openMore)
   }
 
   const handleMenuMobile = () => {
@@ -62,14 +68,14 @@ const Nav = () => {
         <div className="hidden md:flex-1 md:flex md:items-center md:justify-between md:space-x-12">
           <nav className="flex space-x-10">
             <div className="relative">
-              {/* Item active: "text-gray-900", Item inactive: "text-gray-500" */}
               <button
+                ref={ref}
                 onClick={handleGadgets}
                 type="button"
                 className="group text-gray-500 inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
               >
                 <span>Gadgets</span>
-                {/* Item active: "text-gray-600", Item inactive: "text-gray-400" */}
+
                 <svg
                   className="text-gray-400 h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150"
                   viewBox="0 0 20 20"
@@ -82,17 +88,10 @@ const Nav = () => {
                   />
                 </svg>
               </button>
-
-              {/*   'Gadgets' flyout menu, show/hide based on flyout menu state.
-                      Entering: "transition ease-out duration-200"
-                      From: "opacity-0 translate-y-1"
-                      To: "opacity-100 translate-y-0"
-                      Leaving: "transition ease-in duration-150"
-                      From: "opacity-100 translate-y-0"
-                      To: "opacity-0 translate-y-1" */}
+              {/* Gadgets section */}
               <Transition
                 show={openGadgets}
-                enter="transition ease-out duration-200"
+                enter="transition ease-out duration-500"
                 enterFrom="opacity-0 translate-y-1"
                 enterTo="opacity-100 translate-y-0"
                 leave="transition ease-in duration-150"
@@ -234,7 +233,8 @@ const Nav = () => {
             <div className="relative">
               {/* Item active: "text-gray-900", Item inactive: "text-gray-500" */}
               <button
-                onClick={handleBooks}
+                ref={ref2}
+                onClick={handleMore}
                 type="button"
                 className="group text-gray-500 inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
               >
@@ -253,17 +253,9 @@ const Nav = () => {
                 </svg>
               </button>
 
-              {/*    'More' flyout menu, show/hide based on flyout menu state.
-
-                      Entering: "transition ease-out duration-200"
-                        From: "opacity-0 translate-y-1"
-                        To: "opacity-100 translate-y-0"
-                      Leaving: "transition ease-in duration-150"
-                        From: "opacity-100 translate-y-0"
-                        To: "opacity-0 translate-y-1" */}
               <Transition
-                show={openBooks}
-                enter="transition ease-out duration-200"
+                show={openMore}
+                enter="transition ease-out duration-500"
                 enterFrom="opacity-0 translate-y-1"
                 enterTo="opacity-100 translate-y-0"
                 leave="transition ease-in duration-150"
@@ -328,12 +320,6 @@ const Nav = () => {
         </div>
       </div>
 
-      {/*    Entering: "duration-200 ease-out"
-      From: "opacity-0 scale-95"
-      To: "opacity-100 scale-100"
-    Leaving: "duration-100 ease-in"
-      From: "opacity-100 scale-100"
-      To: "opacity-0 scale-95"  */}
       <Transition
         show={menuMobile}
         enter="duration-200 ease-out"
