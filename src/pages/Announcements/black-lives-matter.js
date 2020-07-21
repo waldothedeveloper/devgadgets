@@ -9,18 +9,24 @@ import robot from "../../images/robot.gif"
 import truck from "../../images/truck.gif"
 import plug from "../../images/plug.gif"
 import { Link } from "gatsby"
+import useOnClickOutside from "../../hooks/use-on-click-outside"
+
 //
 const BlackLivesMattter = () => {
   const [openGadgets, setOpenGadgets] = React.useState(false)
-  const [openBooks, setOpenBooks] = React.useState(false)
+  const [openMore, setopenMore] = React.useState(false)
   const [menuMobile, setMenuMobile] = React.useState(false)
+  const ref = React.createRef()
+  const ref2 = React.createRef()
+  useOnClickOutside(ref, () => setOpenGadgets(false))
+  useOnClickOutside(ref2, () => setopenMore(false))
 
   const handleGadgets = () => {
     setOpenGadgets(!openGadgets)
   }
 
-  const handleBooks = () => {
-    setOpenBooks(!openBooks)
+  const handleMore = () => {
+    setopenMore(!openMore)
   }
 
   const handleMenuMobile = () => {
@@ -66,6 +72,7 @@ const BlackLivesMattter = () => {
               <div className="relative">
                 {/* Item active: "text-gray-900", Item inactive: "text-gray-500" */}
                 <button
+                  ref={ref}
                   onClick={handleGadgets}
                   type="button"
                   className="group text-gray-100 inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-50 focus:outline-none focus:text-gray-50 transition ease-in-out duration-150"
@@ -85,7 +92,7 @@ const BlackLivesMattter = () => {
                 </button>
                 <Transition
                   show={openGadgets}
-                  enter="transition ease-out duration-200"
+                  enter="transition ease-out duration-500"
                   enterFrom="opacity-0 translate-y-1"
                   enterTo="opacity-100 translate-y-0"
                   leave="transition ease-in duration-150"
@@ -211,7 +218,8 @@ const BlackLivesMattter = () => {
               <div className="relative">
                 {/* Item active: "text-gray-900", Item inactive: "text-gray-500" */}
                 <button
-                  onClick={handleBooks}
+                  ref={ref2}
+                  onClick={handleMore}
                   type="button"
                   className="group text-gray-100 inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-50 focus:outline-none focus:text-gray-50 transition ease-in-out duration-150"
                 >
@@ -229,18 +237,9 @@ const BlackLivesMattter = () => {
                     />
                   </svg>
                 </button>
-
-                {/*    'More' flyout menu, show/hide based on flyout menu state.
-
-                      Entering: "transition ease-out duration-200"
-                        From: "opacity-0 translate-y-1"
-                        To: "opacity-100 translate-y-0"
-                      Leaving: "transition ease-in duration-150"
-                        From: "opacity-100 translate-y-0"
-                        To: "opacity-0 translate-y-1" */}
                 <Transition
-                  show={openBooks}
-                  enter="transition ease-out duration-200"
+                  show={openMore}
+                  enter="transition ease-out duration-500"
                   enterFrom="opacity-0 translate-y-1"
                   enterTo="opacity-100 translate-y-0"
                   leave="transition ease-in duration-150"
@@ -306,7 +305,7 @@ const BlackLivesMattter = () => {
         </div>
         <Transition
           show={menuMobile}
-          enter="duration-200 ease-out"
+          enter="duration-500 ease-out"
           enterFrom="opacity-0 scale-95"
           enterTo="opacity-100 scale-100"
           leave="duration-100 ease-in"

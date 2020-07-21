@@ -9,8 +9,9 @@ import truck from "../../images/truck.gif"
 import plug from "../../images/plug.gif"
 import { Link } from "gatsby"
 import useOnClickOutside from "../../hooks/use-on-click-outside"
+import Banner from "../announcements/Banner"
 
-const Nav = () => {
+const Nav = ({ open, handleBanner }) => {
   const [openGadgets, setOpenGadgets] = React.useState(false)
   const [openMore, setopenMore] = React.useState(false)
   const [menuMobile, setMenuMobile] = React.useState(false)
@@ -443,6 +444,7 @@ const Nav = () => {
           </div>
         </div>
       </Transition>
+      <Banner open={open} handleBanner={handleBanner} />
     </div>
   )
 }

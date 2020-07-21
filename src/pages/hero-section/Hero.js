@@ -2,12 +2,16 @@ import React from "react"
 import hero_img from "../../images/hero-gadgets.svg"
 import love_heart from "../../images/love-heart.gif"
 import TechnologyBlogDefinition from "./technology-blog-definition"
+import useOnClickOutside from "../../hooks/use-on-click-outside"
 
+//
 const Hero = () => {
   const [open, setOpen] = React.useState(false)
-  console.log("open: ", open)
+  const ref = React.createRef()
+  useOnClickOutside(ref, () => setOpen(false))
+
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="mt-52 lg:mt-32 max-w-7xl mx-auto">
       <div>
         <div className="flex items-center justify-around px-6 sm:px-6 lg:py-16 lg:px-8">
           <div className="pt-12 flex flex-col">
@@ -23,6 +27,7 @@ const Hero = () => {
             <p className="pr-6 md:p-0 mt-3 text-base text-gray-600 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl lg:text-center">
               the{" "}
               <button
+                ref={ref}
                 onClick={() => setOpen(!open)}
                 className="inline-block text-orange-500 font-semibold underline focus:outline-none"
               >

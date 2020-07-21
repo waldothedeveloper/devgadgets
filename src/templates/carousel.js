@@ -41,15 +41,15 @@ const Carousel = ({ metadata }) => {
 
   return (
     <>
-      <div className="my-24">
+      <div className="my-12">
         <div
           className="relative flex items-center content-center overflow-hidden"
-          style={{ height: "32rem" }}
+          style={{ height: "24rem" }}
         >
           <AnimatePresence>
             <motion.img
               onClick={() => setOpen(true)}
-              className="w-full h-full object-cover"
+              className="rounded-lg shadow-lg object-cover object-center absolute inset-0 w-full h-full lg:static lg:h-auto"
               key={page}
               src={photos[imageIndex]}
               custom={direction}
@@ -76,7 +76,7 @@ const Carousel = ({ metadata }) => {
           </AnimatePresence>
         </div>
         {/* pagination */}
-        <nav className="border-t border-gray-200 px-4 flex items-center justify-between sm:px-0">
+        <nav className="px-4 flex items-center justify-between sm:px-0">
           <div className="w-0 flex-1 flex">
             <button
               onClick={() => paginate(-1)}
