@@ -11,7 +11,7 @@ const Hero = () => {
   useOnClickOutside(ref, () => setOpen(false))
 
   return (
-    <div className="mt-52 lg:mt-32 max-w-7xl mx-auto">
+    <div className="mt-6 md:mt-12 lg:mt-0 max-w-7xl mx-auto">
       <div>
         <div className="flex items-center justify-around px-6 sm:px-6 lg:py-16 lg:px-8">
           <div className="pt-12 flex flex-col">

@@ -48,15 +48,16 @@ exports.createPages = ({ actions, graphql }) => {
     }
 
     const posts = result.data.allMdx.nodes
-    // console.log("posts on gatsby-node: ", posts)
 
     // create page for each mdx file
     posts.forEach(node => {
+      // console.log("node: ", node)
       createPage({
         path: node.fields.slug,
         component: blogPostTemplate,
         context: {
           slug: node.fields.slug,
+          category: node.frontmatter.article_category,
         },
       })
     })

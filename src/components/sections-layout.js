@@ -5,7 +5,8 @@ import women_running from "../images/women_running.svg"
 import man_and_woman_gadgets from "../images/man_and_woman_gadgets.svg"
 import arrow_down from "../images/arrow_down.gif"
 import Nav from "../pages/Menu/Nav"
-import MostPopularArticlesLayout from "./most-popular-articles-layout"
+// import MostPopularArticlesLayout from "./most-popular-articles-layout"
+import CategoriesLayout from "./categories-layout"
 
 //
 const SectionLayout = ({ section, data }) => {
@@ -23,6 +24,7 @@ const SectionLayout = ({ section, data }) => {
           content:
             "Even tough is really difficult to find time to read in this hectic life we live, I'd like you to take a chance at my approach on how I read books and why you should read specific sections. The following is a curated list of programming bestsellers that will improve your architecture knowledge, algorithms skills, and deepen your knowledge of your favorite language",
           image: girl_reading_book,
+          article_category: "books",
         })
 
         break
@@ -32,6 +34,7 @@ const SectionLayout = ({ section, data }) => {
           content:
             "I cannot stress enough the importance of gadgets. They increase our productivity, and fill out a needed space wether in your car, at your office, at home, or your desk. Hear me out to what I have to say.",
           image: man_and_woman_gadgets,
+          article_category: "gadgets",
         })
         break
       case "courses":
@@ -40,6 +43,7 @@ const SectionLayout = ({ section, data }) => {
           content:
             "Everyone is a different type of learner, some are visual, some love to read tutorials, some prefer to hear podcasts or even live events",
           image: man_video,
+          article_category: "courses",
         })
         break
       case "lifestyle":
@@ -48,6 +52,7 @@ const SectionLayout = ({ section, data }) => {
           content:
             "Work out, eat healthy, sleep, repeat, we've heard that a ton of times, but the thing is that it's not that easy right?",
           image: women_running,
+          article_category: "lifestyle",
         })
         break
       default:
@@ -103,11 +108,11 @@ const SectionLayout = ({ section, data }) => {
               </div>
             </div>
           </div>
-          <div className="flex justify-center mt-4">
+          <div className="md:hidden flex justify-center mt-4">
             <img className="h-10 w-10" alt="arrow down icon" src={arrow_down} />
           </div>
-
-          <MostPopularArticlesLayout data={data} />
+          <CategoriesLayout secCategory={secCategory} />
+          {/* <MostPopularArticlesLayout data={data} /> */}
         </>
       )}
     </>

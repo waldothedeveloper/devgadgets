@@ -6,7 +6,7 @@ import Hero from "./hero-section/Hero"
 import JoinNewsletter from "./Newsletter/JoinNewsletter"
 import Features from "./features-section/Features"
 import FeaturedGadgets from "./gadgets/Featured-Gadgets"
-// import Banner from "./announcements/Banner"
+import Banner from "./announcements/Banner"
 import GiveAways from "./GiveAways/GiveAways"
 import FeaturedBooks from "./books/FeaturedBooks"
 import FeaturedOnlineCourses from "./courses/Featured-Online-Courses"
@@ -26,7 +26,7 @@ const IndexPage = () => {
       <Nav open={open} handleBanner={handleBanner} />
       <Layout>
         <SEO title="Dev Gadgets is the #1 gadgets resource blog for developers and technology enthusiasts" />
-        {/* <Banner /> */}
+        <Banner />
         <Hero />
         <Features />
         <JoinNewsletter />

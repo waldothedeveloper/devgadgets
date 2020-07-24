@@ -9,8 +9,7 @@ import ShareArticle from "./share-article-template"
 import BuyIt from "./buy-it"
 import JoinNewsletter from "../pages/Newsletter/JoinNewsletter"
 //
-export default ({ data }) => {
-  console.log("data: ", data)
+export default ({ data, pageContext }) => {
   const { frontmatter, body, fields } = data.mdx
 
   return (
