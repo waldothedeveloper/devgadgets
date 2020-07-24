@@ -5,11 +5,10 @@ import women_running from "../images/women_running.svg"
 import man_and_woman_gadgets from "../images/man_and_woman_gadgets.svg"
 import arrow_down from "../images/arrow_down.gif"
 import Nav from "../pages/Menu/Nav"
-// import MostPopularArticlesLayout from "./most-popular-articles-layout"
 import CategoriesLayout from "./categories-layout"
 
 //
-const SectionLayout = ({ section, data }) => {
+const SectionLayout = ({ section }) => {
   const [secCategory, setSecCategory] = React.useState({
     title: "",
     content: "",
@@ -112,7 +111,6 @@ const SectionLayout = ({ section, data }) => {
             <img className="h-10 w-10" alt="arrow down icon" src={arrow_down} />
           </div>
           <CategoriesLayout secCategory={secCategory} />
-          {/* <MostPopularArticlesLayout data={data} /> */}
         </>
       )}
     </>

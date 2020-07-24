@@ -1,4 +1,5 @@
 import React from "react"
+import { motion } from "framer-motion"
 import "../css/hidescrollbar.css"
 import { useGetAllArticles } from "../hooks/use-get-all-articles"
 import ArticlesLayout from "./articles-layout"
@@ -80,13 +81,15 @@ const CategoriesLayout = ({ secCategory }) => {
               className="hidden pt-2 pb-12 md:grid md:gap-5 md:grid-cols-4"
             >
               {subCategory.map(elem => (
-                <button
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
                   onClick={() => handleCategory(elem)}
                   key={elem.id}
                   className={
                     elem.category === articleCat
-                      ? `transition ease-in duration-200 mx-2 group border border-gray-200 rounded-md shadow-lg bg-${elem.category_color}-600 focus:bg-${elem.category_color}-600`
-                      : `transition ease-in duration-200 mx-2 group border border-gray-200 rounded-md shadow-lg`
+                      ? `mx-2 group border border-gray-200 rounded-md shadow-lg bg-${elem.category_color}-600 focus:bg-${elem.category_color}-600`
+                      : `mx-2 group border border-gray-200 rounded-md shadow-lg`
                   }
                 >
                   <li
@@ -117,7 +120,7 @@ const CategoriesLayout = ({ secCategory }) => {
                       </div>
                     </div>
                   </li>
-                </button>
+                </motion.button>
               ))}
             </ul>
           </div>
