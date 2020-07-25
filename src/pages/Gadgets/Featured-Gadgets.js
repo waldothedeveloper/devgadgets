@@ -1,12 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
 import { useGetFeaturedGadgets } from "../../hooks/use-get-featured-gadgets"
-
-// #ed8936 orange
-//  #4fd1c5 teal
+import { motion } from "framer-motion"
+//
 const FeaturedGadgets = () => {
   const data = useGetFeaturedGadgets()
-  // console.log("data: ", data)
 
   return (
     <div className="relative pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
@@ -34,9 +32,10 @@ const FeaturedGadgets = () => {
             technology to work smarter, never harder.
           </p>
         </div>
-        <div className="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
+        <div className="mt-12 grid gap-5 lg:gap-8 max-w-lg mx-auto md:grid-cols-2 lg:grid-cols-3 md:max-w-none">
           {data.map(content => (
-            <div
+            <motion.div
+              whileHover={{ scale: 1.1 }}
               key={content.node.id}
               className="flex flex-col rounded-lg shadow-lg overflow-hidden"
             >
@@ -89,8 +88,7 @@ const FeaturedGadgets = () => {
                   </div>
                 </div>
               </div>
-              {/* </Link> */}
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

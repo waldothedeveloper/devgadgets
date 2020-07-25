@@ -1,4 +1,5 @@
 import React from "react"
+import { motion } from "framer-motion"
 // import dance_party from "../../assets/dance_party.mp4"
 
 const GiveAways = () => {
@@ -48,9 +49,13 @@ const GiveAways = () => {
           </p>
           <div className="mt-8">
             <div className="inline-flex rounded-md shadow">
-              <button className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-teal-500 hover:bg-teal-400 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="inline-flex items-center justify-center px-5 py-3 text-base leading-6 font-medium rounded-md text-white bg-teal-500 hover:bg-teal-400 focus:outline-none"
+              >
                 Enter to Win!
-              </button>
+              </motion.button>
             </div>
           </div>
         </div>

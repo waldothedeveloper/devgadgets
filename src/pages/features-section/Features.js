@@ -44,7 +44,7 @@ const Features = () => {
                   </p>
                   <div className="mt-3">
                     <Link
-                      state={{ section: "gadgets" }}
+                      state={{ featCategory: "gadgets" }}
                       to="/gadgets/all"
                       className="text-base leading-6 font-semibold text-teal-600 hover:text-orange-500 transition ease-in-out duration-150 active:text-orange-500 focus:text-orange-500 focus:outline-none"
                     >
@@ -71,7 +71,7 @@ const Features = () => {
                   <div className="mt-3">
                     <Link
                       to="/books/all"
-                      state={{ section: "books" }}
+                      state={{ featCategory: "books" }}
                       className="text-base leading-6 font-semibold text-teal-600 hover:text-orange-500 transition ease-in-out duration-150 active:text-orange-500 focus:text-orange-500 focus:outline-none"
                     >
                       Learn more
@@ -101,7 +101,7 @@ const Features = () => {
                   <div className="mt-3">
                     <Link
                       to="/courses/all"
-                      state={{ section: "courses" }}
+                      state={{ featCategory: "courses" }}
                       className="text-base leading-6 font-semibold text-teal-600 hover:text-orange-500 transition ease-in-out duration-150 active:text-orange-500 focus:text-orange-500 focus:outline-none"
                     >
                       Learn more
@@ -127,7 +127,7 @@ const Features = () => {
                   <div className="mt-3">
                     <Link
                       to="/books/all"
-                      state={{ section: "lifestyle" }}
+                      state={{ featCategory: "lifestyle" }}
                       className="text-base leading-6 font-semibold text-teal-600 hover:text-orange-500 transition ease-in-out duration-150 active:text-orange-500 focus:text-orange-500 focus:outline-none"
                     >
                       Learn more

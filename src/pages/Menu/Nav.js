@@ -41,7 +41,7 @@ const Nav = () => {
               <img
                 className="h-8 w-auto sm:h-10"
                 src={devgadgetslogo}
-                alt="Workflow"
+                alt="devgadgets official logo"
               />
             </Link>
           </div>
@@ -66,6 +66,7 @@ const Nav = () => {
               </svg>
             </button>
           </div>
+          {/* Desktop view */}
           <div className="hidden md:flex-1 md:flex md:items-center md:justify-between md:space-x-12">
             <nav className="flex space-x-10">
               <div className="relative">
@@ -103,7 +104,14 @@ const Nav = () => {
                     <div className="rounded-lg shadow-lg">
                       <div className="rounded-lg shadow-xs overflow-hidden">
                         <div className="z-50 relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
-                          <button className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150">
+                          <Link
+                            to="/gadgets/all"
+                            state={{
+                              navCategory: "gadgets",
+                              navSubCategory: "keyboards",
+                            }}
+                            className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
+                          >
                             <img
                               src={keyboard}
                               alt="smart watch"
@@ -118,7 +126,7 @@ const Nav = () => {
                                 perfectionists.
                               </p>
                             </div>
-                          </button>
+                          </Link>
                           <button className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150">
                             <img
                               src={headphones}
@@ -232,7 +240,6 @@ const Nav = () => {
               </button>
 
               <div className="relative">
-                {/* Item active: "text-gray-900", Item inactive: "text-gray-500" */}
                 <button
                   ref={ref2}
                   onClick={handleMore}
@@ -240,7 +247,7 @@ const Nav = () => {
                   className="group text-gray-500 inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
                 >
                   <span>More</span>
-                  {/* Item active: "text-gray-600", Item inactive: "text-gray-400" */}
+
                   <svg
                     className="text-gray-400 h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150"
                     viewBox="0 0 20 20"
@@ -263,6 +270,7 @@ const Nav = () => {
                   leaveFrom="opacity-100 translate-y-0"
                   leaveTo="opacity-0 translate-y-1"
                 >
+                  {/* Desktop More  */}
                   <div className="absolute left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-xs sm:px-0">
                     <div className="rounded-lg shadow-lg">
                       <div className="rounded-lg shadow-xs overflow-hidden">
@@ -330,6 +338,7 @@ const Nav = () => {
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
         >
+          {/* Mobile view */}
           <div className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
             <div className="rounded-lg shadow-lg">
               <div className="rounded-lg shadow-xs bg-white divide-y-2 divide-gray-50">
@@ -339,7 +348,7 @@ const Nav = () => {
                       <img
                         className="h-8 w-auto"
                         src={devgadgetslogo}
-                        alt="Workflow"
+                        alt="devgadgets official logo"
                       />
                     </div>
                     <div className="-mr-2">

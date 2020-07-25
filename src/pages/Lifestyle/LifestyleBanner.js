@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 
 const LifestyleBanner = () => {
   return (
-    <div className="relative bg-gray-800 pt-12 md:pt-0">
+    <div className="relative bg-gray-800 pt-20 md:pt-2 lg:pt-0">
       <div className="h-56 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
         <img
           className="w-full h-full object-cover"
@@ -13,7 +13,7 @@ const LifestyleBanner = () => {
           alt="lifestyle team of people"
         />
       </div>
-      <div className="relative max-w-screen-xl mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <div className="relative max-w-screen-xl mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-52">
         <div className="md:ml-auto md:w-1/2 md:pl-10">
           <div className="text-base leading-6 font-semibold uppercase tracking-wider text-gray-300">
             <img
@@ -34,9 +34,9 @@ const LifestyleBanner = () => {
             <div className="inline-flex rounded-md shadow">
               <Link
                 to="/lifestyle"
-                className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-gray-900 bg-white hover:text-gray-600 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
+                className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-gray-900 bg-white hover:text-gray-600 focus:outline-none focus:shadow-outline"
               >
-                Show me
+                Let's see it!
               </Link>
             </div>
           </div>

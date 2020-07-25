@@ -16,7 +16,7 @@ const SectionLayout = ({ section }) => {
 
   //
   React.useEffect(() => {
-    switch (section) {
+    switch (section.featCategory || section.navCategory) {
       case "books":
         setSecCategory({
           title: "Welcome to our books section",
@@ -110,7 +110,12 @@ const SectionLayout = ({ section }) => {
           <div className="md:hidden flex justify-center mt-4">
             <img className="h-10 w-10" alt="arrow down icon" src={arrow_down} />
           </div>
-          <CategoriesLayout secCategory={secCategory} />
+          <div className="h-full">
+            <CategoriesLayout
+              secCategory={secCategory}
+              navSubCategory={section.navSubCategory}
+            />
+          </div>
         </>
       )}
     </>

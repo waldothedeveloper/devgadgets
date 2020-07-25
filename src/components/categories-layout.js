@@ -1,14 +1,14 @@
 import React from "react"
 import { motion } from "framer-motion"
-import "../css/hidescrollbar.css"
 import { useGetAllArticles } from "../hooks/use-get-all-articles"
 import ArticlesLayout from "./articles-layout"
+import Footer from "../pages/Footer/Footer"
 
-const CategoriesLayout = ({ secCategory }) => {
+const CategoriesLayout = ({ secCategory, navSubCategory }) => {
   const data = useGetAllArticles()
   const [articles, setArticles] = React.useState([])
   const [subCategory, setSubCategory] = React.useState([])
-  const [articleCat, setArticleCat] = React.useState("All")
+  const [articleCat, setArticleCat] = React.useState("")
 
   //
   React.useEffect(() => {
@@ -38,6 +38,15 @@ const CategoriesLayout = ({ secCategory }) => {
 
     setSubCategory(newData)
   }, [articles])
+
+  //
+  React.useEffect(() => {
+    if (navSubCategory) {
+      setArticleCat(navSubCategory)
+    } else {
+      setArticleCat("All")
+    }
+  }, [navSubCategory])
 
   const handleCategory = cat => {
     setArticleCat(cat.category)
@@ -76,10 +85,7 @@ const CategoriesLayout = ({ secCategory }) => {
                 ))}
               </select>
             </div>
-            <ul
-              id="scrolling_wrapper"
-              className="hidden pt-2 pb-12 md:grid md:gap-5 md:grid-cols-4"
-            >
+            <ul className="hidden pt-2 pb-12 md:grid md:gap-5 md:grid-cols-4">
               {subCategory.map(elem => (
                 <motion.button
                   whileHover={{ scale: 1.1 }}
@@ -127,6 +133,7 @@ const CategoriesLayout = ({ secCategory }) => {
         </div>
       </div>
       <ArticlesLayout data={articles} articleCat={articleCat} />
+      <Footer />
     </>
   )
 }

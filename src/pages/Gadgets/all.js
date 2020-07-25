@@ -2,10 +2,10 @@ import React from "react"
 import { useGetAllGadgetsArticles } from "../../hooks/use-get-all-gadgets-articles"
 import SectionLayout from "../../components/sections-layout"
 //
-const AllGadgets = props => {
+const AllGadgets = ({ location }) => {
   const data = useGetAllGadgetsArticles()
-  // console.log("data: ", data)
-  return <SectionLayout section={props.location.state.section} data={data} />
+
+  return <SectionLayout section={location.state} data={data} />
 }
 
 export default AllGadgets

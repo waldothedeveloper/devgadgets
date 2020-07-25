@@ -3,21 +3,16 @@ import { useStaticQuery, graphql } from "gatsby"
 export const useGetAllArticles = () => {
   const data = useStaticQuery(graphql`
     query allArticles {
-      allMdx {
+      allMdx(sort: { fields: frontmatter___last_updated, order: DESC }) {
         edges {
           node {
             frontmatter {
               category
               category_color
               article_category
-              last_updated(formatString: "ddd DD MMMM YYYY")
+              last_updated(formatString: "MMMM YYYY")
               title
-              the_gist
-              author
               featuredImage {
-                publicURL
-              }
-              author_image {
                 publicURL
               }
             }

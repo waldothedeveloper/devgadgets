@@ -1,6 +1,8 @@
 import React from "react"
 import { useJoinNewsletter } from "../../hooks/use-join-newsletter"
+import { motion } from "framer-motion"
 
+//
 const JoinNewsletter = () => {
   const { email, handleEmailChange, handleSubmit, errors } = useJoinNewsletter()
 
@@ -64,12 +66,14 @@ const JoinNewsletter = () => {
             </div>
 
             <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-              <button
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
                 type="submit"
-                className="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 rounded-md text-white font-semibold bg-teal-500 hover:bg-teal-400 focus:outline-none focus:bg-teal-400 transition duration-150 ease-in-out"
+                className="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 rounded-md text-white font-semibold bg-teal-500 hover:bg-teal-400 focus:outline-none focus:bg-teal-400"
               >
                 Subscribe
-              </button>
+              </motion.button>
             </div>
           </form>
           <p className="mt-3 text-sm leading-5 text-gray-500">

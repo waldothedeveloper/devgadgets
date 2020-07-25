@@ -1,9 +1,14 @@
 import React from "react"
+import { motion } from "framer-motion"
 
+//
 const ShareSocialMedia = () => {
   return (
     <div className="mt-8 flex items-center">
-      <button className="text-gray-400 hover:text-gray-500">
+      <motion.button
+        whileHover={{ scale: 1.1 }}
+        className="text-gray-400 hover:text-gray-500"
+      >
         <span className="sr-only">Facebook</span>
         <svg className="h-10 w-10" fill="currentColor" viewBox="0 0 24 24">
           <path
@@ -12,7 +17,7 @@ const ShareSocialMedia = () => {
             clipRule="evenodd"
           />
         </svg>
-      </button>
+      </motion.button>
       <button className="ml-6 text-gray-400 hover:text-gray-500">
         <span className="sr-only">Instagram</span>
         <svg className="h-10 w-10" fill="currentColor" viewBox="0 0 24 24">
