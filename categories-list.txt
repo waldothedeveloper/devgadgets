@@ -1,4 +1,5 @@
 gadgets cat:
+ const subCategory = ["All, Keyboards, Headphones, Monitors, IOT, Office, usb"]
 
 -Keyboards
 -Headphones

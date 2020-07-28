@@ -1,5 +1,7 @@
 import React from "react"
+import waldo from "../images/waldo.jpg"
 
+//
 const TitleAndAuthorTemplate = ({ frontmatter, fields }) => {
   return (
     <div className="flex flex-col justify-center md:flex-row md:items-end mx-6 mt-24 md:my-32 md:mx-0">
@@ -9,7 +11,7 @@ const TitleAndAuthorTemplate = ({ frontmatter, fields }) => {
           <button>
             <img
               className="h-10 w-10 rounded-full"
-              src={frontmatter.author_image.publicURL}
+              src={waldo}
               alt="Waldo Lavaut"
             />
           </button>

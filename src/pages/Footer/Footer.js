@@ -82,34 +82,76 @@ const Footer = () => {
                     </button>
                   </li> */}
                   <li className="mt-4">
-                    <button className="text-base leading-6 text-gray-400 hover:text-gray-300">
+                    <Link
+                      to="/gadgets/all"
+                      state={{
+                        navCategory: "gadgets",
+                        navSubCategory: "Keyboards",
+                      }}
+                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                    >
                       Keyboards
-                    </button>
+                    </Link>
                   </li>
                   <li className="mt-4">
-                    <button className="text-base leading-6 text-gray-400 hover:text-gray-300">
+                    <Link
+                      to="/gadgets/all"
+                      state={{
+                        navCategory: "gadgets",
+                        navSubCategory: "Headphones",
+                      }}
+                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                    >
                       Headphones
-                    </button>
+                    </Link>
                   </li>
                   <li className="mt-4">
-                    <button className="text-base leading-6 text-gray-400 hover:text-gray-300">
+                    <Link
+                      to="/gadgets/all"
+                      state={{
+                        navCategory: "gadgets",
+                        navSubCategory: "Iot",
+                      }}
+                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                    >
                       IOT Devices
-                    </button>
+                    </Link>
                   </li>
                   <li className="mt-4">
-                    <button className="text-base leading-6 text-gray-400 hover:text-gray-300">
+                    <Link
+                      to="/gadgets/all"
+                      state={{
+                        navCategory: "gadgets",
+                        navSubCategory: "Monitors",
+                      }}
+                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                    >
                       Monitors
-                    </button>
+                    </Link>
                   </li>
                   <li className="mt-4">
-                    <button className="text-base leading-6 text-gray-400 hover:text-gray-300">
+                    <Link
+                      to="/gadgets/all"
+                      state={{
+                        navCategory: "gadgets",
+                        navSubCategory: "Office",
+                      }}
+                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                    >
                       Office Products
-                    </button>
+                    </Link>
                   </li>
                   <li className="mt-4">
-                    <button className="text-base leading-6 text-gray-400 hover:text-gray-300">
+                    <Link
+                      to="/gadgets/all"
+                      state={{
+                        navCategory: "gadgets",
+                        navSubCategory: "Usb",
+                      }}
+                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                    >
                       USB Devices
-                    </button>
+                    </Link>
                   </li>
                 </ul>
               </div>

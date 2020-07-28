@@ -108,7 +108,7 @@ const Nav = () => {
                             to="/gadgets/all"
                             state={{
                               navCategory: "gadgets",
-                              navSubCategory: "keyboards",
+                              navSubCategory: "Keyboards",
                             }}
                             className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                           >
@@ -127,7 +127,14 @@ const Nav = () => {
                               </p>
                             </div>
                           </Link>
-                          <button className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150">
+                          <Link
+                            to="/gadgets/all"
+                            state={{
+                              navCategory: "gadgets",
+                              navSubCategory: "Headphones",
+                            }}
+                            className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
+                          >
                             <img
                               src={headphones}
                               alt="headphones"
@@ -142,8 +149,15 @@ const Nav = () => {
                                 those headphones
                               </p>
                             </div>
-                          </button>
-                          <button className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150">
+                          </Link>
+                          <Link
+                            to="/gadgets/all"
+                            state={{
+                              navCategory: "gadgets",
+                              navSubCategory: "Monitors",
+                            }}
+                            className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
+                          >
                             <img
                               src={computer_display}
                               alt="computer display"
@@ -158,8 +172,15 @@ const Nav = () => {
                                 budget tight.
                               </p>
                             </div>
-                          </button>
-                          <button className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150">
+                          </Link>
+                          <Link
+                            to="/gadgets/all"
+                            state={{
+                              navCategory: "gadgets",
+                              navSubCategory: "Iot",
+                            }}
+                            className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
+                          >
                             <img
                               src={robot}
                               alt="robot"
@@ -174,8 +195,15 @@ const Nav = () => {
                                 meet Siri at the park?
                               </p>
                             </div>
-                          </button>
-                          <button className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150">
+                          </Link>
+                          <Link
+                            to="/gadgets/all"
+                            state={{
+                              navCategory: "gadgets",
+                              navSubCategory: "Office",
+                            }}
+                            className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
+                          >
                             <img
                               src={truck}
                               alt="truck"
@@ -183,15 +211,22 @@ const Nav = () => {
                             />
                             <div className="space-y-1">
                               <p className="text-base leading-6 font-medium text-gray-900">
-                                Office Desk & Chairs
+                                Office
                               </p>
                               <p className="text-sm leading-5 text-gray-500">
                                 You back hurts, your elbows, your neck, your
                                 body....ouch! We've got you.
                               </p>
                             </div>
-                          </button>
-                          <button className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150">
+                          </Link>
+                          <Link
+                            to="/gadgets/all"
+                            state={{
+                              navCategory: "gadgets",
+                              navSubCategory: "Usb",
+                            }}
+                            className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
+                          >
                             <img
                               src={plug}
                               alt="electrical plug"
@@ -206,7 +241,7 @@ const Nav = () => {
                                 girlfriend or boyfriend.
                               </p>
                             </div>
-                          </button>
+                          </Link>
                         </div>
                         {/* <div className="p-5 bg-gray-50 sm:p-8">
                         <button className="-m-3 p-3 flow-root space-y-1 rounded-md hover:bg-gray-100 transition ease-in-out duration-150">
@@ -375,7 +410,14 @@ const Nav = () => {
                   </div>
                   <div>
                     <nav className="grid gap-6">
-                      <button className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+                      <Link
+                        to="/gadgets/all"
+                        state={{
+                          navCategory: "gadgets",
+                          navSubCategory: "keyboards",
+                        }}
+                        className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
+                      >
                         {/* keyboard mobile */}
                         <img
                           src={keyboard}
@@ -385,8 +427,15 @@ const Nav = () => {
                         <div className="text-base leading-6 font-medium text-gray-900">
                           Keyboards
                         </div>
-                      </button>
-                      <button className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+                      </Link>
+                      <Link
+                        to="/gadgets/all"
+                        state={{
+                          navCategory: "gadgets",
+                          navSubCategory: "headphones",
+                        }}
+                        className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
+                      >
                         {/* headphones mobile */}
                         <img
                           src={headphones}
@@ -396,8 +445,15 @@ const Nav = () => {
                         <div className="text-base leading-6 font-medium text-gray-900">
                           Headphones
                         </div>
-                      </button>
-                      <button className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+                      </Link>
+                      <Link
+                        to="/gadgets/all"
+                        state={{
+                          navCategory: "gadgets",
+                          navSubCategory: "monitors",
+                        }}
+                        className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
+                      >
                         {/* monitors mobile */}
                         <img
                           src={computer_display}
@@ -407,22 +463,43 @@ const Nav = () => {
                         <div className="text-base leading-6 font-medium text-gray-900">
                           Monitors
                         </div>
-                      </button>
-                      <button className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+                      </Link>
+                      <Link
+                        to="/gadgets/all"
+                        state={{
+                          navCategory: "gadgets",
+                          navSubCategory: "iot",
+                        }}
+                        className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
+                      >
                         {/*  IOT Devices mobile */}
                         <img src={robot} alt="robot" className="h-12 w-auto" />
                         <div className="text-base leading-6 font-medium text-gray-900">
                           IOT Devices
                         </div>
-                      </button>
-                      <button className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+                      </Link>
+                      <Link
+                        to="/gadgets/all"
+                        state={{
+                          navCategory: "gadgets",
+                          navSubCategory: "office",
+                        }}
+                        className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
+                      >
                         {/* Desk Chairs mobile */}
                         <img src={truck} alt="truck" className="h-12 w-auto" />
                         <div className="text-base leading-6 font-medium text-gray-900">
-                          Office Desk & Chairs
+                          Office
                         </div>
-                      </button>
-                      <button className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+                      </Link>
+                      <Link
+                        to="/gadgets/all"
+                        state={{
+                          navCategory: "gadgets",
+                          navSubCategory: "usb",
+                        }}
+                        className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
+                      >
                         {/* USB devices mobile */}
                         <img
                           src={plug}
@@ -432,7 +509,7 @@ const Nav = () => {
                         <div className="text-base leading-6 font-medium text-gray-900">
                           USB Devices
                         </div>
-                      </button>
+                      </Link>
                     </nav>
                   </div>
                 </div>

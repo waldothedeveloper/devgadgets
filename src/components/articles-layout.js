@@ -1,28 +1,29 @@
 import React from "react"
 import { Link } from "gatsby"
-import { motion } from "framer-motion"
 
 const ArticlesLayout = ({ data, articleCat }) => {
-  const [filteredArticles, setFilteredArticles] = React.useState([])
+  console.log("articleCat: ", articleCat)
+  const [filterArticles, setFilterArticles] = React.useState([])
 
   React.useEffect(() => {
-    if (articleCat && articleCat !== "All") {
-      const newData = data.filter(
-        elem => elem.node.frontmatter.category === articleCat
-      )
-      setFilteredArticles(newData)
+    if (articleCat === "All") {
+      setFilterArticles(data)
     } else {
-      setFilteredArticles(data)
+      const newData = data.filter(
+        elem =>
+          elem.node.frontmatter.category.toUpperCase() ===
+          articleCat.toUpperCase()
+      )
+      setFilterArticles(newData)
     }
   }, [data, articleCat])
 
   return (
-    <div className="pb-20 px-4 sm:px-6 lg:pb-28 lg:px-8">
-      <div className="grid gap-5 lg:gap-8 max-w-lg mx-auto md:grid-cols-2 lg:grid-cols-3 md:max-w-none">
-        {filteredArticles.map(elem => {
+    <div className="pb-20 lg:pb-28 md:pl-3 lg:pl-6">
+      <div className="grid gap-5 md:row-gap-6 max-w-lg mx-auto md:grid-cols-2 md:max-w-none lg:grid-cols-3">
+        {filterArticles.map(elem => {
           return (
-            <motion.div
-              whileHover={{ scale: 1.1 }}
+            <div
               key={elem.node.id}
               className="flex flex-col rounded-lg shadow-lg overflow-hidden"
             >
@@ -63,7 +64,7 @@ const ArticlesLayout = ({ data, articleCat }) => {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           )
         })}
       </div>
