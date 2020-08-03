@@ -1,5 +1,8 @@
 import React from "react"
 import Transition from "../../components/Transition"
+import PropTypes from "prop-types"
+
+//
 const TechnologyBlogDefinition = ({ open }) => {
   return (
     <Transition
@@ -18,9 +21,10 @@ const TechnologyBlogDefinition = ({ open }) => {
               <div className="bg-gray-700 z-20 relative px-6 py-6">
                 <div className="-m-3 p-3 flex flex-col align-between space-y-1 rounded-md transition ease-in-out duration-150">
                   <p className="text-sm leading-5 text-gray-200">
-                    "A blog, also known as a weblog, is a website that is like a
-                    diary or journal. Bloggers (a word for people who write on
-                    blogs) often write about their opinions and thoughts."
+                    &ldquo;A blog, also known as a weblog, is a website that is
+                    like a diary or journal. Bloggers (a word for people who
+                    write on blogs) often write about their opinions and
+                    thoughts.&rdquo;
                   </p>
                   <p className="pt-4 text-right text-sm leading-5 text-gray-400">
                     Source: Wikipedia.org
@@ -35,4 +39,7 @@ const TechnologyBlogDefinition = ({ open }) => {
   )
 }
 
+TechnologyBlogDefinition.propTypes = {
+  open: PropTypes.bool,
+}
 export default TechnologyBlogDefinition

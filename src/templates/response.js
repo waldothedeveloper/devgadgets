@@ -1,5 +1,7 @@
 import React from "react"
+import PropTypes from "prop-types"
 
+//
 const Response = ({ children }) => {
   return (
     <div className="mb-2">
@@ -9,5 +11,7 @@ const Response = ({ children }) => {
     </div>
   )
 }
-
+Response.propTypes = {
+  children: PropTypes.func,
+}
 export default Response

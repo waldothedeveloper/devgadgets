@@ -1,10 +1,12 @@
 import React from "react"
 import Transition from "../components/Transition"
+import PropTypes from "prop-types"
 
+//
 const Modal = ({ open, setOpen, photos }) => {
   React.useEffect(() => {
     if (open) {
-      console.log("body overflow hidden")
+      // console.log("body overflow hidden")
       document.body.style.overflow = "hidden"
     }
 
@@ -93,4 +95,9 @@ const Modal = ({ open, setOpen, photos }) => {
   )
 }
 
+Modal.propTypes = {
+  open: PropTypes.bool,
+  setOpen: PropTypes.func,
+  photos: PropTypes.array,
+}
 export default Modal

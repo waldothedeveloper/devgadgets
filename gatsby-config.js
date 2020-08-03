@@ -1,76 +1,93 @@
-const path = require("path")
+/* eslint-disable */
 
 module.exports = {
   siteMetadata: {
-    title: `Dev Gadgets`,
-    description: `The #1 gadgets resource for developers and technology enthusiasts.`,
-    author: `@waldothedeveloper`,
-    copyright: `Copyright © 2020 Dev Gadgets. All rights reserved`,
-    siteUrl: `https://devgadgets.com`,
+    title: "Dev Gadgets",
+    description:
+      "The #1 gadgets resource for developers and technology enthusiasts.",
+    author: "@waldothedeveloper",
+    copyright: "Copyright © 2020 Dev Gadgets. All rights reserved",
+    siteUrl: "https://devgadgets.com",
     keywords: [
-      `Technology Gadgets`,
-      `Gadgets`,
-      `Programming`,
-      `Programming books`,
-      `Programming courses`,
-      `Software Engineer`,
-      `Web Developer`,
+      "Technology Gadgets",
+      "Gadgets",
+      "Programming",
+      "Programming books",
+      "Programming courses",
+      "Software Engineer",
+      "Web Developer",
     ],
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-postcss`,
     {
-      resolve: `gatsby-plugin-mdx`,
+      resolve: "gatsby-plugin-eslint",
+      env: {
+        browser: true,
+        node: true,
+      },
       options: {
-        extensions: [`.mdx`, `.md`],
-        defaultLayouts: {
-          default: require.resolve(`./src/templates/blogPostTemplate.js`),
+        test: /\.js$|\.jsx$/,
+        exclude: /(node_modules|.cache|public)/,
+        stages: ["develop"],
+        options: {
+          emitWarning: true,
+          failOnError: false,
         },
       },
     },
-    `gatsby-remark-reading-time`,
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-postcss",
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-plugin-mdx",
       options: {
-        name: `posts`,
+        extensions: [".mdx", ".md"],
+        defaultLayouts: {
+          default: require.resolve("./src/templates/blogPostTemplate.js"),
+        },
+      },
+    },
+    "gatsby-remark-reading-time",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "posts",
         path: `${__dirname}/content/posts/`,
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: `pages`,
+        name: "pages",
         path: `${__dirname}/src/pages/`,
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: `images`,
+        name: "images",
         path: `${__dirname}/src/images`,
       },
     },
     {
-      resolve: `gatsby-plugin-web-font-loader`,
+      resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: [`Rubik`],
+          families: ["Rubik"],
         },
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: "gatsby-plugin-manifest",
       options: {
-        name: `dev gadgets`,
-        short_name: `devgadgets`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/devgadgets-icon-black.png`, // This path is relative to the root of the site.
+        name: "dev gadgets",
+        short_name: "devgadgets",
+        start_url: "/",
+        background_color: "#663399",
+        theme_color: "#663399",
+        display: "minimal-ui",
+        icon: "src/images/devgadgets-icon-black.png", // This path is relative to the root of the site.
       },
     },
   ],

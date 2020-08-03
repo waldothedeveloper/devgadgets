@@ -179,7 +179,7 @@ const BlackLivesMattter = () => {
                               </p>
                               <p className="text-sm leading-5 text-gray-500">
                                 You back hurts, your elbows, your neck, your
-                                body....ouch! We've got you.
+                                body....ouch! We&apos;ve got you.
                               </p>
                             </div>
                           </button>

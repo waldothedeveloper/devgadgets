@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 
 const ShareArticle = ({ frontmatter, fields }) => {
   return (
@@ -99,5 +100,10 @@ const ShareArticle = ({ frontmatter, fields }) => {
       </div>
     </>
   )
+}
+
+ShareArticle.propTypes = {
+  frontmatter: PropTypes.object,
+  fields: PropTypes.object,
 }
 export default ShareArticle

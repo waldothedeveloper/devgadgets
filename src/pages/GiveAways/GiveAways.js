@@ -30,7 +30,7 @@ const GiveAways = () => {
             Aaaaaaannnnnd....
           </div>
           <h2 className="mt-2 text-white text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl sm:leading-10 ">
-            It's GiveAway time! &nbsp;
+            It&apos;s GiveAway time! &nbsp;
             <span role="img" alt="celebrate" aria-labelledby="celebrate">
               🎉
             </span>

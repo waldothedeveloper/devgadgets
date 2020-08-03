@@ -13,6 +13,7 @@ export const useGetAllBookArticles = () => {
               title
               author
               book_author
+              price
               featuredImage {
                 publicURL
               }

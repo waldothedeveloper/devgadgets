@@ -17,9 +17,9 @@ const Features = () => {
             You’ve got questions, we’ve got answers.
           </h3>
           <p className="mt-4 max-w-2xl text-xl leading-7 text-gray-500 lg:mx-auto">
-            Tech stuff help people help people, so we've put our best effort in
-            a curated, distilled, amazing spectrum of technology that will leave
-            you roaring.
+            Tech stuff help people help people, so we&apos;ve put our best
+            effort in a curated, distilled, amazing spectrum of technology that
+            will leave you roaring.
           </p>
         </div>
 
@@ -70,8 +70,8 @@ const Features = () => {
                   </p>
                   <div className="mt-3">
                     <Link
-                      to="/books/all"
                       state={{ featCategory: "books" }}
+                      to="/books/all"
                       className="text-base leading-6 font-semibold text-teal-600 hover:text-orange-500 transition ease-in-out duration-150 active:text-orange-500 focus:text-orange-500 focus:outline-none"
                     >
                       Learn more

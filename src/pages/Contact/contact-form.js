@@ -18,9 +18,9 @@ const ContactForm = () => {
               Community Care Team!
             </h2>
             <p className="mt-4 text-lg leading-7 text-gray-500 sm:mt-3">
-              At Dev-Gadgets I'm always looking for opportunities to connect
-              with my audience, I anwer all of my emails, so don't be shy and
-              send me your suggestions or a love letter.
+              At Dev-Gadgets I&apos;m always looking for opportunities to
+              connect with my audience, I anwer all of my emails, so don&apos;t
+              be shy and send me your suggestions or a love letter.
             </p>
             <form
               onSubmit={e => e.preventDefault()}

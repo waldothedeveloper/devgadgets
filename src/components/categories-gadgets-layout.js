@@ -1,9 +1,9 @@
 import React from "react"
 import { motion } from "framer-motion"
-import { subCategory } from "../utils/categories"
-
+import { subCategoryGadgets } from "../utils/categories"
+import PropTypes from "prop-types"
 //
-const CategoriesLayout = ({ articleCat, handleCategory }) => {
+const CategoriesGadgetsLayout = ({ articleCat, handleCategory }) => {
   const variants = {
     visible: { opacity: 1 },
     hidden: { opacity: 0 },
@@ -18,7 +18,7 @@ const CategoriesLayout = ({ articleCat, handleCategory }) => {
         variants={variants}
         className="hidden md:flex flex-col mt-6 overflow-hidden"
       >
-        {subCategory.map((elem, id) => (
+        {subCategoryGadgets.map((elem, id) => (
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -27,7 +27,7 @@ const CategoriesLayout = ({ articleCat, handleCategory }) => {
             className={
               elem.category === articleCat
                 ? `my-1 md:mx-4 lg:mx-6 group border border-gray-200 rounded-md shadow-lg bg-${elem.category_color}-600 focus:bg-${elem.category_color}-600`
-                : `my-1 md:mx-4 lg:mx-6 group border border-gray-200 rounded-md shadow-lg`
+                : "my-1 md:mx-4 lg:mx-6 group border border-gray-200 rounded-md shadow-lg"
             }
           >
             <li
@@ -50,11 +50,11 @@ const CategoriesLayout = ({ articleCat, handleCategory }) => {
                 <div
                   className={
                     elem.category === articleCat
-                      ? `text-white group-focus:text-white group-hover:text-white text-lg leading-5 font-medium hover:text-gray-600 transition ease-in-out duration-150`
-                      : `text-gray-900 text-sm leading-5 font-medium transition text-base ease-in-out duration-150`
+                      ? "text-white group-focus:text-white group-hover:text-white text-lg leading-5 font-medium hover:text-gray-600 transition ease-in-out duration-150"
+                      : "text-gray-900 text-sm leading-5 font-medium transition text-base ease-in-out duration-150"
                   }
                 >
-                  {elem.category.toUpperCase()}
+                  {elem.category}
                 </div>
               </div>
             </li>
@@ -65,4 +65,8 @@ const CategoriesLayout = ({ articleCat, handleCategory }) => {
   )
 }
 
-export default CategoriesLayout
+CategoriesGadgetsLayout.propTypes = {
+  articleCat: PropTypes.string,
+  handleCategory: PropTypes.func,
+}
+export default CategoriesGadgetsLayout

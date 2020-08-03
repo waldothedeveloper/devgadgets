@@ -1,11 +1,11 @@
 import React from "react"
-// import { useGetAllLifeStyleArticles } from "../../hooks/use-get-all-lifestyle-articles"
-import SectionLayout from "../../components/sections-layout"
+import Sections from "../../components/sections.js"
+import PropTypes from "prop-types"
 //
 const AllLifeStyle = props => {
-  // const data = useGetAllLifeStyleArticles()
-
-  return <SectionLayout section={props.location.state.section} />
+  return <Sections section={props.location.state.section} />
 }
-
+AllLifeStyle.propTypes = {
+  location: PropTypes.object,
+}
 export default AllLifeStyle

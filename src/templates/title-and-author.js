@@ -1,5 +1,6 @@
 import React from "react"
 import waldo from "../images/waldo.jpg"
+import PropTypes from "prop-types"
 
 //
 const TitleAndAuthorTemplate = ({ frontmatter, fields }) => {
@@ -42,4 +43,8 @@ const TitleAndAuthorTemplate = ({ frontmatter, fields }) => {
   )
 }
 
+TitleAndAuthorTemplate.propTypes = {
+  frontmatter: PropTypes.object,
+  fields: PropTypes.object,
+}
 export default TitleAndAuthorTemplate

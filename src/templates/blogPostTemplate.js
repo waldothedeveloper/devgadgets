@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React from "react"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -8,6 +10,7 @@ import Footer from "../pages/Footer/Footer"
 import ShareArticle from "./share-article-template"
 import BuyIt from "./buy-it"
 import JoinNewsletter from "../pages/Newsletter/JoinNewsletter"
+
 //
 export default ({ data, pageContext }) => {
   const { frontmatter, body, fields } = data.mdx
@@ -32,6 +35,7 @@ export default ({ data, pageContext }) => {
   )
 }
 
+//
 export const query = graphql`
   query BlogPostQuery($slug: String) {
     mdx(fields: { slug: { eq: $slug } }) {

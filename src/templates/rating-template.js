@@ -1,6 +1,8 @@
 import React from "react"
 import ReactStars from "react-stars"
+import PropTypes from "prop-types"
 
+//
 const Rating = ({ frontmatter }) => {
   return (
     <ReactStars
@@ -13,4 +15,7 @@ const Rating = ({ frontmatter }) => {
   )
 }
 
+Rating.propTypes = {
+  frontmatter: PropTypes.object,
+}
 export default Rating

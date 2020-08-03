@@ -2,7 +2,9 @@ import React from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { wrap } from "@popmotion/popcorn"
 import Modal from "./modal"
+import PropTypes from "prop-types"
 
+//
 const variants = {
   enter: direction => {
     return {
@@ -131,15 +133,12 @@ const Carousel = ({ metadata }) => {
   )
 }
 
-/**
- * Experimenting with distilling swipe offset and velocity into a single variable, so the
- * less distance a user has swiped, the more velocity they need to register as a swipe.
- * Should accomodate longer swipes and short flicks without having binary checks on
- * just distance thresholds and velocity > 0.
- */
 const swipeConfidenceThreshold = 10000
 const swipePower = (offset, velocity) => {
   return Math.abs(offset) * velocity
 }
 
+Carousel.propTypes = {
+  metadata: PropTypes.object,
+}
 export default Carousel

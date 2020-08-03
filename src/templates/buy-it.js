@@ -1,5 +1,6 @@
 import React from "react"
 import amazon from "../images/amazon-logo.svg"
+import PropTypes from "prop-types"
 
 //
 const BuyIt = ({ frontmatter }) => {
@@ -35,4 +36,7 @@ const BuyIt = ({ frontmatter }) => {
   )
 }
 
+BuyIt.propTypes = {
+  frontmatter: PropTypes.object,
+}
 export default BuyIt

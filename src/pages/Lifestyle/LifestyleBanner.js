@@ -36,7 +36,7 @@ const LifestyleBanner = () => {
                 to="/lifestyle"
                 className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-gray-900 bg-white hover:text-gray-600 focus:outline-none focus:shadow-outline"
               >
-                Let's see it!
+                Let&apos;s see it!
               </Link>
             </div>
           </div>

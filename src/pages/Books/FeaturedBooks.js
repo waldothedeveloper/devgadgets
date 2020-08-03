@@ -16,7 +16,7 @@ const FeaturedBooks = () => {
             <span className="underline text-pink-400 font-semibold">
               must-read
             </span>{" "}
-            selection of books that every programmer should read. Don't pay
+            selection of books that every programmer should read. Don&apos;t pay
             attention to the language it is was written, they really will make
             you a better developer.
           </p>

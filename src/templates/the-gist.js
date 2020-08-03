@@ -1,7 +1,7 @@
 import React from "react"
 import amazon from "../images/amazon-logo.svg"
 import Rating from "./rating-template"
-
+import PropTypes from "prop-types"
 //
 const TheGist = ({ frontmatter }) => {
   return (
@@ -18,7 +18,7 @@ const TheGist = ({ frontmatter }) => {
                 clipPath: `polygon(0 0, 100% 0%, 87% 100%, 0% 100%)`,
               }}
             >
-              <span className="text-sm text-white">Amazon's</span>&nbsp;
+              <span className="text-sm text-white">Amazon&apos;s</span>&nbsp;
               <span className="text-sm text-yellow-400">Choice</span>
             </div>
           </div>
@@ -103,5 +103,7 @@ const TheGist = ({ frontmatter }) => {
     </div>
   )
 }
-
+TheGist.propTypes = {
+  frontmatter: PropTypes.object,
+}
 export default TheGist

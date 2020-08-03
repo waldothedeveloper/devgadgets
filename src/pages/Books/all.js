@@ -1,11 +1,10 @@
 import React from "react"
-import { useGetAllBookArticles } from "../../hooks/use-get-all-book-articles"
-import SectionLayout from "../../components/sections-layout"
+import Sections from "../../components/sections.js"
+import PropTypes from "prop-types"
 //
-const AllBooks = props => {
-  const data = useGetAllBookArticles()
-  // console.log("data: ", data)
-  return <SectionLayout section={props.location.state.section} data={data} />
-}
+const AllBooks = ({ location }) => <Sections section={location.state} />
 
+AllBooks.propTypes = {
+  location: PropTypes.object,
+}
 export default AllBooks

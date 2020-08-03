@@ -12,16 +12,16 @@ const EnterToWin = () => {
             <div>
               <label
                 htmlFor="fullname"
-                class="block text-sm font-medium leading-5 text-gray-700"
+                className="block text-sm font-medium leading-5 text-gray-700"
               >
                 Full name
               </label>
-              <div class="mt-1 relative rounded-md shadow-sm">
+              <div className="mt-1 relative rounded-md shadow-sm">
                 <input
                   aria-label="fullname"
                   id="fullname"
                   type="text"
-                  class="form-input py-3 px-4 block w-full transition ease-in-out duration-150"
+                  className="form-input py-3 px-4 block w-full transition ease-in-out duration-150"
                 />
               </div>
             </div>
@@ -48,7 +48,7 @@ const EnterToWin = () => {
                   type="button"
                   className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-teal-600 hover:bg-teal-500 focus:outline-none focus:border-teal-700 focus:shadow-outline-teal active:bg-teal-700 transition ease-in-out duration-150"
                 >
-                  I'm ready for my prize!
+                  I&apos;m ready for my prize!
                 </button>
               </span>
             </div>

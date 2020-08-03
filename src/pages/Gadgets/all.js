@@ -1,10 +1,10 @@
 import React from "react"
-import SectionLayout from "../../components/sections-layout"
+import Sections from "../../components/sections"
+import PropTypes from "prop-types"
 //
-const AllGadgets = ({ location }) => {
-  // console.log("location: ", location.state)
+const AllGadgets = ({ location }) => <Sections section={location.state} />
 
-  return <SectionLayout section={location.state} />
+AllGadgets.propTypes = {
+  location: PropTypes.object,
 }
-
 export default AllGadgets

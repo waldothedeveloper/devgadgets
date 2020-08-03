@@ -30,8 +30,8 @@ const JoinNewsletter = () => {
           </div>
 
           <p className="mt-3 max-w-3xl text-lg leading-6 text-gray-600">
-            Wake up to the best morning newsletter you've not seen in a long
-            time. <br /> We connect the dots on how technology affects your
+            Wake up to the best morning newsletter you&apos;ve not seen in a
+            long time. <br /> We connect the dots on how technology affects your
             life.
           </p>
         </div>

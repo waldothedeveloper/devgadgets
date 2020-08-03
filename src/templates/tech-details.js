@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 
 const TechDetails = ({ metadata }) => {
   return (
@@ -22,5 +23,7 @@ const TechDetails = ({ metadata }) => {
     </div>
   )
 }
-
+TechDetails.propTypes = {
+  metadata: PropTypes.object,
+}
 export default TechDetails

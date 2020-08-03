@@ -1,11 +1,10 @@
 import React from "react"
-import { useGetAllCoursesArticles } from "../../hooks/use-get-all-courses-articles"
-import SectionLayout from "../../components/sections-layout"
+import Sections from "../../components/sections.js"
+import PropTypes from "prop-types"
 //
-const AllCourses = props => {
-  const data = useGetAllCoursesArticles()
+const AllCourses = props => <Sections section={props.location.state.section} />
 
-  return <SectionLayout section={props.location.state.section} data={data} />
+AllCourses.propTypes = {
+  location: PropTypes.object,
 }
-
 export default AllCourses

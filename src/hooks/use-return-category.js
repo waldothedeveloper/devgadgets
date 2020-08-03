@@ -17,7 +17,7 @@ export const UseReturnCategory = section => {
         setSecCategory({
           title: "Books",
           content:
-            "Even tough is really difficult to find time to read in this hectic life we live, I'd like you to take a chance at my approach on how I read books and why you should read specific sections. The following is a curated list of programming bestsellers that will improve your architecture knowledge, algorithms skills, and deepen your knowledge of your favorite language",
+            "The following is a curated list of programming bestsellers, choose your flavor on the right column.",
           image: girl_reading_book,
           article_category: "books",
         })
