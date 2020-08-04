@@ -11,7 +11,10 @@ const BooksSectionLayout = () => {
 
   return (
     <div className="mt-24 mb-12 mx-4">
-      <BooksCategories handleCategory={handleCategory} />
+      <BooksCategories
+        handleCategory={handleCategory}
+        selectCategory={selectCategory}
+      />
       <BookArticlesLayout selectCategory={selectCategory} />
     </div>
   )

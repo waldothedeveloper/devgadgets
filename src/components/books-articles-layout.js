@@ -37,7 +37,7 @@ const BookArticlesLayout = ({ selectCategory }) => {
                   />
                 </div>
               </Link>
-              <div className="flex-1 bg-white p-4 flex flex-col justify-between">
+              <div className="flex-1 bg-white p-4 flex flex-col justify-evenly">
                 <Link to={elem.node.fields.slug} className="block text-left">
                   <div className="flex">
                     <span
@@ -47,15 +47,15 @@ const BookArticlesLayout = ({ selectCategory }) => {
                     </span>
                   </div>
                   <div className="flex-shrink-0">
-                    <h3 className="mt-4 text-md leading-7 font-semibold text-gray-900">
+                    <h3 className="mt-2 text-md font-semibold text-gray-900">
                       {elem.node.frontmatter.title}
                     </h3>
                   </div>
                 </Link>
-                <p className="text-sm mt-2 text-gray-400 truncate">
+                <p className="text-sm mt-0.5 text-gray-400 truncate">
                   {elem.node.frontmatter.book_author}
                 </p>
-                <p className="mt-1 font-semibold text-teal-400 text-sm">
+                <p className="font-medium text-gray-500 text-sm">
                   ${elem.node.frontmatter.price}
                 </p>
               </div>

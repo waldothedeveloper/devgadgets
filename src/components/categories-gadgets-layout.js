@@ -27,7 +27,7 @@ const CategoriesGadgetsLayout = ({ articleCat, handleCategory }) => {
             className={
               elem.category === articleCat
                 ? `my-1 md:mx-4 lg:mx-6 group border border-gray-200 rounded-md shadow-lg bg-${elem.category_color}-600 focus:bg-${elem.category_color}-600`
-                : "my-1 md:mx-4 lg:mx-6 group border border-gray-200 rounded-md shadow-lg"
+                : `my-1 md:mx-4 lg:mx-6 group border border-gray-200 rounded-md shadow-lg`
             }
           >
             <li

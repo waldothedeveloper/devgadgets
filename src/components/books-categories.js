@@ -4,14 +4,18 @@ import { motion } from "framer-motion"
 import PropTypes from "prop-types"
 
 //
-const BooksCategories = ({ handleCategory }) => {
+const BooksCategories = ({ handleCategory, selectCategory }) => {
   const list = subCategoryBooks.map((elem, id) => (
     <motion.button
       key={id}
       onClick={() => handleCategory(elem)}
       whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.9 }}
-      className={`focus:outline-none inline-flex items-center px-3 py-0.5 mx-3 my-1 rounded-full text-sm font-medium leading-5 bg-${elem.category_color}-200 text-${elem.category_color}-800`}
+      whileTap={{ scale: 0.8 }}
+      className={
+        selectCategory === elem.category
+          ? `focus:outline-none focus:shadow-outline inline-flex items-center px-4 py-0.5 mx-3 my-1 rounded-full text-md font-medium leading-5 bg-gray-800 text-gray-50`
+          : `focus:outline-none inline-flex items-center px-3 py-0.5 mx-3 my-1 rounded-full text-sm font-medium leading-5 bg-${elem.category_color}-200 text-${elem.category_color}-800`
+      }
     >
       {elem.category}
     </motion.button>
@@ -30,5 +34,6 @@ const BooksCategories = ({ handleCategory }) => {
 
 BooksCategories.propTypes = {
   handleCategory: PropTypes.func.isRequired,
+  selectCategory: PropTypes.string.isRequired,
 }
 export default BooksCategories
