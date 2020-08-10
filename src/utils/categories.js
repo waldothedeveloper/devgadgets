@@ -18,3 +18,10 @@ export const subCategoryBooks = [
   { category: "React", category_color: "pink" },
   { category: "SQL", category_color: "purple" },
 ]
+
+export const subCategoryCourses = [
+  { category: "AWS", category_color: "blue" },
+  { category: "React", category_color: "red" },
+  { category: "Javascript", category_color: "yellow" },
+  { category: "Python", category_color: "indigo" },
+]

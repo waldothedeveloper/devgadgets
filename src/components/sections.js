@@ -2,6 +2,7 @@ import React from "react"
 import Nav from "../pages/Menu/Nav"
 import SectionGadgetsLayout from "./sections-gadgets-layout"
 import BooksSectionLayout from "./books-section-layout"
+import CoursesSectionLayout from "./courses-section-layout"
 import Footer from "../pages/Footer/Footer"
 import PropTypes from "prop-types"
 //
@@ -22,6 +23,14 @@ const Sections = ({ section }) => {
         <>
           <Nav />
           <BooksSectionLayout />
+          <Footer />
+        </>
+      )
+    case "courses":
+      return (
+        <>
+          <Nav />
+          <CoursesSectionLayout />
           <Footer />
         </>
       )

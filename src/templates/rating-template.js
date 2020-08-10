@@ -9,8 +9,8 @@ const Rating = ({ frontmatter }) => {
       value={frontmatter.rating}
       edit={false}
       count={5}
-      size={24}
-      color2={"#ffd700"}
+      size={16}
+      color2={"#ECC94B"}
     />
   )
 }

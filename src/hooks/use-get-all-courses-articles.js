@@ -8,6 +8,11 @@ export const useGetAllCoursesArticles = () => {
           node {
             frontmatter {
               category
+              course_author
+              price
+              rating
+              rating_count
+              bestseller
               category_color
               last_updated(formatString: "ddd DD MMMM YYYY")
               title
@@ -25,7 +30,6 @@ export const useGetAllCoursesArticles = () => {
                 text
               }
             }
-            excerpt(pruneLength: 250)
             id
           }
         }
