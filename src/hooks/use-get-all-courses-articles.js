@@ -8,6 +8,7 @@ export const useGetAllCoursesArticles = () => {
           node {
             frontmatter {
               category
+              devgadgets_choice
               course_author
               price
               rating

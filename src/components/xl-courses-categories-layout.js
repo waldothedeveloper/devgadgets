@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import Rating from "../templates/rating-template"
+import DevGadgetsChoice from "./devgadgets-choice"
 
 //
 const XlCoursesCategories = ({ cat, xlCat }) => {
@@ -65,22 +66,27 @@ const XlCoursesCategories = ({ cat, xlCat }) => {
                       </div>
                     </div>
                   </div>
-                  <div className="mt-6 flex items-center">
-                    <div className="">
-                      <p className="font-semibold text-base leading-6 text-gray-800">
-                        {elem.node.frontmatter.price !== 0
-                          ? `$` + elem.node.frontmatter.price
-                          : `Free`}
-                      </p>
+                  <div className="mt-6 flex flex-col">
+                    <p className="self-start font-semibold text-base leading-6 text-gray-800">
+                      {elem.node.frontmatter.price !== 0
+                        ? `$` + elem.node.frontmatter.price
+                        : `Free`}
+                    </p>
+                    <div className="flex items-center mt-1">
                       <p
                         className={
                           elem.node.frontmatter.bestseller
-                            ? "-ml-1 mt-1 px-2 py-1 bg-yellow-200 text-yellow-800 text-sm font-semibold inline-flex rounded-md"
+                            ? "-ml-1 px-2 mr-2 py-1 bg-yellow-200 text-yellow-800 text-sm font-semibold mb-2 rounded-md"
                             : "hidden"
                         }
                       >
                         Bestseller
                       </p>
+                      <DevGadgetsChoice
+                        devgadgets_choice={
+                          elem.node.frontmatter.devgadgets_choice
+                        }
+                      />
                     </div>
                   </div>
                 </Link>
