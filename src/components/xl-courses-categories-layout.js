@@ -38,7 +38,7 @@ const XlCoursesCategories = ({ cat, xlCat }) => {
                 </div>
 
                 <Link
-                  className="flex-1 bg-white p-6 flex flex-col justify-between"
+                  className="flex-1 bg-white p-6 flex flex-col"
                   to={elem.node.fields.slug}
                 >
                   <div className="flex-1">
