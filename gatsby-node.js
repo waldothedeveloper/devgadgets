@@ -4,6 +4,9 @@ const path = require(`path`)
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
   const blogPostTemplate = path.resolve(`src/templates/blogPostTemplate.js`)
+  const instructorsTemplate = path.resolve(
+    `src/templates/instructorsTemplate.js`
+  )
 
   return graphql(`
     {
@@ -14,6 +17,12 @@ exports.createPages = ({ actions, graphql }) => {
             title
             last_updated(formatString: "YYYY MMMM Do")
             author
+            name
+            instructor
+            about
+            image {
+              publicURL
+            }
             article_category
             category
             the_gist
@@ -51,15 +60,23 @@ exports.createPages = ({ actions, graphql }) => {
 
     // create page for each mdx file
     posts.forEach(node => {
-      // console.log("node: ", node)
-      createPage({
-        path: node.fields.slug,
-        component: blogPostTemplate,
-        context: {
-          slug: node.fields.slug,
-          category: node.frontmatter.article_category,
-        },
-      })
+      if (node.frontmatter.instructor) {
+        createPage({
+          path: node.fields.slug,
+          component: instructorsTemplate,
+          context: {
+            slug: node.fields.slug,
+          },
+        })
+      } else {
+        createPage({
+          path: node.fields.slug,
+          component: blogPostTemplate,
+          context: {
+            slug: node.fields.slug,
+          },
+        })
+      }
     })
   })
 }

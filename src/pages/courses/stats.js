@@ -2,7 +2,7 @@ import React from "react"
 
 const CoursesStats = () => {
   return (
-    <div className="mt-12 mb-2 bg-teal-800">
+    <div className="mt-4 mb-2 bg-teal-800">
       <div className="max-w-screen-xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 lg:py-20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl  leading-9  text-white sm:leading-10">

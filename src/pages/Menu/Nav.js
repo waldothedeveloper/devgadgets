@@ -49,7 +49,7 @@ const Nav = () => {
             <button
               onClick={handleMenuMobile}
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-teal-400 hover:text-teal-500 hover:bg-teal-100 focus:outline-none focus:bg-teal-100 focus:text-gray-500 transition duration-150 ease-in-out"
+              className="inline-flex items-center justify-center p-2 rounded-md text-teal-400 hover:text-teal-400 hover:bg-teal-100 focus:outline-none focus:bg-teal-100 focus:text-gray-500 transition duration-150 ease-in-out"
             >
               <svg
                 className="h-6 w-6"
@@ -74,12 +74,12 @@ const Nav = () => {
                   ref={ref}
                   onClick={handleGadgets}
                   type="button"
-                  className="group text-gray-500 inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
+                  className="group text-gray-500 inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-teal-400 focus:outline-none focus:text-teal-500 transition ease-in-out duration-150"
                 >
                   <span>Gadgets</span>
 
                   <svg
-                    className="text-gray-400 h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150"
+                    className="text-gray-400 h-5 w-5 group-hover:text-teal-400 group-focus:text-teal-500 transition ease-in-out duration-150"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                   >
@@ -264,13 +264,21 @@ const Nav = () => {
                   </div>
                 </Transition>
               </div>
-              <button className="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+              <Link
+                state={{ featCategory: "books" }}
+                to="/books/all"
+                className="text-base leading-6 font-medium text-gray-500 hover:text-teal-400 focus:outline-none focus:text-teal-500 transition ease-in-out duration-150"
+              >
                 Books
-              </button>
-              <button className="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+              </Link>
+              <Link
+                to="/courses/all"
+                state={{ featCategory: "courses" }}
+                className="text-base leading-6 font-medium text-gray-500 hover:text-teal-400 focus:outline-none focus:text-teal-500 transition ease-in-out duration-150"
+              >
                 Courses
-              </button>
-              <button className="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+              </Link>
+              <button className="text-base leading-6 font-medium text-gray-500 hover:text-teal-400 focus:outline-none focus:text-teal-500 transition ease-in-out duration-150">
                 Lifestyle
               </button>
 
@@ -279,12 +287,12 @@ const Nav = () => {
                   ref={ref2}
                   onClick={handleMore}
                   type="button"
-                  className="group text-gray-500 inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
+                  className="group text-gray-500 inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-teal-400 focus:outline-none focus:text-teal-500 transition ease-in-out duration-150"
                 >
                   <span>More</span>
 
                   <svg
-                    className="text-gray-400 h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150"
+                    className="text-gray-400 h-5 w-5 group-hover:text-teal-400 group-focus:text-teal-500 transition ease-in-out duration-150"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                   >
@@ -390,7 +398,7 @@ const Nav = () => {
                       <button
                         onClick={handleMenuMobile}
                         type="button"
-                        className="inline-flex items-center justify-center p-2 rounded-md text-teal-400 hover:text-teal-500 hover:bg-teal-100 focus:outline-none focus:bg-teal-100 focus:text-gray-500 transition duration-150 ease-in-out"
+                        className="inline-flex items-center justify-center p-2 rounded-md text-teal-400 hover:text-teal-400 hover:bg-teal-100 focus:outline-none focus:bg-teal-100 focus:text-gray-500 transition duration-150 ease-in-out"
                       >
                         <svg
                           className="h-6 w-6"
@@ -515,13 +523,21 @@ const Nav = () => {
                 </div>
                 <div className="py-6 px-5 space-y-6">
                   <div className="grid grid-cols-2 gap-4">
-                    <button className="text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150">
+                    <Link
+                      state={{ featCategory: "books" }}
+                      to="/books/all"
+                      className="text-base leading-6 font-medium text-gray-900 hover:text-teal-400 transition ease-in-out duration-150"
+                    >
                       Books
-                    </button>
-                    <button className="text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150">
+                    </Link>
+                    <Link
+                      to="/courses/all"
+                      state={{ featCategory: "courses" }}
+                      className="text-base leading-6 font-medium text-gray-900 hover:text-teal-400 transition ease-in-out duration-150"
+                    >
                       Courses
-                    </button>
-                    <button className="text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150">
+                    </Link>
+                    <button className="text-base leading-6 font-medium text-gray-900 hover:text-teal-400 transition ease-in-out duration-150">
                       Lifestyle
                     </button>
                   </div>

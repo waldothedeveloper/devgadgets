@@ -26,7 +26,7 @@ const Banner = () => {
               <div className="pr-16 sm:text-center sm:px-16">
                 <p className="font-medium text-white">
                   <span className="font-bold text-orange-500">
-                    #BLACKLIVESMATTER &nbsp; &nbsp;
+                    #BLACKLIVESMATTER &nbsp;
                   </span>
                   <span className="inline">
                     It is time to come together and united as one human race.

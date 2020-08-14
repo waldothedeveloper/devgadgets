@@ -77,7 +77,7 @@ const CoursesCategoriesLayout = () => {
   return (
     <div>
       <div>
-        <div className="sm:hidden">
+        <div className="sm:hidden border-b border-gray-400">
           <div className="w-full">
             {toogle.map(elem => (
               <div key={elem.id}>
@@ -118,7 +118,7 @@ const CoursesCategoriesLayout = () => {
               <button
                 key={elem.id}
                 onClick={() => setXlCategory(elem.cat)}
-                className="w-1/4 py-4 px-1 text-center border-b-2 border-transparent font-medium text-sm leading-5 text-teal-500 hover:text-teal-400 hover:border-teal-100 focus:outline-none focus:text-teal-700 focus:border-teal-400"
+                className="w-1/4 py-4 px-1 text-center border-b-2 border-transparent font-medium text-sm leading-5 text-gray-500 hover:text-teal-400 hover:border-teal-100 focus:outline-none focus:text-teal-500 focus:border-teal-300"
               >
                 {elem.cat}
               </button>
@@ -131,7 +131,4 @@ const CoursesCategoriesLayout = () => {
   )
 }
 
-CoursesCategoriesLayout.propTypes = {
-  //
-}
 export default CoursesCategoriesLayout

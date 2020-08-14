@@ -42,6 +42,9 @@ module.exports = {
       options: {
         extensions: [".mdx", ".md"],
         defaultLayouts: {
+          instructors: require.resolve(
+            "./src/templates/instructorsTemplate.js"
+          ),
           default: require.resolve("./src/templates/blogPostTemplate.js"),
         },
       },

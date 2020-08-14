@@ -45,7 +45,7 @@ const ShareArticle = ({ frontmatter, fields }) => {
             target="_blank"
             rel="noreferrer"
             data-size="large"
-            href={`https://twitter.com/intent/tweet?text=Check%20out%20this%20cool%20article%20of%20Devgadgets:%20"${frontmatter.title}"%20https://www.devgadgets.com${fields.slug}`}
+            href={`https://twitter.com/intent/tweet?text=Check%20out%20this%20cool%20article%20of%20Devgadgets:%20"${frontmatter.title}"%20https://www.devgadgets.io${fields.slug}`}
             className="ml-6 text-gray-400 hover:text-teal-500"
           >
             <span className="sr-only">Twitter</span>
@@ -59,7 +59,7 @@ const ShareArticle = ({ frontmatter, fields }) => {
           </a>
           {/* Share on email or something */}
           <a
-            href={`mailto:?subject=Hi, check out this cool article of Devgadgets&amp;body=${frontmatter.title}%20https://www.devgadgets.com${fields.slug}`}
+            href={`mailto:?subject=Hi, check out this cool article of Devgadgets&amp;body=${frontmatter.title}%20https://www.devgadgets.io${fields.slug}`}
             title="Share by Email"
             className="ml-6 text-gray-400 hover:text-teal-500"
           >
