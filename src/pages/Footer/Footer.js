@@ -2,9 +2,12 @@ import React from "react"
 import logo from "../../images/logo-teal-3.svg"
 import { Link } from "gatsby"
 import { motion } from "framer-motion"
-
+import { useGetInstructors } from "../../hooks/use-get-instructors"
+import PropTypes from "prop-types"
 //
 const Footer = () => {
+  const data = useGetInstructors()
+
   return (
     <div className="bg-gray-800">
       <div className="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
@@ -268,11 +271,6 @@ const Footer = () => {
                   </li>
                   <li className="mt-4">
                     <button className="text-base leading-6 text-gray-400 hover:text-gray-300">
-                      Wes Bos
-                    </button>
-                  </li>
-                  <li className="mt-4">
-                    <button className="text-base leading-6 text-gray-400 hover:text-gray-300">
                       Udemy
                     </button>
                   </li>
@@ -281,16 +279,23 @@ const Footer = () => {
                       FrontEndMasters
                     </button>
                   </li>
-                  <li className="mt-4">
-                    <button className="text-base leading-6 text-gray-400 hover:text-gray-300">
-                      Tyler McGinnis
-                    </button>
-                  </li>
+
                   <li className="mt-4">
                     <button className="text-base leading-6 text-gray-400 hover:text-gray-300">
                       Udacity
                     </button>
                   </li>
+                  {/* Have in mind that if you keep adding instructors you will need to refactor this UI soon */}
+                  {data.map(elem => (
+                    <li key={elem.node.id} className="mt-4">
+                      <Link
+                        to={elem.node.fields.slug}
+                        className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                      >
+                        {elem.node.frontmatter.name}
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
               <div className="mt-12 md:mt-0">
@@ -298,11 +303,6 @@ const Footer = () => {
                   Legal
                 </h4>
                 <ul className="mt-4">
-                  {/* <li>
-                    <button className="text-base leading-6 text-gray-400 hover:text-gray-300">
-                      All
-                    </button>
-                  </li> */}
                   <li className="mt-4">
                     <Link
                       to="/privacy-policy"
@@ -326,4 +326,7 @@ const Footer = () => {
   )
 }
 
+Footer.propTypes = {
+  data: PropTypes.array,
+}
 export default Footer
