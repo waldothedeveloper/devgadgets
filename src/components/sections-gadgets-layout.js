@@ -19,7 +19,7 @@ const SectionGadgetsLayout = ({ section }) => {
   }
 
   React.useEffect(() => {
-    const sub = section.subCategory
+    const sub = section.subCategory ? section.subCategory : "All"
 
     if (sub && sub === "Keyboards") {
       setArticleCat(sub)

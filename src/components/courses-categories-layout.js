@@ -122,7 +122,7 @@ const CoursesCategoriesLayout = () => {
                 className={
                   elem.cat === xlCategory
                     ? `btn-active focus:outline-none active:outline-none`
-                    : `btn-inactive focus:outline-none`
+                    : `btn-inactive focus:outline-none hover:text-teal-300 hover:border-teal-100`
                 }
               >
                 {elem.cat}

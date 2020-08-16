@@ -168,30 +168,85 @@ const Footer = () => {
                     <Link
                       className="text-base leading-6 text-gray-400 hover:text-gray-300"
                       to="/books/all"
-                      state={{ featCategory: "books" }}
+                      state={{
+                        featCategory: "books",
+                        subCategory: "All",
+                      }}
                     >
                       All
                     </Link>
                   </li>
                   <li className="mt-4">
-                    <button className="text-base leading-6 text-gray-400 hover:text-gray-300">
+                    <Link
+                      to="/books/all"
+                      state={{
+                        featCategory: "books",
+                        subCategory: "Javascript",
+                      }}
+                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                    >
                       Javascript
-                    </button>
+                    </Link>
                   </li>
                   <li className="mt-4">
-                    <button className="text-base leading-6 text-gray-400 hover:text-gray-300">
+                    <Link
+                      to="/books/all"
+                      state={{
+                        featCategory: "books",
+                        subCategory: "Ruby",
+                      }}
+                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                    >
                       Ruby
-                    </button>
+                    </Link>
                   </li>
                   <li className="mt-4">
-                    <button className="text-base leading-6 text-gray-400 hover:text-gray-300">
+                    <Link
+                      to="/books/all"
+                      state={{
+                        featCategory: "books",
+                        subCategory: "Python",
+                      }}
+                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                    >
                       Python
-                    </button>
+                    </Link>
                   </li>
                   <li className="mt-4">
-                    <button className="text-base leading-6 text-gray-400 hover:text-gray-300">
-                      AWS
-                    </button>
+                    <Link
+                      to="/books/all"
+                      state={{
+                        featCategory: "books",
+                        subCategory: "C#",
+                      }}
+                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                    >
+                      C#
+                    </Link>
+                  </li>
+                  <li className="mt-4">
+                    <Link
+                      to="/books/all"
+                      state={{
+                        featCategory: "books",
+                        subCategory: "React",
+                      }}
+                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                    >
+                      React
+                    </Link>
+                  </li>
+                  <li className="mt-4">
+                    <Link
+                      to="/books/all"
+                      state={{
+                        featCategory: "books",
+                        subCategory: "SQL",
+                      }}
+                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                    >
+                      SQL
+                    </Link>
                   </li>
                 </ul>
               </div>

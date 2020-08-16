@@ -22,7 +22,7 @@ const Sections = ({ section }) => {
       return (
         <>
           <Nav />
-          <BooksSectionLayout />
+          <BooksSectionLayout section={section} />
           <Footer />
         </>
       )

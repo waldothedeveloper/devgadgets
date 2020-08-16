@@ -14,9 +14,8 @@ export const subCategoryBooks = [
   { category: "Ruby", category_color: "red" },
   { category: "Python", category_color: "blue" },
   { category: "C#", category_color: "orange" },
-  { category: "Rust", category_color: "green" },
   { category: "React", category_color: "pink" },
-  { category: "SQL", category_color: "purple" },
+  { category: "SQL", category_color: "green" },
 ]
 
 export const subCategoryCourses = [
