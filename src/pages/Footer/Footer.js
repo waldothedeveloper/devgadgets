@@ -311,6 +311,14 @@ const Footer = () => {
                       Privacy Policy
                     </Link>
                   </li>
+                  <li className="mt-4">
+                    <Link
+                      to="/earnings-disclaimer"
+                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                    >
+                      Afilliate Disclosure
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>
