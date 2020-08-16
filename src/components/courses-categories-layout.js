@@ -5,6 +5,7 @@ import ChevronUp from "./chevron-up"
 import ChevronDown from "./chevron-down"
 import { useGetAllCoursesArticles } from "../hooks/use-get-all-courses-articles"
 import XlCoursesCategories from "./xl-courses-categories-layout"
+import shortid from "shortid"
 
 const CoursesCategoriesLayout = () => {
   const data = useGetAllCoursesArticles()
@@ -28,13 +29,13 @@ const CoursesCategoriesLayout = () => {
       {
         cat: "AWS",
         open: true,
-        id: "450ergndf",
+        id: shortid.generate(),
         data: data.filter(elem => elem.node.frontmatter.category === "AWS"),
       },
       {
         cat: "Javascript",
         open: false,
-        id: "dfg09u8dfgn",
+        id: shortid.generate(),
         data: data.filter(
           elem => elem.node.frontmatter.category === "Javascript"
         ),
@@ -42,13 +43,13 @@ const CoursesCategoriesLayout = () => {
       {
         cat: "Python",
         open: false,
-        id: "sdfs0df9807asd",
+        id: shortid.generate(),
         data: data.filter(elem => elem.node.frontmatter.category === "Python"),
       },
       {
         cat: "Web Development",
         open: false,
-        id: "dfg097hfdgjkbdfg98usxvxcxvcv",
+        id: shortid.generate(),
         data: data.filter(
           elem => elem.node.frontmatter.category === "Web Development"
         ),
@@ -56,7 +57,7 @@ const CoursesCategoriesLayout = () => {
       {
         cat: "Algorithms & Data Structures",
         open: false,
-        id: "dfg098077766fdgdg6d782397234",
+        id: shortid.generate(),
         data: data.filter(
           elem =>
             elem.node.frontmatter.category === "Algorithms & Data Structures"
@@ -65,7 +66,7 @@ const CoursesCategoriesLayout = () => {
       {
         cat: "Developer Job Interviews",
         open: false,
-        id: "dfg98723424bdsfikodsh8",
+        id: shortid.generate(),
         data: data.filter(
           elem => elem.node.frontmatter.category === "Developer Job Interviews"
         ),
@@ -118,7 +119,11 @@ const CoursesCategoriesLayout = () => {
               <button
                 key={elem.id}
                 onClick={() => setXlCategory(elem.cat)}
-                className="w-1/4 py-4 px-1 text-center border-b-2 border-transparent font-medium text-sm leading-5 text-gray-500 hover:text-teal-400 hover:border-teal-100 focus:outline-none focus:text-teal-500 focus:border-teal-300"
+                className={
+                  elem.cat === xlCategory
+                    ? `btn-active focus:outline-none active:outline-none`
+                    : `btn-inactive focus:outline-none`
+                }
               >
                 {elem.cat}
               </button>

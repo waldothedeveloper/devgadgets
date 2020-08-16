@@ -105,11 +105,11 @@ const Nav = () => {
                       <div className="rounded-lg shadow-xs overflow-hidden">
                         <div className="z-50 relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
                           <Link
-                            to="/gadgets/all"
                             state={{
-                              navCategory: "gadgets",
-                              navSubCategory: "Keyboards",
+                              featCategory: "gadgets",
+                              subCategory: "Keyboards",
                             }}
+                            to="/gadgets/all"
                             className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                           >
                             <img
@@ -128,11 +128,11 @@ const Nav = () => {
                             </div>
                           </Link>
                           <Link
-                            to="/gadgets/all"
                             state={{
-                              navCategory: "gadgets",
-                              navSubCategory: "Headphones",
+                              featCategory: "gadgets",
+                              subCategory: "Headphones",
                             }}
+                            to="/gadgets/all"
                             className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                           >
                             <img
@@ -151,11 +151,11 @@ const Nav = () => {
                             </div>
                           </Link>
                           <Link
-                            to="/gadgets/all"
                             state={{
-                              navCategory: "gadgets",
-                              navSubCategory: "Monitors",
+                              featCategory: "gadgets",
+                              subCategory: "Monitors",
                             }}
+                            to="/gadgets/all"
                             className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                           >
                             <img
@@ -174,11 +174,11 @@ const Nav = () => {
                             </div>
                           </Link>
                           <Link
-                            to="/gadgets/all"
                             state={{
-                              navCategory: "gadgets",
-                              navSubCategory: "Iot",
+                              featCategory: "gadgets",
+                              subCategory: "Iot",
                             }}
+                            to="/gadgets/all"
                             className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                           >
                             <img
@@ -197,11 +197,11 @@ const Nav = () => {
                             </div>
                           </Link>
                           <Link
-                            to="/gadgets/all"
                             state={{
-                              navCategory: "gadgets",
-                              navSubCategory: "Office",
+                              featCategory: "gadgets",
+                              subCategory: "Office",
                             }}
+                            to="/gadgets/all"
                             className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                           >
                             <img
@@ -220,11 +220,11 @@ const Nav = () => {
                             </div>
                           </Link>
                           <Link
-                            to="/gadgets/all"
                             state={{
-                              navCategory: "gadgets",
-                              navSubCategory: "Usb",
+                              featCategory: "gadgets",
+                              subCategory: "Usb",
                             }}
+                            to="/gadgets/all"
                             className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                           >
                             <img
@@ -421,8 +421,8 @@ const Nav = () => {
                       <Link
                         to="/gadgets/all"
                         state={{
-                          navCategory: "gadgets",
-                          navSubCategory: "keyboards",
+                          featCategory: "gadgets",
+                          subCategory: "Keyboards",
                         }}
                         className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
                       >
@@ -439,8 +439,8 @@ const Nav = () => {
                       <Link
                         to="/gadgets/all"
                         state={{
-                          navCategory: "gadgets",
-                          navSubCategory: "headphones",
+                          featCategory: "gadgets",
+                          subCategory: "Headphones",
                         }}
                         className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
                       >
@@ -457,8 +457,8 @@ const Nav = () => {
                       <Link
                         to="/gadgets/all"
                         state={{
-                          navCategory: "gadgets",
-                          navSubCategory: "monitors",
+                          featCategory: "gadgets",
+                          subCategory: "Monitors",
                         }}
                         className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
                       >
@@ -475,8 +475,8 @@ const Nav = () => {
                       <Link
                         to="/gadgets/all"
                         state={{
-                          navCategory: "gadgets",
-                          navSubCategory: "iot",
+                          featCategory: "gadgets",
+                          subCategory: "Iot",
                         }}
                         className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
                       >
@@ -489,8 +489,8 @@ const Nav = () => {
                       <Link
                         to="/gadgets/all"
                         state={{
-                          navCategory: "gadgets",
-                          navSubCategory: "office",
+                          featCategory: "gadgets",
+                          subCategory: "Office",
                         }}
                         className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
                       >
@@ -503,8 +503,8 @@ const Nav = () => {
                       <Link
                         to="/gadgets/all"
                         state={{
-                          navCategory: "gadgets",
-                          navSubCategory: "usb",
+                          featCategory: "gadgets",
+                          subCategory: "Usb",
                         }}
                         className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
                       >
@@ -524,8 +524,8 @@ const Nav = () => {
                 <div className="py-6 px-5 space-y-6">
                   <div className="grid grid-cols-2 gap-4">
                     <Link
-                      state={{ featCategory: "books" }}
                       to="/books/all"
+                      state={{ featCategory: "books" }}
                       className="text-base leading-6 font-medium text-gray-900 hover:text-teal-400 transition ease-in-out duration-150"
                     >
                       Books

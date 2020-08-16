@@ -8,7 +8,6 @@ import PropTypes from "prop-types"
 const SectionGadgetsLayout = ({ section }) => {
   const data = useGetAllGadgetsArticles()
   const secCategory = UseReturnCategory(section)
-
   const [articleCat, setArticleCat] = React.useState("All")
 
   const handleCategory = cat => {
@@ -18,6 +17,26 @@ const SectionGadgetsLayout = ({ section }) => {
   const handleSelectCategory = event => {
     setArticleCat(event.target.value)
   }
+
+  React.useEffect(() => {
+    const sub = section.subCategory
+
+    if (sub && sub === "Keyboards") {
+      setArticleCat(sub)
+    } else if (sub && sub === "Headphones") {
+      setArticleCat(sub)
+    } else if (sub && sub === "Monitors") {
+      setArticleCat(sub)
+    } else if (sub && sub === "Iot") {
+      setArticleCat(sub)
+    } else if (sub && sub === "Office") {
+      setArticleCat(sub)
+    } else if (sub && sub === "Usb") {
+      setArticleCat(sub)
+    } else {
+      setArticleCat("All")
+    }
+  }, [section])
 
   //
   return (
@@ -42,17 +61,17 @@ const SectionGadgetsLayout = ({ section }) => {
                 className="form-select block w-full"
               >
                 <option value="All">All</option>
-                <option value="keyboards">Keyboards</option>
-                <option value="headphones">Headphones</option>
-                <option value="monitors">Monitors</option>
-                <option value="iot">IOT</option>
-                <option value="office">Office</option>
-                <option value="usb">USB</option>
+                <option value="Keyboards">Keyboards</option>
+                <option value="Headphones">Headphones</option>
+                <option value="Monitors">Monitors</option>
+                <option value="Iot">IOT</option>
+                <option value="Office">Office</option>
+                <option value="Usb">USB</option>
               </select>
             </div>
             <ArticlesGadgetsLayout data={data} articleCat={articleCat} />
           </div>
-          <div className="md:w-4/12  lg:w-3/12">
+          <div className="md:w-4/12 lg:w-3/12">
             <CategoriesGadgetsLayout
               articleCat={articleCat}
               handleCategory={handleCategory}

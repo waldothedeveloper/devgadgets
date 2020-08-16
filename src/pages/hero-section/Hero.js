@@ -26,14 +26,15 @@ const Hero = () => {
 
             <p className="pr-6 md:p-0 mt-3 text-base text-gray-600 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl lg:text-center">
               the{" "}
-              <motion.button
-                whileTap={{ scale: 0.9 }}
-                ref={ref}
-                onClick={() => setOpen(!open)}
-                className="inline-block text-orange-500 font-semibold underline focus:outline-none"
-              >
-                technology blog
-              </motion.button>{" "}
+              <span ref={ref}>
+                <motion.button
+                  whileTap={{ scale: 0.9 }}
+                  onClick={() => setOpen(!open)}
+                  className="inline-block text-orange-500 font-semibold underline focus:outline-none"
+                >
+                  technology blog
+                </motion.button>{" "}
+              </span>
               that developers & technology enthusiasts{` `}
               <span className="text-orange-500 font-semibold">#love</span>
               <span className="-mb-2 inline-block align-baseline">

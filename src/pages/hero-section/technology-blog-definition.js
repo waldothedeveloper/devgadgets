@@ -15,7 +15,7 @@ const TechnologyBlogDefinition = ({ open }) => {
       leaveTo="opacity-0"
     >
       <div className="relative">
-        <div className="absolute transform translate-x-3/12 -mt-6 -ml-16 md:mt-1 md:ml-4 px-2 w-screen max-w-xs sm:px-0">
+        <div className="absolute transform translate-x-3/12 -mt-6 -ml-16 md:mt-1 md:-ml-10 lg:ml-6 px-2 w-screen max-w-xs sm:px-0">
           <div className="rounded-lg shadow-lg">
             <div className="rounded-lg shadow-xs overflow-hidden">
               <div className="bg-gray-700 z-20 relative px-6 py-6">

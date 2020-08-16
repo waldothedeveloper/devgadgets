@@ -76,18 +76,22 @@ const Footer = () => {
                   Gadgets
                 </h4>
                 <ul className="mt-4">
-                  {/* <li>
-                    <button className="text-base leading-6 text-gray-400 hover:text-gray-300">
+                  <li>
+                    <Link
+                      state={{ featCategory: "gadgets" }}
+                      to="/gadgets/all"
+                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                    >
                       All
-                    </button>
-                  </li> */}
+                    </Link>
+                  </li>
                   <li className="mt-4">
                     <Link
-                      to="/gadgets/all"
                       state={{
-                        navCategory: "gadgets",
-                        navSubCategory: "Keyboards",
+                        featCategory: "gadgets",
+                        subCategory: "Keyboards",
                       }}
+                      to="/gadgets/all"
                       className="text-base leading-6 text-gray-400 hover:text-gray-300"
                     >
                       Keyboards
@@ -95,11 +99,11 @@ const Footer = () => {
                   </li>
                   <li className="mt-4">
                     <Link
-                      to="/gadgets/all"
                       state={{
-                        navCategory: "gadgets",
-                        navSubCategory: "Headphones",
+                        featCategory: "gadgets",
+                        subCategory: "Headphones",
                       }}
+                      to="/gadgets/all"
                       className="text-base leading-6 text-gray-400 hover:text-gray-300"
                     >
                       Headphones
@@ -107,11 +111,11 @@ const Footer = () => {
                   </li>
                   <li className="mt-4">
                     <Link
-                      to="/gadgets/all"
                       state={{
-                        navCategory: "gadgets",
-                        navSubCategory: "Iot",
+                        featCategory: "gadgets",
+                        subCategory: "Iot",
                       }}
+                      to="/gadgets/all"
                       className="text-base leading-6 text-gray-400 hover:text-gray-300"
                     >
                       IOT Devices
@@ -119,11 +123,11 @@ const Footer = () => {
                   </li>
                   <li className="mt-4">
                     <Link
-                      to="/gadgets/all"
                       state={{
-                        navCategory: "gadgets",
-                        navSubCategory: "Monitors",
+                        featCategory: "gadgets",
+                        subCategory: "Monitors",
                       }}
+                      to="/gadgets/all"
                       className="text-base leading-6 text-gray-400 hover:text-gray-300"
                     >
                       Monitors
@@ -131,11 +135,11 @@ const Footer = () => {
                   </li>
                   <li className="mt-4">
                     <Link
-                      to="/gadgets/all"
                       state={{
-                        navCategory: "gadgets",
-                        navSubCategory: "Office",
+                        featCategory: "gadgets",
+                        subCategory: "Office",
                       }}
+                      to="/gadgets/all"
                       className="text-base leading-6 text-gray-400 hover:text-gray-300"
                     >
                       Office Products
@@ -143,11 +147,11 @@ const Footer = () => {
                   </li>
                   <li className="mt-4">
                     <Link
-                      to="/gadgets/all"
                       state={{
-                        navCategory: "gadgets",
-                        navSubCategory: "Usb",
+                        featCategory: "gadgets",
+                        subCategory: "Usb",
                       }}
+                      to="/gadgets/all"
                       className="text-base leading-6 text-gray-400 hover:text-gray-300"
                     >
                       USB Devices
@@ -160,11 +164,15 @@ const Footer = () => {
                   Books
                 </h4>
                 <ul className="mt-4">
-                  {/* <li>
-                    <button className="text-base leading-6 text-gray-400 hover:text-gray-300">
+                  <li>
+                    <Link
+                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                      to="/books/all"
+                      state={{ featCategory: "books" }}
+                    >
                       All
-                    </button>
-                  </li> */}
+                    </Link>
+                  </li>
                   <li className="mt-4">
                     <button className="text-base leading-6 text-gray-400 hover:text-gray-300">
                       Javascript
@@ -194,11 +202,15 @@ const Footer = () => {
                   Courses
                 </h4>
                 <ul className="mt-4">
-                  {/* <li>
-                    <button className="text-base leading-6 text-gray-400 hover:text-gray-300">
+                  <li>
+                    <Link
+                      to="/courses/all"
+                      state={{ featCategory: "courses" }}
+                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                    >
                       All
-                    </button>
-                  </li> */}
+                    </Link>
+                  </li>
                   <li className="mt-4">
                     <button className="text-base leading-6 text-gray-400 hover:text-gray-300">
                       Wes Bos
@@ -228,7 +240,7 @@ const Footer = () => {
               </div>
               <div className="mt-12 md:mt-0">
                 <h4 className="text-sm leading-5 font-semibold tracking-wider text-teal-400 uppercase">
-                  LifeStyle
+                  Legal
                 </h4>
                 <ul className="mt-4">
                   {/* <li>
@@ -237,19 +249,12 @@ const Footer = () => {
                     </button>
                   </li> */}
                   <li className="mt-4">
-                    <button className="text-base leading-6 text-gray-400 hover:text-gray-300">
-                      Daily tips
-                    </button>
-                  </li>
-                  <li className="mt-4">
-                    <button className="text-base leading-6 text-gray-400 hover:text-gray-300">
-                      Exercise
-                    </button>
-                  </li>
-                  <li className="mt-4">
-                    <button className="text-base leading-6 text-gray-400 hover:text-gray-300">
-                      Eating
-                    </button>
+                    <Link
+                      to="/privacy-policy"
+                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                    >
+                      Privacy Policy
+                    </Link>
                   </li>
                 </ul>
               </div>

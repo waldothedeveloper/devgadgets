@@ -7,7 +7,7 @@ module.exports = {
       "The #1 gadgets resource for developers and technology enthusiasts.",
     author: "@waldothedeveloper",
     copyright: "Copyright © 2020 Dev Gadgets. All rights reserved",
-    siteUrl: "https://devgadgets.com",
+    siteUrl: "https://devgadgets.io",
     keywords: [
       "Technology Gadgets",
       "Gadgets",
@@ -19,6 +19,21 @@ module.exports = {
     ],
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-mailchimp",
+      options: {
+        endpoint:
+          "https://waldolavaut.us10.list-manage.com/subscribe/post?u=22377aca679801284569b9bce&amp;id=5596b856f1",
+        timeout: 3500,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
+        trackingId: "UA-59759762-6",
+      },
+    },
     {
       resolve: "gatsby-plugin-eslint",
       env: {
