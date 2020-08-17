@@ -49,9 +49,7 @@ const FeaturedGadgets = () => {
               <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                 <div className="flex-1">
                   <p className="text-sm leading-5 font-medium text-teal-600">
-                    <button className="hover:underline">
-                      {content.node.frontmatter.category}
-                    </button>
+                    {content.node.frontmatter.category}
                   </p>
                   <Link to={content.node.fields.slug} className="block">
                     <h3 className="mt-2 text-xl leading-7 font-semibold text-gray-900">

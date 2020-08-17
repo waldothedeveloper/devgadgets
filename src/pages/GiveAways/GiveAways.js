@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 
 const GiveAways = () => {
   return (
-    <div className="relative bg-gray-700">
+    <div className="relative bg-teal-700">
       <div className="h-64 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
         <img
           className="w-full h-full object-cover"

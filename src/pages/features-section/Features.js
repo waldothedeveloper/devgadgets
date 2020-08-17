@@ -48,7 +48,7 @@ const Features = () => {
                       to="/gadgets/all"
                       className="text-base leading-6 font-semibold text-teal-600 hover:text-orange-500 transition ease-in-out duration-150 active:text-orange-500 focus:text-orange-500 focus:outline-none"
                     >
-                      Learn more
+                      Discover gadgets
                     </Link>
                   </div>
                 </div>
@@ -74,7 +74,7 @@ const Features = () => {
                       to="/books/all"
                       className="text-base leading-6 font-semibold text-teal-600 hover:text-orange-500 transition ease-in-out duration-150 active:text-orange-500 focus:text-orange-500 focus:outline-none"
                     >
-                      Learn more
+                      Discover books
                     </Link>
                   </div>
                 </div>
@@ -104,13 +104,13 @@ const Features = () => {
                       state={{ featCategory: "courses" }}
                       className="text-base leading-6 font-semibold text-teal-600 hover:text-orange-500 transition ease-in-out duration-150 active:text-orange-500 focus:text-orange-500 focus:outline-none"
                     >
-                      Learn more
+                      Discover courses
                     </Link>
                   </div>
                 </div>
               </div>
             </li>
-            <li className="mt-10 md:mt-0">
+            {/* <li className="mt-10 md:mt-0">
               <div className="flex">
                 <div className="flex-shrink-0">
                   <img src={coffee} alt="smart watch" className="h-16 w-auto" />
@@ -126,16 +126,16 @@ const Features = () => {
                   </p>
                   <div className="mt-3">
                     <Link
-                      to="/books/all"
+                      to="/lifestyle/all"
                       state={{ featCategory: "lifestyle" }}
                       className="text-base leading-6 font-semibold text-teal-600 hover:text-orange-500 transition ease-in-out duration-150 active:text-orange-500 focus:text-orange-500 focus:outline-none"
                     >
-                      Learn more
+                      Discover more
                     </Link>
                   </div>
                 </div>
               </div>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

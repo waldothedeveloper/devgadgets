@@ -188,7 +188,7 @@ const EarningsDisclaimer = () => {
               A few of the affiliate programs DevGadgets is currently enrolled
               include:
             </p>
-            <ul className="text-teal-500">
+            <ul>
               <li>Udemy</li>
               <li>WesBos</li>
               <li>Amazon</li>

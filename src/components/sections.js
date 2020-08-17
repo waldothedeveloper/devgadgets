@@ -7,7 +7,8 @@ import Footer from "../pages/Footer/Footer"
 import PropTypes from "prop-types"
 //
 const Sections = ({ section }) => {
-  const category = section.featCategory
+  const category =
+    section && section.featCategory ? section.featCategory : "gadgets"
 
   switch (category) {
     case "gadgets":

@@ -278,9 +278,6 @@ const Nav = () => {
               >
                 Courses
               </Link>
-              <button className="text-base leading-6 font-medium text-gray-500 hover:text-teal-400 focus:outline-none focus:text-teal-500 transition ease-in-out duration-150">
-                Lifestyle
-              </button>
 
               <div className="relative">
                 <button
@@ -289,7 +286,7 @@ const Nav = () => {
                   type="button"
                   className="group text-gray-500 inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-teal-400 focus:outline-none focus:text-teal-500 transition ease-in-out duration-150"
                 >
-                  <span>More</span>
+                  <span>Legal</span>
 
                   <svg
                     className="text-gray-400 h-5 w-5 group-hover:text-teal-400 group-focus:text-teal-500 transition ease-in-out duration-150"
@@ -318,50 +315,29 @@ const Nav = () => {
                     <div className="rounded-lg shadow-lg">
                       <div className="rounded-lg shadow-xs overflow-hidden">
                         <div className="z-50 relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                          <button className="-m-3 p-3 block space-y-1 rounded-md hover:bg-gray-50 transition ease-in-out duration-150">
+                          <Link
+                            to="/privacy-policy"
+                            className="-m-3 p-3 block space-y-1 rounded-md hover:bg-teal-100 transition ease-in-out duration-150"
+                          >
                             <p className="text-base leading-6 font-medium text-gray-900">
-                              Blog
+                              Privacy Policy
                             </p>
-                            <p className="text-sm leading-5 text-gray-500">
-                              Learn about tips, product updates and company
-                              culture.
-                            </p>
-                          </button>
-                          <button className="-m-3 p-3 block space-y-1 rounded-md hover:bg-gray-50 transition ease-in-out duration-150">
-                            <p className="text-base leading-6 font-medium text-gray-900">
-                              Help Center
-                            </p>
-                            <p className="text-sm leading-5 text-gray-500">
-                              Get all of your questions answered in our forums
-                              of contact support.
-                            </p>
-                          </button>
-                          <button className="-m-3 p-3 block space-y-1 rounded-md hover:bg-gray-50 transition ease-in-out duration-150">
-                            <p className="text-base leading-6 font-medium text-gray-900">
-                              Guides
-                            </p>
-                            <p className="text-sm leading-5 text-gray-500">
-                              Learn how to maximize our platform to get the most
-                              out of it.
-                            </p>
-                          </button>
-                          <button className="-m-3 p-3 block space-y-1 rounded-md hover:bg-gray-50 transition ease-in-out duration-150">
-                            <p className="text-base leading-6 font-medium text-gray-900">
-                              Events
-                            </p>
-                            <p className="text-sm leading-5 text-gray-500">
-                              Check out webinars with experts and learn about
-                              our annual conference.
-                            </p>
-                          </button>
-                          <button className="-m-3 p-3 block space-y-1 rounded-md hover:bg-gray-50 transition ease-in-out duration-150">
-                            <p className="text-base leading-6 font-medium text-gray-900">
-                              Security
-                            </p>
-                            <p className="text-sm leading-5 text-gray-500">
-                              Understand how we take your privacy seriously.
-                            </p>
-                          </button>
+                          </Link>
+                          <Link
+                            to="/earnings-disclaimer"
+                            className="-m-3 p-3 block space-y-1 rounded-md hover:bg-teal-100 transition ease-in-out duration-150"
+                          >
+                            <p>Affiliate Disclosure</p>
+                          </Link>
+
+                          <a
+                            target="_blank"
+                            rel="noreferrer"
+                            href={`mailto:contact@devgadgets.io`}
+                            className="-m-3 p-3 block space-y-1 rounded-md hover:bg-teal-100 transition ease-in-out duration-150"
+                          >
+                            Contact
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -424,7 +400,7 @@ const Nav = () => {
                           featCategory: "gadgets",
                           subCategory: "Keyboards",
                         }}
-                        className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
+                        className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                       >
                         {/* keyboard mobile */}
                         <img
@@ -442,7 +418,7 @@ const Nav = () => {
                           featCategory: "gadgets",
                           subCategory: "Headphones",
                         }}
-                        className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
+                        className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                       >
                         {/* headphones mobile */}
                         <img
@@ -460,7 +436,7 @@ const Nav = () => {
                           featCategory: "gadgets",
                           subCategory: "Monitors",
                         }}
-                        className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
+                        className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                       >
                         {/* monitors mobile */}
                         <img
@@ -478,7 +454,7 @@ const Nav = () => {
                           featCategory: "gadgets",
                           subCategory: "Iot",
                         }}
-                        className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
+                        className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                       >
                         {/*  IOT Devices mobile */}
                         <img src={robot} alt="robot" className="h-12 w-auto" />
@@ -492,7 +468,7 @@ const Nav = () => {
                           featCategory: "gadgets",
                           subCategory: "Office",
                         }}
-                        className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
+                        className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                       >
                         {/* Desk Chairs mobile */}
                         <img src={truck} alt="truck" className="h-12 w-auto" />
@@ -506,7 +482,7 @@ const Nav = () => {
                           featCategory: "gadgets",
                           subCategory: "Usb",
                         }}
-                        className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
+                        className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                       >
                         {/* USB devices mobile */}
                         <img
@@ -537,9 +513,6 @@ const Nav = () => {
                     >
                       Courses
                     </Link>
-                    <button className="text-base leading-6 font-medium text-gray-900 hover:text-teal-400 transition ease-in-out duration-150">
-                      Lifestyle
-                    </button>
                   </div>
                 </div>
               </div>

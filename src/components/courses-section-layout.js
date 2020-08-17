@@ -20,9 +20,10 @@ const CoursesSectionLayout = () => {
         <h2 className="text-4xl leading-9 tracking-tight font-bold text-gray-900 sm:text-5xl sm:leading-10">
           Online Courses
         </h2>
-        <p className="mt-3 text-xl lg:max-w-md leading-7 text-teal-500 sm:mt-4">
-          Choose any topic. <br />{" "}
-          <span className="text-teal-500">We add more every month.</span>
+        <p className="mt-3 text-xl lg:max-w-md leading-7 text-gray-400 sm:mt-4">
+          Pick any topic, anytime. We add new courses every month following a
+          rigorous, curated process. To show you the best, so you can become one
+          of the best.
         </p>
       </div>
       <CoursesCategoriesLayout />

@@ -319,6 +319,16 @@ const Footer = () => {
                       Afilliate Disclosure
                     </Link>
                   </li>
+                  <li className="mt-4">
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href={`mailto:contact@devgadgets.io`}
+                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                    >
+                      Contact
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>

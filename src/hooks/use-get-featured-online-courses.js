@@ -5,18 +5,22 @@ export const useGetFeaturedOnlineCourses = () => {
     query onlineCourses {
       allMdx(
         filter: { frontmatter: { featured_course: { eq: true } } }
-        limit: 6
+        limit: 12
       ) {
         edges {
           node {
             frontmatter {
               category
+              devgadgets_choice
+              course_author
+              price
+              rating
+              rating_count
+              bestseller
               category_color
               last_updated(formatString: "ddd DD MMMM YYYY")
               title
               author
-              vendor
-              vendor_color
               featuredImage {
                 publicURL
               }
@@ -30,7 +34,6 @@ export const useGetFeaturedOnlineCourses = () => {
                 text
               }
             }
-            excerpt(pruneLength: 250)
             id
           }
         }

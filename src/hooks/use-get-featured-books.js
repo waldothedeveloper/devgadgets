@@ -5,17 +5,18 @@ export const useGetFeaturedBooks = () => {
     query bookArticles {
       allMdx(
         filter: { frontmatter: { featured_book: { eq: true } } }
-        limit: 6
+        limit: 20
       ) {
         edges {
           node {
             frontmatter {
               category
               category_color
-              last_updated(formatString: "ddd DD MMMM YYYY")
+              last_updated(formatString: "dddd DD MMMM YYYY")
               title
               author
               book_author
+              price
               featuredImage {
                 publicURL
               }

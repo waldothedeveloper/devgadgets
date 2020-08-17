@@ -10,8 +10,8 @@ import Banner from "./announcements/Banner"
 import GiveAways from "./GiveAways/GiveAways"
 import FeaturedBooks from "./books/FeaturedBooks"
 import FeaturedOnlineCourses from "./courses/Featured-Online-Courses"
-import LifestyleBanner from "./lifestyle/LifestyleBanner"
-import ContactForm from "./Contact/contact-form"
+// import LifestyleBanner from "./lifestyle/LifestyleBanner"
+// import ContactForm from "./Contact/contact-form"
 import Footer from "./Footer/Footer"
 
 const IndexPage = () => {
@@ -31,12 +31,12 @@ const IndexPage = () => {
         <Features />
         <JoinNewsletter />
         <FeaturedGadgets />
-        <GiveAways />
         <FeaturedOnlineCourses />
-        <LifestyleBanner />
         <FeaturedBooks />
+        <GiveAways />
+        {/* <LifestyleBanner /> */}
       </Layout>
-      <ContactForm />
+      {/* <ContactForm /> */}
       <Footer />
     </>
   )
