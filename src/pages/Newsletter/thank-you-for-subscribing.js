@@ -24,30 +24,39 @@ const ThankYouForSubscribing = () => {
       </div>
       <div className="relative max-w-screen-xl mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-52">
         <div className="md:ml-auto md:w-1/2 md:pl-10">
-          <h2 className="mt-2 text-white text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl sm:leading-10">
+          <h2 className="mt-2 text-teal-100 text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl sm:leading-10">
             Thank you for subscribing!{" "}
           </h2>
-          <p className="mt-3 text-lg leading-7 text-gray-300">
+          <p className="mt-3 text-lg leading-7 text-teal-100">
             Now go ahead and check your inbox for a welcome email from us{" "}
             <span role="img" aria-label="rocket">
-              🚀
+              🚀.
             </span>
-            <br />
             <br />
             If you <span className="text-orange-500">don&apos;t find</span> our
-            email in your inbox, please check your{" "}
-            <span role="img" aria-label="trash">
-              🗑️
-            </span>{" "}
-            spam folder. <br /> Once you&apos;ll open it mark it as not-spam.{" "}
-            <span role="img" aria-label="victory">
-              ✌️
-            </span>
-            <br />
-            This will ensure you will receive our future newsletters. Peace!{" "}
-            <span role="img" aria-label="unicorn">
-              🦄
-            </span>{" "}
+            email in your inbox:
+            <div className="prose prose-lg text-teal-200 mt-6">
+              <ul>
+                <li>
+                  Check your spam folder{" "}
+                  <span role="img" aria-label="trash">
+                    🗑️
+                  </span>{" "}
+                </li>
+                <li>
+                  Once you find it, mark us as not-spam.{" "}
+                  <span role="img" aria-label="victory">
+                    ✌️
+                  </span>
+                </li>
+                <li>
+                  That&apos;s it, you are ready for our future newsletters.{" "}
+                  <span role="img" aria-label="unicorn">
+                    🦄
+                  </span>{" "}
+                </li>
+              </ul>
+            </div>
           </p>
         </div>
       </div>

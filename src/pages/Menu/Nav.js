@@ -513,6 +513,26 @@ const Nav = () => {
                     >
                       Courses
                     </Link>
+                    <Link
+                      to="/privacy-policy"
+                      className="text-base leading-6 font-medium text-gray-900 hover:text-teal-400 transition ease-in-out duration-150"
+                    >
+                      Privacy Policy
+                    </Link>
+                    <Link
+                      to="/earnings-disclaimer"
+                      className="text-base leading-6 font-medium text-gray-900 hover:text-teal-400 transition ease-in-out duration-150"
+                    >
+                      Affiliate Disclosure
+                    </Link>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href={`mailto:contact@devgadgets.io`}
+                      className="text-base leading-6 font-medium text-gray-900 hover:text-teal-400 transition ease-in-out duration-150"
+                    >
+                      Contact
+                    </a>
                   </div>
                 </div>
               </div>

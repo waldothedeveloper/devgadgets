@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import smartwatch from "../../images/smart-watch.gif"
-import coffee from "../../images/coffee.gif"
+// import coffee from "../../images/coffee.gif"
 import ebook from "../../images/ebook-reader.gif"
 import computer from "../../images/computer-display.gif"
 

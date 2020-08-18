@@ -1,4 +1,5 @@
 /* eslint-disable */
+require("dotenv").config()
 
 module.exports = {
   siteMetadata: {
@@ -22,8 +23,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-mailchimp",
       options: {
-        endpoint:
-          "https://waldolavaut.us10.list-manage.com/subscribe/post?u=22377aca679801284569b9bce&amp;id=5596b856f1",
+        endpoint: process.env.MAILCHIMP_ENDPOINT,
         timeout: 3500,
       },
     },
@@ -31,7 +31,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         // replace "UA-XXXXXXXXX-X" with your own Tracking ID
-        trackingId: "UA-59759762-6",
+        trackingId: process.env.GOOGLE_TRACKING_ID,
       },
     },
     {

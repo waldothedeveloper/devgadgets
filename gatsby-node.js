@@ -7,6 +7,7 @@ exports.createPages = ({ actions, graphql }) => {
   const instructorsTemplate = path.resolve(
     `src/templates/instructorsTemplate.js`
   )
+  const booksTemplate = path.resolve(`src/templates/booksTemplate.js`)
 
   return graphql(`
     {
@@ -19,6 +20,7 @@ exports.createPages = ({ actions, graphql }) => {
             author
             name
             instructor
+            book_article
             about
             image {
               publicURL
@@ -64,6 +66,14 @@ exports.createPages = ({ actions, graphql }) => {
         createPage({
           path: node.fields.slug,
           component: instructorsTemplate,
+          context: {
+            slug: node.fields.slug,
+          },
+        })
+      } else if (node.frontmatter.book_article) {
+        createPage({
+          path: node.fields.slug,
+          component: booksTemplate,
           context: {
             slug: node.fields.slug,
           },
