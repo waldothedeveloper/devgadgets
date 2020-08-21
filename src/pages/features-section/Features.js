@@ -23,7 +23,89 @@ const Features = () => {
           </p>
         </div>
 
-        <div className="mt-10">
+        <div className="py-12 bg-white">
+          <div className="max-w-xl lg:mx-auto px-4 sm:px-6 lg:max-w-screen-xl lg:px-8">
+            <div className="lg:grid lg:grid-cols-3 lg:gap-8">
+              <div>
+                <div className="flex items-start justify-start">
+                  <img
+                    src={smartwatch}
+                    alt="smart watch"
+                    className="h-16 w-16"
+                  />
+                </div>
+                <div className="mt-5">
+                  <h5 className="text-lg leading-6 font-medium text-gray-900">
+                    Gadgets for Geeks
+                  </h5>
+                  <p className="mt-2 text-base leading-6 text-gray-500">
+                    The gadgets that will improve your productivity. Routers,
+                    mechanic keyboards, mouses, monitors and more.
+                  </p>
+                </div>
+                <div className="mt-3">
+                  <Link
+                    state={{ featCategory: "gadgets" }}
+                    to="/gadgets/all"
+                    className="text-base leading-6 font-semibold text-teal-600 hover:text-orange-500 transition ease-in-out duration-150 active:text-orange-500 focus:text-orange-500 focus:outline-none"
+                  >
+                    Discover gadgets
+                  </Link>
+                </div>
+              </div>
+              <div className="mt-10 lg:mt-0">
+                <div className="flex items-start justify-start">
+                  <img src={ebook} alt="ebook" className="h-16 w-16" />
+                </div>
+                <div className="mt-5">
+                  <h5 className="text-lg leading-6 font-medium text-gray-900">
+                    Programming Books
+                  </h5>
+                  <p className="mt-2 text-base leading-6 text-gray-500">
+                    A curated collection of the best, always up to date
+                    programming books in popular languages like Python,
+                    Javascript, Ruby, SQL and more.
+                  </p>
+                  <div className="mt-3">
+                    <Link
+                      state={{ featCategory: "books" }}
+                      to="/books/all"
+                      className="text-base leading-6 font-semibold text-teal-600 hover:text-orange-500 transition ease-in-out duration-150 active:text-orange-500 focus:text-orange-500 focus:outline-none"
+                    >
+                      Discover books
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-10 lg:mt-0">
+                <div className="flex items-start justify-start">
+                  <img src={computer} alt="computer" className="h-16 w-16" />
+                </div>
+                <div className="mt-5">
+                  <h5 className="text-lg leading-6 font-medium text-gray-900">
+                    Online Courses
+                  </h5>
+                  <p className="mt-2 text-base leading-6 text-gray-500">
+                    Leverage your skills in no time with the best courses from
+                    Udemy, Udacity, or FrontEnd-Masters.
+                  </p>
+                  <div className="mt-3">
+                    <Link
+                      to="/courses/all"
+                      state={{ featCategory: "courses" }}
+                      className="text-base leading-6 font-semibold text-teal-600 hover:text-orange-500 transition ease-in-out duration-150 active:text-orange-500 focus:text-orange-500 focus:outline-none"
+                    >
+                      Discover courses
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* OLD FEATURES- NO NEED TO DELETE REALLY RIGHT NOW */}
+        {/* <div className="mt-10">
           <ul className="md:grid md:grid-cols-2 md:gap-x-8 md:gap-x-10">
             <li>
               <div className="flex">
@@ -110,34 +192,8 @@ const Features = () => {
                 </div>
               </div>
             </li>
-            {/* <li className="mt-10 md:mt-0">
-              <div className="flex">
-                <div className="flex-shrink-0">
-                  <img src={coffee} alt="smart watch" className="h-16 w-auto" />
-                </div>
-                <div className="ml-4">
-                  <h4 className="text-lg leading-6 font-medium text-gray-900">
-                    Healthy LifeStyle
-                  </h4>
-                  <p className="mt-2 text-base leading-6 text-gray-500">
-                    Feeling tired? bad diet? Learn on this articles the best
-                    tips to a healthier work-life balance so you can code like a
-                    champion.
-                  </p>
-                  <div className="mt-3">
-                    <Link
-                      to="/lifestyle/all"
-                      state={{ featCategory: "lifestyle" }}
-                      className="text-base leading-6 font-semibold text-teal-600 hover:text-orange-500 transition ease-in-out duration-150 active:text-orange-500 focus:text-orange-500 focus:outline-none"
-                    >
-                      Discover more
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </li> */}
           </ul>
-        </div>
+        </div> */}
       </div>
     </div>
   )
