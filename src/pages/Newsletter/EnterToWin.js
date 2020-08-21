@@ -7,7 +7,7 @@ const EnterToWin = () => {
         <div className="mt-6">
           <form
             onSubmit={event => event.preventDefault()}
-            className="grid grid-cols-1 row-gap-6"
+            className="grid grid-cols-1 gap-x-6"
           >
             <div>
               <label

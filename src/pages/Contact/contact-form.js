@@ -24,7 +24,7 @@ const ContactForm = () => {
             </p>
             <form
               onSubmit={e => e.preventDefault()}
-              className="mt-9 grid grid-cols-1 row-gap-6 sm:grid-cols-2 sm:col-gap-8"
+              className="mt-9 grid grid-cols-1 gap-x-6 sm:grid-cols-2 sm:gap-x-8"
             >
               <div className="sm:col-span-2">
                 <label

@@ -19,7 +19,8 @@ const InstructorsTemplate = ({ data, pageContext }) => {
 
   React.useEffect(() => {
     const result = courses.filter(
-      elem => elem.node.frontmatter.course_author === frontmatter.name
+      elem =>
+        elem.node.frontmatter.course_author === frontmatter.instructor_name
     )
     setFiltCourses(result)
   }, [courses, data])
@@ -32,7 +33,7 @@ const InstructorsTemplate = ({ data, pageContext }) => {
           <div className="hidden lg:block bg-gray-50 absolute top-0 bottom-0 left-3/4 w-screen"></div>
           <div className="mx-auto text-base max-w-prose lg:max-w-none">
             <h1 className="mt-2 mb-8 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
-              Meet {frontmatter.name}
+              Meet {frontmatter.instructor_name}
             </h1>
           </div>
           <div className="lg:grid lg:grid-cols-2 lg:gap-8">
@@ -92,7 +93,7 @@ const InstructorsTemplate = ({ data, pageContext }) => {
                         clipRule="evenodd"
                       />
                     </svg>
-                    {frontmatter.name}
+                    {frontmatter.instructor_name}
                   </figcaption>
                 </figure>
               </div>
@@ -103,7 +104,7 @@ const InstructorsTemplate = ({ data, pageContext }) => {
           </div>
           <div className="mx-auto text-base max-w-prose lg:max-w-none">
             <h1 className="mt-12 mb-8 text-2xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-3xl sm:leading-10">
-              {frontmatter.name}&lsquo; Courses
+              {frontmatter.instructor_name}&lsquo; Courses
             </h1>
           </div>
           {/* Courses might go here */}
@@ -204,7 +205,7 @@ export const query = graphql`
       body
       frontmatter {
         about
-        name
+        instructor_name
         image {
           publicURL
         }

@@ -18,7 +18,7 @@ exports.createPages = ({ actions, graphql }) => {
             title
             last_updated(formatString: "YYYY MMMM Do")
             author
-            name
+            instructor_name
             instructor
             book_article
             about

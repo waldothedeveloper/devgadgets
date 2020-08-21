@@ -33,7 +33,7 @@ const Instructors = () => {
                   alt=""
                 />
                 <h3 className="mt-6 text-gray-900 text-sm leading-5 font-medium">
-                  {elem.node.frontmatter.name}
+                  {elem.node.frontmatter.instructor_name}
                 </h3>
                 <dl className="mt-1 flex-grow flex flex-col justify-between">
                   <dt className="sr-only">Title</dt>
@@ -58,7 +58,9 @@ const Instructors = () => {
                   <div className="-ml-px w-0 flex-1 flex">
                     <Link
                       to={elem.node.fields.slug}
-                      state={{ name: elem.node.frontmatter.name }}
+                      state={{
+                        name: elem.node.frontmatter.instructor_name,
+                      }}
                       className="relative w-0 flex-1 inline-flex items-center justify-center py-4 text-sm leading-5 text-gray-700 font-medium border border-transparent rounded-br-lg hover:text-teal-500 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 focus:z-10 transition ease-in-out duration-150"
                     >
                       Discover

@@ -33,7 +33,7 @@ const ArticlesGadgetsLayout = ({ data, articleCat }) => {
       variants={variants}
       className="pb-20 lg:pb-28 md:pl-3 lg:pl-6"
     >
-      <div className="grid gap-5 md:row-gap-6 max-w-lg mx-auto md:grid-cols-2 md:max-w-none lg:grid-cols-3">
+      <div className="grid gap-5 md:gap-x-6 max-w-lg mx-auto md:grid-cols-2 md:max-w-none lg:grid-cols-3">
         {filterArticles.map(elem => (
           <div
             key={elem.node.id}

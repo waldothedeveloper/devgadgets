@@ -15,7 +15,7 @@ export const useGetInstructors = () => {
                 publicURL
               }
               about
-              name
+              instructor_name
             }
             fields {
               slug

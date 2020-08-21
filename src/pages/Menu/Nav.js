@@ -8,6 +8,8 @@ import robot from "../../images/robot.gif"
 import truck from "../../images/truck.gif"
 import plug from "../../images/plug.gif"
 import { Link } from "gatsby"
+import Search from "../../components/search-index"
+// import SearchResult from "../../components/search-results"
 import useOnClickOutside from "../../hooks/use-on-click-outside"
 
 const Nav = () => {
@@ -67,8 +69,8 @@ const Nav = () => {
             </button>
           </div>
           {/* Desktop view */}
-          <div className="hidden md:flex-1 md:flex md:items-center md:justify-between md:space-x-12">
-            <nav className="flex space-x-10">
+          <div className="hidden md:flex-1 md:flex md:items-center md:space-x-12">
+            <nav className="flex space-x-10 items-center">
               <div className="relative">
                 <button
                   ref={ref}
@@ -243,22 +245,6 @@ const Nav = () => {
                             </div>
                           </Link>
                         </div>
-                        {/* <div className="p-5 bg-gray-50 sm:p-8">
-                        <button className="-m-3 p-3 flow-root space-y-1 rounded-md hover:bg-gray-100 transition ease-in-out duration-150">
-                          <div className="flex items-center space-x-3">
-                            <div className="text-base leading-6 font-medium text-gray-900">
-                              Enterprise
-                            </div>
-                            <span className="inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium leading-5 bg-teal-100 text-teal-800">
-                              New
-                            </span>
-                          </div>
-                          <p className="text-sm leading-5 text-gray-500">
-                            Empower your entire team with even more advanced
-                            tools.
-                          </p>
-                        </button>
-                      </div> */}
                       </div>
                     </div>
                   </div>
@@ -310,7 +296,7 @@ const Nav = () => {
                   leaveFrom="opacity-100 translate-y-0"
                   leaveTo="opacity-0 translate-y-1"
                 >
-                  {/* Desktop More  */}
+                  {/* Desktop Legal  */}
                   <div className="absolute left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-xs sm:px-0">
                     <div className="rounded-lg shadow-lg">
                       <div className="rounded-lg shadow-xs overflow-hidden">
@@ -345,6 +331,13 @@ const Nav = () => {
                 </Transition>
               </div>
             </nav>
+            {/* Search Algolia here */}
+            {/* Search Algolia here */}
+            {/* Search Algolia here */}
+            {/* Search Algolia here */}
+            <div className="relative">
+              <Search />
+            </div>
           </div>
         </div>
 
