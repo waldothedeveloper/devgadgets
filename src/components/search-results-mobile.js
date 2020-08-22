@@ -9,6 +9,23 @@ const SearchResultsMobile = ({ hits }) => {
     <>
       {hits.length === 20 ? (
         <MobileSubMenus hits={hits} />
+      ) : hits.length === 0 ? (
+        <ul
+          style={{ height: "calc(100vh - 1rem)" }}
+          className="mt-12 space-y-6 overflow-x-hidden overflow-y-scroll pb-72"
+        >
+          <div className="p-3 block space-y-2 transition ease-in-out duration-150">
+            <li>
+              <div className="flex">
+                <div className="w-auto pl-3">
+                  <h4 className="text-base leading-6 font-medium text-gray-900">
+                    Sorry no results...
+                  </h4>
+                </div>
+              </div>
+            </li>
+          </div>
+        </ul>
       ) : (
         <ul
           style={{ height: "calc(100vh - 1rem)" }}
