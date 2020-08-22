@@ -14,7 +14,7 @@ const JoinNewsletter = () => {
   } = useJoinNewsletter()
 
   return mailChimpResponse.result === "error" ? (
-    <div className="mt-16 bg-teal-800">
+    <div className="bg-teal-800">
       <div className="max-w-screen-2xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center">
         <div className="lg:w-0 lg:flex-1">
           <div className="flex items-center">
@@ -81,7 +81,7 @@ const JoinNewsletter = () => {
   ) : mailChimpResponse.message !== "" ? (
     <ThankYouForSubscribing />
   ) : (
-    <div className="mt-16 bg-teal-800">
+    <div className="bg-teal-800">
       <div className="max-w-screen-2xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center">
         <div className="lg:w-0 lg:flex-1">
           <div className="flex items-center">

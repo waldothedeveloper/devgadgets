@@ -3,7 +3,6 @@ import React from "react"
 import { connectHits } from "react-instantsearch-dom"
 import PropTypes from "prop-types"
 import Transition from "./Transition"
-// import { CustomSearchBox } from "./search-box"
 import "../css/customscrollbar.css"
 
 //
@@ -69,7 +68,7 @@ const Hits = ({ hits }) =>
             <div className="z-50 relative bg-white px-5 py-6">
               <ul
                 id="scrolling_wrapper"
-                className="space-y-6 overflow-x-hidden overflow-y-scroll max-h-72 pb-12"
+                className="space-y-6 overflow-x-hidden overflow-y-scroll max-h-72"
               >
                 {hits.map(hit => (
                   <div
