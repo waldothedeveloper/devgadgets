@@ -1,13 +1,23 @@
 /* eslint-disable */
 require("dotenv").config()
 
+// for netlify robots to avoid Google thinking there's duplicate content and messing up the SEO
+const {
+  NODE_ENV,
+  URL: NETLIFY_SITE_URL = "https://www.devgadgets.io",
+  DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
+  CONTEXT: NETLIFY_ENV = NODE_ENV,
+} = process.env
+const isNetlifyProduction = NETLIFY_ENV === "production"
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
+
 module.exports = {
   siteMetadata: {
     title: "Dev Gadgets",
     description:
       "The #1 gadgets resource for developers and technology enthusiasts.",
     author: "@waldothedeveloper",
-    copyright: "Copyright © 2020 Dev Gadgets. All rights reserved",
+    copyright: `Copyright © 2020 Dev Gadgets. All rights reserved`,
     siteUrl: "https://devgadgets.io",
     keywords: [
       "Technology Gadgets",
@@ -19,7 +29,48 @@ module.exports = {
       "Web Developer",
     ],
   },
+
   plugins: [
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        resolveEnv: () => NETLIFY_ENV,
+        env: {
+          production: {
+            policy: [{ userAgent: "*" }],
+          },
+          "branch-deploy": {
+            policy: [{ userAgent: "*", disallow: ["/"] }],
+            sitemap: null,
+            host: null,
+          },
+          "deploy-preview": {
+            policy: [{ userAgent: "*", disallow: ["/"] }],
+            sitemap: null,
+            host: null,
+          },
+        },
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-cloudinary`,
+      options: {
+        cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+        apiKey: process.env.CLOUDINARY_API_KEY,
+        apiSecret: process.env.CLOUDINARY_API_SECRET,
+        resourceType: `image`,
+        prefix: `devgadgets_cloudinary/`,
+        maxResults: 500,
+      },
+    },
     {
       resolve: `gatsby-plugin-algolia`,
       options: {
@@ -87,13 +138,7 @@ module.exports = {
         path: `${__dirname}/src/pages/`,
       },
     },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "images",
-        path: `${__dirname}/src/images`,
-      },
-    },
+
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {

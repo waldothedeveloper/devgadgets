@@ -4,9 +4,12 @@ import PropTypes from "prop-types"
 const ShareArticle = ({ frontmatter, fields }) => {
   return (
     <>
-      <div className="mt-24 mb-12 border-gray-200 border-b">
-        <div className="px-4 py-5 sm:p-6 flex">
-          <a
+      <div className="flex items-center justify-center mt-24 mb-12">
+        <div className="border-gray-300 border-t flex-1 mx-3" />
+        <p className="text-gray-500 font-mono text-sm">Share article</p>
+        <div className="py-5 sm:py-4 flex">
+          {/* Share on Facebook */}
+          {/* <a
             target="_blank"
             rel="noreferrer"
             href="https://www.facebook.com/dialog/share?"
@@ -24,9 +27,9 @@ const ShareArticle = ({ frontmatter, fields }) => {
                 clipRule="evenodd"
               />
             </svg>
-          </a>
+          </a> */}
           {/* Share on Instagram */}
-          <button className="ml-6 text-gray-400 hover:text-teal-500">
+          {/* <button className="ml-6 text-gray-400 hover:text-teal-500">
             <span className="sr-only">Instagram</span>
             <svg
               className="h-6 w-6 md:h-8 md:w-8"
@@ -39,13 +42,13 @@ const ShareArticle = ({ frontmatter, fields }) => {
                 clipRule="evenodd"
               />
             </svg>
-          </button>
+          </button> */}
           {/* Share on Twitter */}
           <a
             target="_blank"
             rel="noreferrer"
             data-size="large"
-            href={`https://twitter.com/intent/tweet?text=Check%20out%20this%20cool%20article%20of%20Devgadgets:%20"${frontmatter.title}"%20https://www.devgadgets.io${fields.slug}`}
+            href={`https://twitter.com/intent/tweet?text=Check%20out%20this%20cool%20article%20of%20Devgadgets:%0D%0A%0D%0A"${frontmatter.title}"%0D%0A%0D%0Ahttps://www.devgadgets.io${fields.slug}`}
             className="ml-6 text-gray-400 hover:text-teal-500"
           >
             <span className="sr-only">Twitter</span>
@@ -57,9 +60,9 @@ const ShareArticle = ({ frontmatter, fields }) => {
               <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
             </svg>
           </a>
-          {/* Share on email or something */}
+          {/* Share on email  */}
           <a
-            href={`mailto:?subject=Hi, check out this cool article of Devgadgets&amp;body=${frontmatter.title}%20https://www.devgadgets.io${fields.slug}`}
+            href={`mailto:?subject=Hi, check out this cool article of Devgadgets&body=${frontmatter.title}:%0D%0A%0D%0Ahttps://www.devgadgets.io${fields.slug}`}
             title="Share by Email"
             className="ml-6 text-gray-400 hover:text-teal-500"
           >
@@ -79,7 +82,7 @@ const ShareArticle = ({ frontmatter, fields }) => {
             </svg>
           </a>
           {/* Share on external link*/}
-          <button className="ml-6 text-gray-400 hover:text-teal-500">
+          {/* <button className="ml-6 text-gray-400 hover:text-teal-500">
             <span className="sr-only">External Link</span>
 
             <svg
@@ -95,7 +98,7 @@ const ShareArticle = ({ frontmatter, fields }) => {
                 d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
               />
             </svg>
-          </button>
+          </button> */}
         </div>
       </div>
     </>

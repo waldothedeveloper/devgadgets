@@ -3,7 +3,7 @@ import amazon from "../images/amazon-logo.svg"
 import Rating from "./rating-template"
 import PropTypes from "prop-types"
 //
-const TheGist = ({ frontmatter }) => {
+const TheGist = ({ frontmatter, image }) => {
   return (
     <div className="mt-12 relative bg-white">
       <div className="flex justify-start my-2">
@@ -42,8 +42,12 @@ const TheGist = ({ frontmatter }) => {
         <figure>
           <div className="pb-7/12 lg:pb-0">
             <img
-              src={frontmatter.featuredImage.publicURL}
-              alt="product featured"
+              src={
+                image && image.secure_url
+                  ? image.secure_url
+                  : `http://placehold.jp/24/cccccc/ffffff/250x50.png?text=image_not_found`
+              }
+              alt="featured product"
               className="rounded-lg shadow-lg object-cover object-center absolute inset-0 w-full h-full lg:static lg:h-auto"
             />
           </div>
@@ -105,5 +109,6 @@ const TheGist = ({ frontmatter }) => {
 }
 TheGist.propTypes = {
   frontmatter: PropTypes.object,
+  image: PropTypes.object,
 }
 export default TheGist

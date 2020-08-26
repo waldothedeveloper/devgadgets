@@ -12,6 +12,6 @@ const Response = ({ children }) => {
   )
 }
 Response.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.string,
 }
 export default Response

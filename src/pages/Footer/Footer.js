@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import { motion } from "framer-motion"
 import { useGetInstructors } from "../../hooks/use-get-instructors"
 import PropTypes from "prop-types"
+
 //
 const Footer = () => {
   const data = useGetInstructors()
@@ -83,7 +84,7 @@ const Footer = () => {
                     <Link
                       state={{ featCategory: "gadgets" }}
                       to="/gadgets/all"
-                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                      className="text-base leading-6 text-gray-400 hover:text-teal-300"
                     >
                       All
                     </Link>
@@ -95,7 +96,7 @@ const Footer = () => {
                         subCategory: "Keyboards",
                       }}
                       to="/gadgets/all"
-                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                      className="text-base leading-6 text-gray-400 hover:text-teal-300"
                     >
                       Keyboards
                     </Link>
@@ -107,7 +108,7 @@ const Footer = () => {
                         subCategory: "Headphones",
                       }}
                       to="/gadgets/all"
-                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                      className="text-base leading-6 text-gray-400 hover:text-teal-300"
                     >
                       Headphones
                     </Link>
@@ -119,7 +120,7 @@ const Footer = () => {
                         subCategory: "Iot",
                       }}
                       to="/gadgets/all"
-                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                      className="text-base leading-6 text-gray-400 hover:text-teal-300"
                     >
                       IOT Devices
                     </Link>
@@ -131,7 +132,7 @@ const Footer = () => {
                         subCategory: "Monitors",
                       }}
                       to="/gadgets/all"
-                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                      className="text-base leading-6 text-gray-400 hover:text-teal-300"
                     >
                       Monitors
                     </Link>
@@ -143,7 +144,7 @@ const Footer = () => {
                         subCategory: "Office",
                       }}
                       to="/gadgets/all"
-                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                      className="text-base leading-6 text-gray-400 hover:text-teal-300"
                     >
                       Office Products
                     </Link>
@@ -155,7 +156,7 @@ const Footer = () => {
                         subCategory: "Usb",
                       }}
                       to="/gadgets/all"
-                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                      className="text-base leading-6 text-gray-400 hover:text-teal-300"
                     >
                       USB Devices
                     </Link>
@@ -169,7 +170,7 @@ const Footer = () => {
                 <ul className="mt-4">
                   <li>
                     <Link
-                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                      className="text-base leading-6 text-gray-400 hover:text-teal-300"
                       to="/books/all"
                       state={{
                         featCategory: "books",
@@ -186,7 +187,7 @@ const Footer = () => {
                         featCategory: "books",
                         subCategory: "Javascript",
                       }}
-                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                      className="text-base leading-6 text-gray-400 hover:text-teal-300"
                     >
                       Javascript
                     </Link>
@@ -198,7 +199,7 @@ const Footer = () => {
                         featCategory: "books",
                         subCategory: "Ruby",
                       }}
-                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                      className="text-base leading-6 text-gray-400 hover:text-teal-300"
                     >
                       Ruby
                     </Link>
@@ -210,7 +211,7 @@ const Footer = () => {
                         featCategory: "books",
                         subCategory: "Python",
                       }}
-                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                      className="text-base leading-6 text-gray-400 hover:text-teal-300"
                     >
                       Python
                     </Link>
@@ -222,7 +223,7 @@ const Footer = () => {
                         featCategory: "books",
                         subCategory: "C#",
                       }}
-                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                      className="text-base leading-6 text-gray-400 hover:text-teal-300"
                     >
                       C#
                     </Link>
@@ -234,7 +235,7 @@ const Footer = () => {
                         featCategory: "books",
                         subCategory: "React",
                       }}
-                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                      className="text-base leading-6 text-gray-400 hover:text-teal-300"
                     >
                       React
                     </Link>
@@ -246,7 +247,7 @@ const Footer = () => {
                         featCategory: "books",
                         subCategory: "SQL",
                       }}
-                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                      className="text-base leading-6 text-gray-400 hover:text-teal-300"
                     >
                       SQL
                     </Link>
@@ -264,35 +265,20 @@ const Footer = () => {
                     <Link
                       to="/courses/all"
                       state={{ featCategory: "courses" }}
-                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                      className="text-base leading-6 text-gray-400 hover:text-teal-300"
                     >
                       All
                     </Link>
                   </li>
-                  <li className="mt-4">
-                    <button className="text-base leading-6 text-gray-400 hover:text-gray-300">
-                      Udemy
-                    </button>
-                  </li>
-                  <li className="mt-4">
-                    <button className="text-base leading-6 text-gray-400 hover:text-gray-300">
-                      FrontEndMasters
-                    </button>
-                  </li>
 
-                  <li className="mt-4">
-                    <button className="text-base leading-6 text-gray-400 hover:text-gray-300">
-                      Udacity
-                    </button>
-                  </li>
                   {/* Have in mind that if you keep adding instructors you will need to refactor this UI soon */}
                   {data.map(elem => (
                     <li key={elem.node.id} className="mt-4">
                       <Link
                         to={elem.node.fields.slug}
-                        className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                        className="text-base leading-6 text-gray-400 hover:text-teal-300"
                       >
-                        {elem.node.frontmatter.name}
+                        {elem.node.frontmatter.instructor_name}
                       </Link>
                     </li>
                   ))}
@@ -306,7 +292,7 @@ const Footer = () => {
                   <li className="mt-4">
                     <Link
                       to="/privacy-policy"
-                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                      className="text-base leading-6 text-gray-400 hover:text-teal-300"
                     >
                       Privacy Policy
                     </Link>
@@ -314,7 +300,7 @@ const Footer = () => {
                   <li className="mt-4">
                     <Link
                       to="/earnings-disclaimer"
-                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                      className="text-base leading-6 text-gray-400 hover:text-teal-300"
                     >
                       Afilliate Disclosure
                     </Link>
@@ -324,7 +310,7 @@ const Footer = () => {
                       target="_blank"
                       rel="noreferrer"
                       href={`mailto:contact@devgadgets.io`}
-                      className="text-base leading-6 text-gray-400 hover:text-gray-300"
+                      className="text-base leading-6 text-gray-400 hover:text-teal-300"
                     >
                       Contact
                     </a>

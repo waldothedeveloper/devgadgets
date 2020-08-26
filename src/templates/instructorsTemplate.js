@@ -9,9 +9,11 @@ import ShareArticle from "./share-article-template"
 import { useGetAllCoursesArticles } from "../hooks/use-get-all-courses-articles"
 import JoinNewsletter from "../pages/Newsletter/JoinNewsletter"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import SEO from "../components/seo"
 import PropTypes from "prop-types"
 //
 const InstructorsTemplate = ({ data, pageContext }) => {
+  const image = data.cloudinaryMedia
   const { frontmatter, body } = data.mdx
 
   const courses = useGetAllCoursesArticles()
@@ -27,6 +29,13 @@ const InstructorsTemplate = ({ data, pageContext }) => {
 
   return (
     <>
+      <SEO
+        title={frontmatter.title}
+        description={frontmatter.the_gist}
+        // image={image}
+        pathname={location.pathname}
+        author={frontmatter.author}
+      />
       <Nav />
       <div className="mt-24 bg-white overflow-hidden">
         <div className="relative max-w-7xl mx-auto pt-16 px-4 sm:px-6 lg:px-8">
@@ -74,7 +83,11 @@ const InstructorsTemplate = ({ data, pageContext }) => {
                 <figure>
                   <div className="relative pb-7/12 lg:pb-0">
                     <img
-                      src={frontmatter.featuredImage.publicURL}
+                      src={
+                        image && image.secure_url
+                          ? image.secure_url
+                          : `http://placehold.jp/24/cccccc/ffffff/250x50.png?text=image_not_found`
+                      }
                       alt=""
                       width="1184"
                       height="1376"
@@ -199,7 +212,10 @@ InstructorsTemplate.propTypes = {
 export default InstructorsTemplate
 
 export const query = graphql`
-  query getAllInstructors($slug: String) {
+  query getAllInstructors($slug: String, $cloudinaryImage: String) {
+    cloudinaryMedia(public_id: { eq: $cloudinaryImage }) {
+      secure_url
+    }
     mdx(fields: { slug: { eq: $slug } }) {
       id
       body

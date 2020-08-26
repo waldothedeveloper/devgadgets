@@ -3,9 +3,12 @@ import hero_img from "../../images/hero-gadgets.svg"
 import love_heart from "../../images/love-heart.gif"
 import TechnologyBlogDefinition from "./technology-blog-definition"
 import useOnClickOutside from "../../hooks/use-on-click-outside"
+// import { getAllCloudinaryImages } from "../../hooks/get-all-cloudinary-images"
 import { motion } from "framer-motion"
 //
 const Hero = () => {
+  // const data = getAllCloudinaryImages()
+  // console.log("data: ", data)
   const [open, setOpen] = React.useState(false)
   const ref = React.createRef()
   useOnClickOutside(ref, () => setOpen(false))

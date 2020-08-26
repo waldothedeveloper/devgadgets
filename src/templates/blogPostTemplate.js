@@ -1,5 +1,4 @@
 /* eslint-disable */
-
 import React from "react"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -9,21 +8,31 @@ import TheGist from "./the-gist"
 import Footer from "../pages/Footer/Footer"
 import ShareArticle from "./share-article-template"
 import BuyIt from "./buy-it"
+import SEO from "../components/seo"
 import JoinNewsletter from "../pages/Newsletter/JoinNewsletter"
 
 //
-export default ({ data, pageContext }) => {
+export default ({ data, location }) => {
+  const image = data.cloudinaryMedia
   const { frontmatter, body, fields } = data.mdx
 
+  //! TODO: REMEMBER TO CREATE KEYWORDS FOR EVERY MDX ARTICLE
   return (
     <>
+      <SEO
+        title={frontmatter.title}
+        description={frontmatter.the_gist}
+        image={image}
+        pathname={location.pathname}
+        author={frontmatter.author}
+      />
       <Nav />
       <div className="">
         <div className="mt-12 mx-3 md:mx-32 lg:mx-64 lg:mt-24 xl:mx-72">
           <TitleAndAuthorTemplate frontmatter={frontmatter} fields={fields} />
         </div>
         <div className="mt-12 mx-6 md:mx-32 lg:mx-64 xl:mx-72">
-          <TheGist frontmatter={frontmatter} />
+          <TheGist frontmatter={frontmatter} image={image} />
           <MDXRenderer>{body}</MDXRenderer>
           <BuyIt frontmatter={frontmatter} />
           <JoinNewsletter />
@@ -37,7 +46,10 @@ export default ({ data, pageContext }) => {
 
 //
 export const query = graphql`
-  query BlogPostQuery($slug: String) {
+  query BlogPostQuery($slug: String, $cloudinaryImage: String) {
+    cloudinaryMedia(public_id: { eq: $cloudinaryImage }) {
+      secure_url
+    }
     mdx(fields: { slug: { eq: $slug } }) {
       id
       body
@@ -58,9 +70,6 @@ export const query = graphql`
         category_color
         featured
         featuredImage {
-          publicURL
-        }
-        author_image {
           publicURL
         }
       }

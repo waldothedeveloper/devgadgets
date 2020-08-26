@@ -25,9 +25,11 @@ const searchClient = algoliasearch(
 const Nav = () => {
   const [openGadgets, setOpenGadgets] = React.useState(false)
   const [openMore, setopenMore] = React.useState(false)
+
   const [menuMobile, setMenuMobile] = React.useState(false)
   const ref = React.createRef()
   const ref2 = React.createRef()
+
   useOnClickOutside(ref, () => setOpenGadgets(false))
   useOnClickOutside(ref2, () => setopenMore(false))
 
@@ -343,7 +345,7 @@ const Nav = () => {
                 </div>
               </nav>
 
-              {/* Search Algolia here */}
+              {/* Desktop Search Algolia here */}
               <div className="relative">
                 {/* <Search /> */}
                 <CustomSearchBox />

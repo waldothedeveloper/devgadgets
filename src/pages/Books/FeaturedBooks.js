@@ -14,8 +14,8 @@ const FeaturedBooks = () => {
           <p className="mt-3 text-xl leading-7 sm:mt-4 max-w-2xl text-gray-400">
             The following are a{" "}
             <span className="text-orange-400 font-medium">must-read</span>{" "}
-            selection of books that every programmer should read. Don&apos;t pay
-            attention to the language it is was written, they really will make
+            selection of books that every programmer should read. Regardless of
+            the programming language it is was written, they really will make
             you a better developer.
           </p>
         </div>

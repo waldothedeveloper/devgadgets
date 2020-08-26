@@ -1,5 +1,27 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { motion } from "framer-motion"
+
+const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delay: 0.3,
+      when: "beforeChildren",
+      staggerChildren: 0.1,
+    },
+  },
+}
+
+const item = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+}
 
 const TechDetails = ({ metadata }) => {
   return (
@@ -13,13 +35,22 @@ const TechDetails = ({ metadata }) => {
         </p>
       </div>
 
-      <ul className="list-disc m-2 p-2">
+      <motion.ul
+        variants={container}
+        initial="hidden"
+        animate="visible"
+        className="list-disc m-2 p-2"
+      >
         {metadata.technical_details.map((details, id) => (
-          <li key={id} className="text-md leading-7 my-4 mx-2 text-gray-500">
+          <motion.li
+            variants={item}
+            key={id}
+            className="text-md leading-7 my-4 mx-2 text-gray-500"
+          >
             {details}
-          </li>
+          </motion.li>
         ))}
-      </ul>
+      </motion.ul>
     </div>
   )
 }

@@ -7,7 +7,7 @@ import JoinNewsletter from "./Newsletter/JoinNewsletter"
 import Features from "./features-section/Features"
 import FeaturedGadgets from "./gadgets/Featured-Gadgets"
 import Banner from "./announcements/Banner"
-import GiveAways from "./GiveAways/GiveAways"
+// import GiveAways from "./GiveAways/GiveAways"
 import FeaturedBooks from "./books/FeaturedBooks"
 import FeaturedOnlineCourses from "./courses/Featured-Online-Courses"
 import Footer from "./Footer/Footer"
@@ -31,7 +31,8 @@ const IndexPage = () => {
         <FeaturedGadgets />
         <FeaturedOnlineCourses />
         <FeaturedBooks />
-        <GiveAways />
+        {/* This is for future marketing campaigns */}
+        {/* <GiveAways /> */}
       </Layout>
       <Footer />
     </>

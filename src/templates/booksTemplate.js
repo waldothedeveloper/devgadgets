@@ -7,13 +7,22 @@ import ShareArticle from "./share-article-template"
 import JoinNewsletter from "../pages/Newsletter/JoinNewsletter"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import DevGadgetsChoice from "../components/devgadgets-choice"
+import SEO from "../components/seo"
 import PropTypes from "prop-types"
 //
 const BooksTemplate = ({ data, pageContext }) => {
+  const image = data.cloudinaryMedia
   const { frontmatter, body } = data.mdx
 
   return (
     <>
+      <SEO
+        title={frontmatter.title}
+        description={frontmatter.the_gist}
+        // image={image}
+        pathname={location.pathname}
+        author={frontmatter.author}
+      />
       <Nav />
       <div className="mt-12 lg:mt-24 py-16 overflow-hidden">
         <div className="px-4 sm:px-6 lg:px-8">
@@ -59,7 +68,11 @@ const BooksTemplate = ({ data, pageContext }) => {
               <div className="mx-12 md:max-w-sm md:mx-auto lg:max-w-md rounded-lg shadow-lg">
                 <img
                   className="w-full h-full object-cover object-center"
-                  src={frontmatter.featuredImage.publicURL}
+                  src={
+                    image && image.secure_url
+                      ? image.secure_url
+                      : `http://placehold.jp/24/cccccc/ffffff/250x50.png?text=image_not_found`
+                  }
                   alt="book"
                 />
               </div>
@@ -81,7 +94,10 @@ BooksTemplate.propTypes = {
 export default BooksTemplate
 
 export const query = graphql`
-  query getAllBooks($slug: String) {
+  query getAllBooks($slug: String, $cloudinaryImage: String) {
+    cloudinaryMedia(public_id: { eq: $cloudinaryImage }) {
+      secure_url
+    }
     mdx(fields: { slug: { eq: $slug } }) {
       id
       body
