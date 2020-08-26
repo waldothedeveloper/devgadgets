@@ -8,9 +8,6 @@ const SearchBox = ({ refine, currentRefinement }) => (
     className="w-screen max-w-xs mx-auto"
     onSubmit={e => e.preventDefault()}
   >
-    <label htmlFor="search_field" className="sr-only">
-      Search
-    </label>
     <div className="relative w-full text-cool-gray-400 focus-within:text-cool-gray-600">
       <div className="absolute inset-y-0 left-0 flex items-center pointer-events-none pl-2">
         <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
@@ -21,6 +18,9 @@ const SearchBox = ({ refine, currentRefinement }) => (
           />
         </svg>
       </div>
+      <label htmlFor="search_field" className="sr-only">
+        Search
+      </label>
       <input
         type="text"
         value={currentRefinement}

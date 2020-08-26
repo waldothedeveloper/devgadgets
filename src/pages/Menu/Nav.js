@@ -1,11 +1,11 @@
 import React from "react"
 import Transition from "../../components/Transition"
 import devgadgetslogo from "../../images/logo-teal-3.svg"
-import keyboard from "../../images/keyboard.gif"
-import headphones from "../../images/headphones.gif"
-import computer_display from "../../images/computer-display.gif"
-import robot from "../../images/robot.gif"
-import truck from "../../images/truck.gif"
+// import keyboard from "../../images/keyboard.gif"
+// import headphones from "../../images/headphones.gif"
+// import computer_display from "../../images/computer-display.gif"
+// import robot from "../../images/robot.gif"
+// import truck from "../../images/truck.gif"
 import plug from "../../images/plug.gif"
 import { Link } from "gatsby"
 import { CustomSearchBox } from "../../components/search-box"
@@ -14,7 +14,7 @@ import NavMobile from "./NavMobile"
 import { InstantSearch } from "react-instantsearch-dom"
 import algoliasearch from "algoliasearch/lite"
 import useOnClickOutside from "../../hooks/use-on-click-outside"
-
+import { getCloudinaryNavImages } from "../../hooks/get-cloudinary-nav-images"
 //
 const searchClient = algoliasearch(
   process.env.GATSBY_ALGOLIA_APP_ID,
@@ -23,6 +23,9 @@ const searchClient = algoliasearch(
 
 //
 const Nav = () => {
+  const data = getCloudinaryNavImages()
+  // console.log("data: ", data)
+
   const [openGadgets, setOpenGadgets] = React.useState(false)
   const [openMore, setopenMore] = React.useState(false)
 
@@ -119,6 +122,7 @@ const Nav = () => {
                       <div className="rounded-lg shadow-lg">
                         <div className="rounded-lg shadow-xs overflow-hidden">
                           <div className="z-50 relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
+                            {/* Keyboard */}
                             <Link
                               state={{
                                 featCategory: "gadgets",
@@ -127,11 +131,33 @@ const Nav = () => {
                               to="/gadgets/all"
                               className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                             >
-                              <img
-                                src={keyboard}
-                                alt="smart watch"
+                              <video
                                 className="h-12 w-auto"
-                              />
+                                playsInline
+                                autoPlay
+                                loop
+                                muted="muted"
+                                poster={data.keyboard.secure_url.replace(
+                                  "gif",
+                                  "jpg"
+                                )}
+                              >
+                                <source
+                                  type="video/webm"
+                                  src={data.keyboard.secure_url.replace(
+                                    "gif",
+                                    "webm"
+                                  )}
+                                />
+                                <source
+                                  type="video/mp4"
+                                  src={data.keyboard.secure_url.replace(
+                                    "gif",
+                                    "mp4"
+                                  )}
+                                />
+                                Your browser does not support HTML5 video tag.
+                              </video>
                               <div className="space-y-1">
                                 <p className="text-base leading-6 font-medium text-gray-900">
                                   Keyboards
@@ -142,6 +168,7 @@ const Nav = () => {
                                 </p>
                               </div>
                             </Link>
+                            {/* Headphones */}
                             <Link
                               state={{
                                 featCategory: "gadgets",
@@ -150,11 +177,33 @@ const Nav = () => {
                               to="/gadgets/all"
                               className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                             >
-                              <img
-                                src={headphones}
-                                alt="headphones"
+                              <video
                                 className="h-12 w-auto"
-                              />
+                                playsInline
+                                autoPlay
+                                loop
+                                muted="muted"
+                                poster={data.headphones.secure_url.replace(
+                                  "gif",
+                                  "jpg"
+                                )}
+                              >
+                                <source
+                                  type="video/webm"
+                                  src={data.headphones.secure_url.replace(
+                                    "gif",
+                                    "webm"
+                                  )}
+                                />
+                                <source
+                                  type="video/mp4"
+                                  src={data.headphones.secure_url.replace(
+                                    "gif",
+                                    "mp4"
+                                  )}
+                                />
+                                Your browser does not support HTML5 video tag.
+                              </video>
                               <div className="space-y-1">
                                 <p className="text-base leading-6 font-medium text-gray-900">
                                   Headphones
@@ -165,6 +214,7 @@ const Nav = () => {
                                 </p>
                               </div>
                             </Link>
+                            {/* Monitors */}
                             <Link
                               state={{
                                 featCategory: "gadgets",
@@ -173,11 +223,33 @@ const Nav = () => {
                               to="/gadgets/all"
                               className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                             >
-                              <img
-                                src={computer_display}
-                                alt="computer display"
+                              <video
                                 className="h-12 w-auto"
-                              />
+                                playsInline
+                                autoPlay
+                                loop
+                                muted="muted"
+                                poster={data.computer_display.secure_url.replace(
+                                  "gif",
+                                  "jpg"
+                                )}
+                              >
+                                <source
+                                  type="video/webm"
+                                  src={data.computer_display.secure_url.replace(
+                                    "gif",
+                                    "webm"
+                                  )}
+                                />
+                                <source
+                                  type="video/mp4"
+                                  src={data.computer_display.secure_url.replace(
+                                    "gif",
+                                    "mp4"
+                                  )}
+                                />
+                                Your browser does not support HTML5 video tag.
+                              </video>
                               <div className="space-y-1">
                                 <p className="text-base leading-6 font-medium text-gray-900">
                                   Monitors
@@ -188,6 +260,7 @@ const Nav = () => {
                                 </p>
                               </div>
                             </Link>
+                            {/* Iot */}
                             <Link
                               state={{
                                 featCategory: "gadgets",
@@ -196,11 +269,33 @@ const Nav = () => {
                               to="/gadgets/all"
                               className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                             >
-                              <img
-                                src={robot}
-                                alt="robot"
+                              <video
                                 className="h-12 w-auto"
-                              />
+                                playsInline
+                                autoPlay
+                                loop
+                                muted="muted"
+                                poster={data.robot.secure_url.replace(
+                                  "gif",
+                                  "jpg"
+                                )}
+                              >
+                                <source
+                                  type="video/webm"
+                                  src={data.robot.secure_url.replace(
+                                    "gif",
+                                    "webm"
+                                  )}
+                                />
+                                <source
+                                  type="video/mp4"
+                                  src={data.robot.secure_url.replace(
+                                    "gif",
+                                    "mp4"
+                                  )}
+                                />
+                                Your browser does not support HTML5 video tag.
+                              </video>
                               <div className="space-y-1">
                                 <p className="text-base leading-6 font-medium text-gray-900">
                                   IOT Devices
@@ -211,6 +306,7 @@ const Nav = () => {
                                 </p>
                               </div>
                             </Link>
+                            {/* Office  */}
                             <Link
                               state={{
                                 featCategory: "gadgets",
@@ -219,11 +315,33 @@ const Nav = () => {
                               to="/gadgets/all"
                               className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                             >
-                              <img
-                                src={truck}
-                                alt="truck"
+                              <video
                                 className="h-12 w-auto"
-                              />
+                                playsInline
+                                autoPlay
+                                loop
+                                muted="muted"
+                                poster={data.truck.secure_url.replace(
+                                  "gif",
+                                  "jpg"
+                                )}
+                              >
+                                <source
+                                  type="video/webm"
+                                  src={data.truck.secure_url.replace(
+                                    "gif",
+                                    "webm"
+                                  )}
+                                />
+                                <source
+                                  type="video/mp4"
+                                  src={data.truck.secure_url.replace(
+                                    "gif",
+                                    "mp4"
+                                  )}
+                                />
+                                Your browser does not support HTML5 video tag.
+                              </video>
                               <div className="space-y-1">
                                 <p className="text-base leading-6 font-medium text-gray-900">
                                   Office
@@ -234,6 +352,7 @@ const Nav = () => {
                                 </p>
                               </div>
                             </Link>
+                            {/* USB */}
                             <Link
                               state={{
                                 featCategory: "gadgets",
@@ -242,11 +361,33 @@ const Nav = () => {
                               to="/gadgets/all"
                               className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                             >
-                              <img
-                                src={plug}
-                                alt="electrical plug"
+                              <video
                                 className="h-12 w-auto"
-                              />
+                                playsInline
+                                autoPlay
+                                loop
+                                muted="muted"
+                                poster={data.plug.secure_url.replace(
+                                  "gif",
+                                  "jpg"
+                                )}
+                              >
+                                <source
+                                  type="video/webm"
+                                  src={data.plug.secure_url.replace(
+                                    "gif",
+                                    "webm"
+                                  )}
+                                />
+                                <source
+                                  type="video/mp4"
+                                  src={data.plug.secure_url.replace(
+                                    "gif",
+                                    "mp4"
+                                  )}
+                                />
+                                Your browser does not support HTML5 video tag.
+                              </video>
                               <div className="space-y-1">
                                 <p className="text-base leading-6 font-medium text-gray-900">
                                   USB Devices
@@ -313,29 +454,122 @@ const Nav = () => {
                     <div className="absolute left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-xs sm:px-0">
                       <div className="rounded-lg shadow-lg">
                         <div className="rounded-lg shadow-xs overflow-hidden">
-                          <div className="z-50 relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                          <div className="z-50 relative grid gap-5 bg-white p-3">
                             <Link
                               to="/privacy-policy"
-                              className="-m-3 p-3 block space-y-1 rounded-md hover:bg-teal-100 transition ease-in-out duration-150"
+                              className="focus:outline-none -m-1 p-1 flex items-start space-x-2 space-y-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                             >
-                              <p className="text-base leading-6 font-medium text-gray-900">
-                                Privacy Policy
-                              </p>
+                              <video
+                                className="h-12 w-auto"
+                                playsInline
+                                autoPlay
+                                loop
+                                muted="muted"
+                                poster={data.privacy_policy.secure_url.replace(
+                                  "gif",
+                                  "jpg"
+                                )}
+                              >
+                                <source
+                                  type="video/webm"
+                                  src={data.privacy_policy.secure_url.replace(
+                                    "gif",
+                                    "webm"
+                                  )}
+                                />
+                                <source
+                                  type="video/mp4"
+                                  src={data.privacy_policy.secure_url.replace(
+                                    "gif",
+                                    "mp4"
+                                  )}
+                                />
+                                Your browser does not support HTML5 video tag.
+                              </video>
+
+                              <div className="">
+                                <p className="text-base leading-6 font-medium text-gray-900">
+                                  Privacy Policy
+                                </p>
+                              </div>
                             </Link>
                             <Link
                               to="/earnings-disclaimer"
-                              className="-m-3 p-3 block space-y-1 rounded-md hover:bg-teal-100 transition ease-in-out duration-150"
+                              className="focus:outline-none -m-1 p-1 flex items-start space-x-2 space-y-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                             >
-                              <p>Affiliate Disclosure</p>
-                            </Link>
+                              <video
+                                className="h-12 w-auto"
+                                playsInline
+                                autoPlay
+                                loop
+                                muted="muted"
+                                poster={data.legal_balance.secure_url.replace(
+                                  "gif",
+                                  "jpg"
+                                )}
+                              >
+                                <source
+                                  type="video/webm"
+                                  src={data.legal_balance.secure_url.replace(
+                                    "gif",
+                                    "webm"
+                                  )}
+                                />
+                                <source
+                                  type="video/mp4"
+                                  src={data.legal_balance.secure_url.replace(
+                                    "gif",
+                                    "mp4"
+                                  )}
+                                />
+                                Your browser does not support HTML5 video tag.
+                              </video>
 
+                              <div className="">
+                                <p className="text-base leading-6 font-medium text-gray-900">
+                                  Affiliate Disclosure
+                                </p>
+                              </div>
+                            </Link>
                             <a
                               target="_blank"
                               rel="noreferrer"
                               href={`mailto:contact@devgadgets.io`}
-                              className="-m-3 p-3 block space-y-1 rounded-md hover:bg-teal-100 transition ease-in-out duration-150"
+                              className="focus:outline-none -m-1 p-1 flex items-start space-x-2 space-y-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                             >
-                              Contact
+                              <video
+                                className="h-12 w-auto"
+                                playsInline
+                                autoPlay
+                                loop
+                                muted="muted"
+                                poster={data.contact_avatars.secure_url.replace(
+                                  "gif",
+                                  "jpg"
+                                )}
+                              >
+                                <source
+                                  type="video/webm"
+                                  src={data.contact_avatars.secure_url.replace(
+                                    "gif",
+                                    "webm"
+                                  )}
+                                />
+                                <source
+                                  type="video/mp4"
+                                  src={data.contact_avatars.secure_url.replace(
+                                    "gif",
+                                    "mp4"
+                                  )}
+                                />
+                                Your browser does not support HTML5 video tag.
+                              </video>
+
+                              <div className="">
+                                <p className="text-base leading-6 font-medium text-gray-900">
+                                  Contact
+                                </p>
+                              </div>
                             </a>
                           </div>
                         </div>

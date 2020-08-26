@@ -14,7 +14,7 @@ import PropTypes from "prop-types"
 //
 const InstructorsTemplate = ({ data, pageContext }) => {
   const image = data.cloudinaryMedia
-  const { frontmatter, body } = data.mdx
+  const { frontmatter, body, fields } = data.mdx
 
   const courses = useGetAllCoursesArticles()
   const [filtCourses, setFiltCourses] = React.useState([])
@@ -33,7 +33,7 @@ const InstructorsTemplate = ({ data, pageContext }) => {
         title={frontmatter.title}
         description={frontmatter.the_gist}
         // image={image}
-        pathname={location.pathname}
+        pathname={fields.slug}
         author={frontmatter.author}
       />
       <Nav />
@@ -227,6 +227,12 @@ export const query = graphql`
         }
         featuredImage {
           publicURL
+        }
+      }
+      fields {
+        slug
+        readingTime {
+          text
         }
       }
     }

@@ -1,16 +1,15 @@
 import React from "react"
-import hero_img from "../../images/hero-gadgets.svg"
-import love_heart from "../../images/love-heart.gif"
+// import hero_img from "../../images/hero-gadgets.svg"
+// import love_heart from "../../images/love-heart.gif"
 import TechnologyBlogDefinition from "./technology-blog-definition"
 import useOnClickOutside from "../../hooks/use-on-click-outside"
-// import { getAllCloudinaryImages } from "../../hooks/get-all-cloudinary-images"
+import { getCloudinaryHeroImages } from "../../hooks/get-cloudinary-hero-images"
 import { motion } from "framer-motion"
 //
 const Hero = () => {
-  // const data = getAllCloudinaryImages()
-  // console.log("data: ", data)
-  const [open, setOpen] = React.useState(false)
   const ref = React.createRef()
+  const data = getCloudinaryHeroImages()
+  const [open, setOpen] = React.useState(false)
   useOnClickOutside(ref, () => setOpen(false))
 
   return (
@@ -41,7 +40,25 @@ const Hero = () => {
               that developers & technology enthusiasts{` `}
               <span className="text-orange-500 font-semibold">#love</span>
               <span className="-mb-2 inline-block align-baseline">
-                <img className="h-8 w-8" src={love_heart} alt="heart" />
+                <video
+                  className="h-8 w-8"
+                  playsInline
+                  autoPlay
+                  loop
+                  muted="muted"
+                  poster={data.loveheart.secure_url.replace("gif", "jpg")}
+                >
+                  <source
+                    type="video/webm"
+                    src={data.loveheart.secure_url.replace("gif", "webm")}
+                  />
+                  <source
+                    type="video/mp4"
+                    src={data.loveheart.secure_url.replace("gif", "mp4")}
+                  />
+                  Your browser does not support HTML5 video tag.
+                </video>
+
                 {/* <svg
                   className="h-8 w-8 text-orange-500"
                   viewBox="0 0 20 20"
@@ -62,7 +79,11 @@ const Hero = () => {
         <div className="p-2">
           <img
             className="mt-10 w-auto h-auto lg:max-w-3xl lg:mx-auto"
-            src={hero_img}
+            src={
+              data && data.hero && data.hero.secure_url
+                ? data.hero.secure_url
+                : `http://placehold.jp/24/cccccc/ffffff/250x50.png?text=image_not_found`
+            }
             alt="hero"
           />
         </div>

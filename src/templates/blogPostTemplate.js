@@ -12,7 +12,7 @@ import SEO from "../components/seo"
 import JoinNewsletter from "../pages/Newsletter/JoinNewsletter"
 
 //
-export default ({ data, location }) => {
+export default ({ data }) => {
   const image = data.cloudinaryMedia
   const { frontmatter, body, fields } = data.mdx
 
@@ -23,7 +23,7 @@ export default ({ data, location }) => {
         title={frontmatter.title}
         description={frontmatter.the_gist}
         image={image}
-        pathname={location.pathname}
+        pathname={fields.slug}
         author={frontmatter.author}
       />
       <Nav />

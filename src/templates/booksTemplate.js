@@ -12,7 +12,7 @@ import PropTypes from "prop-types"
 //
 const BooksTemplate = ({ data, pageContext }) => {
   const image = data.cloudinaryMedia
-  const { frontmatter, body } = data.mdx
+  const { frontmatter, body, fields } = data.mdx
 
   return (
     <>
@@ -20,7 +20,7 @@ const BooksTemplate = ({ data, pageContext }) => {
         title={frontmatter.title}
         description={frontmatter.the_gist}
         // image={image}
-        pathname={location.pathname}
+        pathname={fields.slug}
         author={frontmatter.author}
       />
       <Nav />
@@ -111,6 +111,12 @@ export const query = graphql`
         last_updated
         featuredImage {
           publicURL
+        }
+      }
+      fields {
+        slug
+        readingTime {
+          text
         }
       }
     }
