@@ -1,12 +1,23 @@
 import React from "react"
 import lifestyle from "../../images/lifestyle.svg"
 import { motion } from "framer-motion"
+import { graphql, useStaticQuery } from "gatsby"
+
+//
 const variants = {
   visible: { opacity: 1 },
   hidden: { opacity: 0 },
 }
 //
 const ThankYouForSubscribing = () => {
+  const data = useStaticQuery(graphql`
+    query getThankYou {
+      cloudinaryMedia(public_id: { eq: "devgadgets_cloudinary/lifestyle" }) {
+        secure_url
+      }
+    }
+  `)
+
   return (
     <motion.div
       initial="hidden"
@@ -18,7 +29,7 @@ const ThankYouForSubscribing = () => {
       <div className="h-56 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
         <img
           className="w-full h-full object-cover"
-          src={lifestyle}
+          src={data.cloudinaryMedia.secure_url || lifestyle}
           alt="lifestyle team of people"
         />
       </div>
@@ -35,29 +46,29 @@ const ThankYouForSubscribing = () => {
             <br />
             If you <span className="text-orange-500">don&apos;t find</span> our
             email in your inbox:
-            <div className="prose prose-lg text-teal-200 mt-6">
-              <ul>
-                <li>
-                  Check your spam folder{" "}
-                  <span role="img" aria-label="trash">
-                    🗑️
-                  </span>{" "}
-                </li>
-                <li>
-                  Once you find it, mark us as not-spam.{" "}
-                  <span role="img" aria-label="victory">
-                    ✌️
-                  </span>
-                </li>
-                <li>
-                  That&apos;s it, you are ready for our future newsletters.{" "}
-                  <span role="img" aria-label="unicorn">
-                    🦄
-                  </span>{" "}
-                </li>
-              </ul>
-            </div>
           </p>
+          <div className="prose prose-lg text-teal-200 mt-6">
+            <ul>
+              <li>
+                Check your spam folder{" "}
+                <span role="img" aria-label="trash">
+                  🗑️
+                </span>{" "}
+              </li>
+              <li>
+                Once you find it, mark us as not-spam.{" "}
+                <span role="img" aria-label="victory">
+                  ✌️
+                </span>
+              </li>
+              <li>
+                That&apos;s it, you are ready for our future newsletters.{" "}
+                <span role="img" aria-label="unicorn">
+                  🦄
+                </span>{" "}
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </motion.div>

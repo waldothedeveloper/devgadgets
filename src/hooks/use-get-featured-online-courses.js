@@ -15,6 +15,7 @@ export const useGetFeaturedOnlineCourses = () => {
               course_author
               price
               rating
+              cloudinaryImage
               rating_count
               bestseller
               category_color

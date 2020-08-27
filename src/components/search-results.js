@@ -6,8 +6,10 @@ import Transition from "./Transition"
 import "../css/customscrollbar.css"
 
 //
-const Hits = ({ hits }) =>
-  hits.length === 20 ? null : hits.length === 0 ? null : (
+const Hits = ({ hits }) => {
+  // console.log("hits: ", hits)
+
+  return hits.length === 20 ? null : hits.length === 0 ? null : (
     <Transition
       show={true}
       enter="transition ease-out duration-500"
@@ -39,7 +41,7 @@ const Hits = ({ hits }) =>
                           <img
                             className="w-32 h-20 object-cover rounded-md"
                             src={hit.featuredImage.publicURL}
-                            alt={hit.image_captions || ""}
+                            alt={hit.image_captions || "featured"}
                           />
                         </div>
                         <div className="space-y-1 min-w-0 flex-1">
@@ -71,6 +73,7 @@ const Hits = ({ hits }) =>
       </div>
     </Transition>
   )
+}
 
 Hits.propTypes = {
   hits: PropTypes.array.isRequired,

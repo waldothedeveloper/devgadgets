@@ -11,6 +11,7 @@ export const useGetFeaturedGadgets = () => {
               last_updated(formatString: "ddd DD MMMM YYYY")
               title
               author
+              cloudinaryImage
               the_gist
               featuredImage {
                 publicURL

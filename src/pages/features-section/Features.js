@@ -1,11 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
-import smartwatch from "../../images/smart-watch.gif"
+import { getCloudinaryFeaturedImages } from "../../hooks/get-cloudinary-featured-images"
+// import smartwatch from "../../images/smart-watch.gif"
 // import coffee from "../../images/coffee.gif"
-import ebook from "../../images/ebook-reader.gif"
-import computer from "../../images/computer-display.gif"
+// import ebook from "../../images/ebook-reader.gif"
+// import computer from "../../images/computer-display.gif"
 
 const Features = () => {
+  const data = getCloudinaryFeaturedImages()
+  // console.log("data: ", data)
   return (
     <div className="py-12 bg-white">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -28,11 +31,24 @@ const Features = () => {
             <div className="lg:grid lg:grid-cols-3 lg:gap-8">
               <div>
                 <div className="flex items-start justify-start">
-                  <img
-                    src={smartwatch}
-                    alt="smart watch"
+                  <video
                     className="h-16 w-16"
-                  />
+                    playsInline
+                    autoPlay
+                    loop
+                    muted="muted"
+                    poster={data.smartwatch.secure_url.replace("gif", "jpg")}
+                  >
+                    <source
+                      type="video/webm"
+                      src={data.smartwatch.secure_url.replace("gif", "webm")}
+                    />
+                    <source
+                      type="video/mp4"
+                      src={data.smartwatch.secure_url.replace("gif", "mp4")}
+                    />
+                    Your browser does not support HTML5 video tag.
+                  </video>
                 </div>
                 <div className="mt-5">
                   <h5 className="text-lg leading-6 font-medium text-gray-900">
@@ -55,7 +71,24 @@ const Features = () => {
               </div>
               <div className="mt-10 lg:mt-0">
                 <div className="flex items-start justify-start">
-                  <img src={ebook} alt="ebook" className="h-16 w-16" />
+                  <video
+                    className="h-16 w-16"
+                    playsInline
+                    autoPlay
+                    loop
+                    muted="muted"
+                    poster={data.ebook.secure_url.replace("gif", "jpg")}
+                  >
+                    <source
+                      type="video/webm"
+                      src={data.ebook.secure_url.replace("gif", "webm")}
+                    />
+                    <source
+                      type="video/mp4"
+                      src={data.ebook.secure_url.replace("gif", "mp4")}
+                    />
+                    Your browser does not support HTML5 video tag.
+                  </video>
                 </div>
                 <div className="mt-5">
                   <h5 className="text-lg leading-6 font-medium text-gray-900">
@@ -79,7 +112,24 @@ const Features = () => {
               </div>
               <div className="mt-10 lg:mt-0">
                 <div className="flex items-start justify-start">
-                  <img src={computer} alt="computer" className="h-16 w-16" />
+                  <video
+                    className="h-16 w-16"
+                    playsInline
+                    autoPlay
+                    loop
+                    muted="muted"
+                    poster={data.computer.secure_url.replace("gif", "jpg")}
+                  >
+                    <source
+                      type="video/webm"
+                      src={data.computer.secure_url.replace("gif", "webm")}
+                    />
+                    <source
+                      type="video/mp4"
+                      src={data.computer.secure_url.replace("gif", "mp4")}
+                    />
+                    Your browser does not support HTML5 video tag.
+                  </video>
                 </div>
                 <div className="mt-5">
                   <h5 className="text-lg leading-6 font-medium text-gray-900">

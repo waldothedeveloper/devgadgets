@@ -23,6 +23,9 @@ const pageQuery = `{
           gadget_name
           about
           the_gist
+          cloudinaryInstructor
+          cloudinaryBookImage
+          cloudinaryImage
           featuredImage {
             publicURL
           }

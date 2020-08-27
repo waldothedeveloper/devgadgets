@@ -2,8 +2,10 @@ import React from "react"
 import { Link } from "gatsby"
 import { useGetFeaturedGadgets } from "../../hooks/use-get-featured-gadgets"
 import { motion } from "framer-motion"
+import { getAllCloudinaryImages } from "../../hooks/get-all-cloudinary-images"
 //
 const FeaturedGadgets = () => {
+  const cloudImg = getAllCloudinaryImages()
   const data = useGetFeaturedGadgets()
 
   return (
@@ -26,7 +28,7 @@ const FeaturedGadgets = () => {
             Meet your next
             <br /> favorites gadgets
           </h2>
-          <p className="text-left md:text-center px-2 mt-3 max-w-2xl mx-auto text-xl leading-7 text-gray-500 sm:mt-4">
+          <p className="text-left md:text-center px-2 mt-3 max-w-2xl mx-auto text-lg leading-7 text-gray-400 sm:mt-4">
             Discover amazing products to make your productivity 200% better.
             Check out this curated list of the best affordable piece of
             technology to work smarter, never harder.
@@ -35,14 +37,21 @@ const FeaturedGadgets = () => {
         <div className="mt-12 grid gap-5 lg:gap-8 max-w-lg mx-auto md:grid-cols-2 lg:grid-cols-3 md:max-w-none">
           {data.map(content => (
             <motion.div
-              whileHover={{ scale: 1.1 }}
               key={content.node.id}
+              whileHover={{ scale: 1.1 }}
               className="flex flex-col rounded-lg shadow-lg overflow-hidden"
             >
               <div className="flex-shrink-0">
                 <img
                   className="h-48 w-full object-cover"
-                  src={content.node.frontmatter.featuredImage.publicURL}
+                  src={
+                    cloudImg.filter(elem =>
+                      elem.node.secure_url.includes(
+                        content.node.frontmatter.cloudinaryImage
+                      )
+                    )[0].node.secure_url ||
+                    content.node.frontmatter.featuredImage.publicURL
+                  }
                   alt=""
                 />
               </div>

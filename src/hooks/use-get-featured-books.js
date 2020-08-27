@@ -17,6 +17,7 @@ export const useGetFeaturedBooks = () => {
               author
               book_author
               price
+              cloudinaryBookImage
               featuredImage {
                 publicURL
               }

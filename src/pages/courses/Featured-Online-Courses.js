@@ -3,9 +3,11 @@ import { Link } from "gatsby"
 import { useGetFeaturedOnlineCourses } from "../../hooks/use-get-featured-online-courses"
 import Rating from "../../templates/rating-template"
 import DevGadgetsChoice from "../../components/devgadgets-choice"
+import { getAllCloudinaryImages } from "../../hooks/get-all-cloudinary-images"
 
 //
 const FeaturedOnlineCourses = () => {
+  const cloudImg = getAllCloudinaryImages()
   const data = useGetFeaturedOnlineCourses()
 
   return (
@@ -33,7 +35,14 @@ const FeaturedOnlineCourses = () => {
                     <Link className="flex-1" to={elem.node.fields.slug}>
                       <img
                         className="h-48 w-full object-cover"
-                        src={elem.node.frontmatter.featuredImage.publicURL}
+                        src={
+                          cloudImg.filter(str =>
+                            str.node.secure_url.includes(
+                              elem.node.frontmatter.cloudinaryImage
+                            )
+                          )[0].node.secure_url ||
+                          elem.node.frontmatter.featuredImage.publicURL
+                        }
                         alt="featured image of the course"
                       />
                     </Link>
