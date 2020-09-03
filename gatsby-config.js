@@ -91,6 +91,7 @@ module.exports = {
       options: {
         // replace "UA-XXXXXXXXX-X" with your own Tracking ID
         trackingId: process.env.GOOGLE_TRACKING_ID,
+        head: false,
       },
     },
     {
@@ -136,15 +137,6 @@ module.exports = {
       options: {
         name: "pages",
         path: `${__dirname}/src/pages/`,
-      },
-    },
-
-    {
-      resolve: "gatsby-plugin-web-font-loader",
-      options: {
-        google: {
-          families: ["Rubik"],
-        },
       },
     },
     "gatsby-transformer-sharp",

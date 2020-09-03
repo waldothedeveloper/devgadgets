@@ -37,7 +37,9 @@ exports.createPages = ({ actions, graphql }) => {
             buy_link
             category_color
             featured
-            cloudinaryInstructor
+            cloudinaryInstructorMedia
+            cloudinaryCarousel
+            featuredCloudinaryInstructor
             cloudinaryBookImage
             cloudinaryImage
             featuredImage {
@@ -71,7 +73,9 @@ exports.createPages = ({ actions, graphql }) => {
           component: instructorsTemplate,
           context: {
             slug: node.fields.slug,
-            cloudinaryImage: node.frontmatter.cloudinaryInstructor,
+            cloudinaryImage: node.frontmatter.featuredCloudinaryInstructor,
+            cloudinaryInstructorMedia:
+              node.frontmatter.cloudinaryInstructorMedia,
           },
         })
       } else if (node.frontmatter.book_article) {
@@ -90,6 +94,7 @@ exports.createPages = ({ actions, graphql }) => {
           context: {
             slug: node.fields.slug,
             cloudinaryImage: node.frontmatter.cloudinaryImage,
+            cloudinaryCarousel: node.frontmatter.cloudinaryCarousel,
           },
         })
       }

@@ -13,7 +13,10 @@ import JoinNewsletter from "../pages/Newsletter/JoinNewsletter"
 
 //
 export default ({ data }) => {
-  const image = data.cloudinaryMedia
+  console.log("data: ", data)
+  const image = data && data.cloudinaryMedia ? data.cloudinaryMedia : ""
+  const carousel =
+    data && data.allCloudinaryMedia ? data.allCloudinaryMedia.edges : []
   const { frontmatter, body, fields } = data.mdx
 
   //! TODO: REMEMBER TO CREATE KEYWORDS FOR EVERY MDX ARTICLE
@@ -33,7 +36,7 @@ export default ({ data }) => {
         </div>
         <div className="mt-12 mx-6 md:mx-32 lg:mx-64 xl:mx-72">
           <TheGist frontmatter={frontmatter} image={image} />
-          <MDXRenderer>{body}</MDXRenderer>
+          <MDXRenderer carousel={carousel}>{body}</MDXRenderer>
           <BuyIt frontmatter={frontmatter} />
           <JoinNewsletter />
           <ShareArticle frontmatter={frontmatter} fields={fields} />
@@ -46,9 +49,20 @@ export default ({ data }) => {
 
 //
 export const query = graphql`
-  query BlogPostQuery($slug: String, $cloudinaryImage: String) {
+  query BlogPostQuery(
+    $slug: String
+    $cloudinaryImage: String
+    $cloudinaryCarousel: [String]
+  ) {
     cloudinaryMedia(public_id: { eq: $cloudinaryImage }) {
       secure_url
+    }
+    allCloudinaryMedia(filter: { public_id: { in: $cloudinaryCarousel } }) {
+      edges {
+        node {
+          secure_url
+        }
+      }
     }
     mdx(fields: { slug: { eq: $slug } }) {
       id
@@ -62,6 +76,7 @@ export const query = graphql`
         the_gist
         amazon_choice
         ratings_count
+        devgadgets_choice
         image_captions
         rating
         price

@@ -26,15 +26,10 @@ const variants = {
   },
 }
 
-const Carousel = ({ metadata }) => {
+const Carousel = ({ carousel }) => {
   const [open, setOpen] = React.useState(false)
-  const photos = metadata.photos
+  const photos = carousel
   const [[page, direction], setPage] = React.useState([0, 0])
-
-  // We only have 3 images, but we paginate them absolutely (ie 1, 2, 3, 4, 5...) and
-  // then wrap that within 0-2 to find our image ID in the array below. By passing an
-  // absolute page index as the `motion` component's `key` prop, `AnimatePresence` will
-  // detect it as an entirely new image. So you can infinitely paginate as few as 1 images.
   const imageIndex = wrap(0, photos.length, page)
 
   const paginate = newDirection => {
@@ -48,19 +43,25 @@ const Carousel = ({ metadata }) => {
           className="relative flex items-center content-center overflow-hidden"
           style={{ height: "24rem" }}
         >
-          <AnimatePresence>
+          <AnimatePresence initial={false} custom={direction}>
             <motion.img
               onClick={() => setOpen(true)}
-              className="rounded-lg shadow-lg object-cover object-center absolute inset-0 w-full h-full lg:static lg:h-auto"
+              className="w-screen absolute"
+              // className="rounded-lg shadow-lg object-cover object-center absolute inset-0 w-full h-full lg:static lg:h-auto"
               key={page}
-              src={photos[imageIndex]}
+              src={
+                photos[imageIndex].node
+                  ? photos[imageIndex].node.secure_url
+                  : `https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80`
+              }
               custom={direction}
               variants={variants}
               initial="enter"
               animate="center"
               exit="exit"
               transition={{
-                x: { type: "spring", stiffness: 5000, damping: 40000 },
+                x: { type: "spring", stiffness: 300, damping: 200 },
+                opacity: { duration: 0.2 },
               }}
               drag="x"
               dragConstraints={{ left: 0, right: 0 }}
@@ -140,5 +141,6 @@ const swipePower = (offset, velocity) => {
 
 Carousel.propTypes = {
   metadata: PropTypes.object,
+  carousel: PropTypes.array.isRequired,
 }
 export default Carousel

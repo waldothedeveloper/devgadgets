@@ -4,8 +4,8 @@ import PropTypes from "prop-types"
 const ShareArticle = ({ frontmatter, fields }) => {
   return (
     <>
-      <div className="flex items-center justify-center mt-24 mb-12">
-        <div className="border-gray-300 border-t flex-1 mx-3" />
+      <div className="flex items-center justify-center mt-24 mb-12 mx-auto max-w-sm md:max-w-3xl lg:max-w-5xl">
+        <div className="border-gray-300 border-t flex-1 mr-5" />
         <p className="text-gray-500 font-mono text-sm">Share article</p>
         <div className="py-5 sm:py-4 flex">
           {/* Share on Facebook */}

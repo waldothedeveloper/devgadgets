@@ -9,8 +9,22 @@ category_color: indigo
 featured: true
 featuredImage: mx-master-3.jpg
 cloudinaryImage: devgadgets_cloudinary/mx-master-3
+cloudinaryCarousel:
+  [
+    "devgadgets_cloudinary/mx-master-1",
+    "devgadgets_cloudinary/mx-master-4",
+    "devgadgets_cloudinary/mx-master-lifestyle-2",
+    "devgadgets_cloudinary/mx-for-coders",
+    "devgadgets_cloudinary/mx-for-coders-2",
+    "devgadgets_cloudinary/mx-master-6",
+    "devgadgets_cloudinary/mx_master",
+    "devgadgets_cloudinary/mx_master_front",
+    "devgadgets_cloudinary/mx_master_side",
+    "devgadgets_cloudinary/mx_master_windows",
+  ]
 author_image: waldo.jpg
 amazon_choice: true
+devgadgets_choice: true
 ratings_count: 1654
 price: 99.99
 rating: 4.5
@@ -31,18 +45,6 @@ import mx_master_8 from "./mx_master_front.jpg"
 import mx_master_9 from "./mx_master_side.jpg"
 import mx_master_10 from "./mx_master_windows.jpg"
 export const metadata = {
-  photos: [
-    mx_master_1,
-    mx_master_2,
-    mx_master_3,
-    mx_master_4,
-    mx_master_5,
-    mx_master_6,
-    mx_master_7,
-    mx_master_8,
-    mx_master_9,
-    mx_master_10,
-  ],
   technical_details: [
     "Ultra-fast magspeed scrolling - Remarkable speed, precision & quietness of electromagnetic scrolling with all new magspeed wheel - up to 90% faster, 87% more precise & ultra quiet.",
     "Comfort shape and intuitive controls - Work comfortably with perfectly sculpted shape and ideally placed thumb wheel and controls.",
@@ -55,6 +57,7 @@ export const metadata = {
 }
 
 <Question>1. Ultra-fast scrolling speed</Question>
+
 <Response>
 The scroll wheel on this mouse comes with
   what Logitech calls the{" "}
@@ -65,7 +68,7 @@ The scroll wheel on this mouse comes with
 <Question>2. App-specific customizations</Question>
 <Response>Calling out photographers, videographers, spreadsheet wizards, designers, developers, you name it. Working on Final Cut Pro? No problem, you can pan, undo & redo, or horizontally scroll with the same buttons that lets you go back & forth and navigate between tabs or even open a link in a new tab in any browser. The app specific customizations are really dope, and Apple is calling their mouse magic? This Logitech mouse is the real magic!</Response>
 
-<Carousel metadata={metadata} />
+<Carousel carousel={props.carousel} />
 
 <Question>3. Multiple computers, one flow</Question>
 <Response>

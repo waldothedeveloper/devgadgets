@@ -23,7 +23,7 @@ const pageQuery = `{
           gadget_name
           about
           the_gist
-          cloudinaryInstructor
+          featuredCloudinaryInstructor
           cloudinaryBookImage
           cloudinaryImage
           featuredImage {

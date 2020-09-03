@@ -51,7 +51,7 @@ const CategoriesGadgetsLayout = ({ articleCat, handleCategory }) => {
                   className={
                     elem.category === articleCat
                       ? "text-white group-focus:text-white group-hover:text-white text-lg leading-5 font-medium hover:text-gray-600 transition ease-in-out duration-150"
-                      : "text-gray-900 text-sm leading-5 font-medium transition text-base ease-in-out duration-150"
+                      : "text-gray-900 text-sm leading-5 font-medium transition ease-in-out duration-150"
                   }
                 >
                   {elem.category}

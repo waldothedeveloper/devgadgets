@@ -81,7 +81,7 @@ const Modal = ({ open, setOpen, photos }) => {
                     <img
                       key={id}
                       className="w-full h-full object-cover object-center"
-                      src={photo}
+                      src={photo.node.secure_url}
                       alt="products"
                     />
                   </li>

@@ -13,11 +13,15 @@ import SEO from "../components/seo"
 import PropTypes from "prop-types"
 //
 const InstructorsTemplate = ({ data, pageContext }) => {
-  const image = data.cloudinaryMedia
+  const image = data && data.cloudinaryMedia ? data.cloudinaryMedia : ""
+
+  const cloudinaryCourses =
+    data && data.allCloudinaryMedia ? data.allCloudinaryMedia.edges : []
   const { frontmatter, body, fields } = data.mdx
 
   const courses = useGetAllCoursesArticles()
   const [filtCourses, setFiltCourses] = React.useState([])
+  // console.log("filtCourses: ", filtCourses)
 
   React.useEffect(() => {
     const result = courses.filter(
@@ -30,7 +34,7 @@ const InstructorsTemplate = ({ data, pageContext }) => {
   return (
     <>
       <SEO
-        title={frontmatter.title}
+        title={frontmatter.instructor_name}
         description={frontmatter.the_gist}
         // image={image}
         pathname={fields.slug}
@@ -39,7 +43,7 @@ const InstructorsTemplate = ({ data, pageContext }) => {
       <Nav />
       <div className="mt-24 bg-white overflow-hidden">
         <div className="relative max-w-7xl mx-auto pt-16 px-4 sm:px-6 lg:px-8">
-          <div className="hidden lg:block bg-gray-50 absolute top-0 bottom-0 left-3/4 w-screen"></div>
+          <div className="hidden lg:block bg-teal-50 absolute top-0 bottom-0 left-3/4 w-screen"></div>
           <div className="mx-auto text-base max-w-prose lg:max-w-none">
             <h1 className="mt-2 mb-8 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
               Meet {frontmatter.instructor_name}
@@ -68,7 +72,7 @@ const InstructorsTemplate = ({ data, pageContext }) => {
                       y="0"
                       width="4"
                       height="4"
-                      className="text-gray-200"
+                      className="text-orange-200"
                       fill="currentColor"
                     />
                   </pattern>
@@ -120,7 +124,7 @@ const InstructorsTemplate = ({ data, pageContext }) => {
               {frontmatter.instructor_name}&lsquo; Courses
             </h1>
           </div>
-          {/* Courses might go here */}
+          {/* Courses go here */}
           <ul className="mx-0.5 md:mx-5 grid grid-cols-1 gap-6 md:gap-2 sm:grid-cols-2 lg:grid-cols-3">
             {filtCourses.map(elem => {
               return (
@@ -133,7 +137,15 @@ const InstructorsTemplate = ({ data, pageContext }) => {
                       <Link className="flex-1" to={elem.node.fields.slug}>
                         <img
                           className="h-48 w-full object-cover"
-                          src={elem.node.frontmatter.featuredImage.publicURL}
+                          src={
+                            cloudinaryCourses
+                              ? cloudinaryCourses.filter(photo =>
+                                  photo.node.secure_url.includes(
+                                    elem.node.frontmatter.cloudinaryImage
+                                  )
+                                )[0].node.secure_url
+                              : elem.node.frontmatter.featuredImage.publicURL
+                          }
                           alt="featured image of the course"
                         />
                       </Link>
@@ -198,7 +210,9 @@ const InstructorsTemplate = ({ data, pageContext }) => {
           </ul>
         </div>
       </div>
-      <JoinNewsletter />
+      <div className="mt-24 lg:max-w-5xl lg:mx-auto">
+        <JoinNewsletter />
+      </div>
       <ShareArticle frontmatter={frontmatter} fields={pageContext} />
       <Footer />
     </>
@@ -212,9 +226,23 @@ InstructorsTemplate.propTypes = {
 export default InstructorsTemplate
 
 export const query = graphql`
-  query getAllInstructors($slug: String, $cloudinaryImage: String) {
+  query getAllInstructors(
+    $slug: String
+    $cloudinaryImage: String
+    $cloudinaryInstructorMedia: [String]
+  ) {
     cloudinaryMedia(public_id: { eq: $cloudinaryImage }) {
       secure_url
+      id
+    }
+    allCloudinaryMedia(
+      filter: { public_id: { in: $cloudinaryInstructorMedia } }
+    ) {
+      edges {
+        node {
+          secure_url
+        }
+      }
     }
     mdx(fields: { slug: { eq: $slug } }) {
       id

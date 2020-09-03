@@ -272,16 +272,20 @@ const Footer = () => {
                   </li>
 
                   {/* Have in mind that if you keep adding instructors you will need to refactor this UI soon */}
-                  {data.map(elem => (
-                    <li key={elem.node.id} className="mt-4">
-                      <Link
-                        to={elem.node.fields.slug}
-                        className="text-base leading-6 text-gray-400 hover:text-teal-300"
-                      >
-                        {elem.node.frontmatter.instructor_name}
-                      </Link>
-                    </li>
-                  ))}
+                  {data && data.allMdx && data.allMdx.edges ? (
+                    data.allMdx.edges.map(elem => (
+                      <li key={elem.node.id} className="mt-4">
+                        <Link
+                          to={elem.node.fields.slug}
+                          className="text-base leading-6 text-gray-400 hover:text-teal-300"
+                        >
+                          {elem.node.frontmatter.instructor_name}
+                        </Link>
+                      </li>
+                    ))
+                  ) : (
+                    <div>Loading...</div>
+                  )}
                 </ul>
               </div>
               <div className="mt-12 md:mt-0">

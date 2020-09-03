@@ -53,7 +53,9 @@ const FeaturedOnlineCourses = () => {
                     to={elem.node.fields.slug}
                   >
                     <div className="flex-1">
-                      <p className="text-sm leading-5 font-medium text-teal-600">
+                      <p
+                        className={`text-sm leading-5 font-semibold text-${elem.node.frontmatter.category_color}-400`}
+                      >
                         {elem.node.frontmatter.category}
                       </p>
                       <div className="block">

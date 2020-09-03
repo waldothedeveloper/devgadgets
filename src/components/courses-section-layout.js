@@ -2,15 +2,18 @@ import React from "react"
 import CoursesCategoriesLayout from "./courses-categories-layout"
 import man_video from "../images/man_video.jpeg"
 import Instructors from "./instructors"
+import { getCloudinaryManVideo } from "../hooks/get-cloudinary-man-video"
 // import CoursesStats from "../pages/courses/stats"
 
 const CoursesSectionLayout = () => {
+  const data = getCloudinaryManVideo()
+
   return (
     <div className="mt-24">
       <div className="flex items-center rounded-full shadow-xl">
         <div className="h-72">
           <img
-            src={man_video}
+            src={data && data.man_video ? data.man_video.secure_url : man_video}
             className="h-full w-full object-cover object-center"
           />
         </div>

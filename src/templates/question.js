@@ -11,7 +11,7 @@ const Question = ({ children }) => {
 }
 
 Question.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.node,
 }
 
 export default Question
