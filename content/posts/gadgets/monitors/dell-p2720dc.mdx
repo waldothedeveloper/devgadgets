@@ -8,6 +8,17 @@ category_color: blue
 featured: false
 featuredImage: dell-monitor.jpeg
 cloudinaryImage: devgadgets_cloudinary/dell-monitor
+cloudinaryCarousel:
+  [
+    "devgadgets_cloudinary/dell-monitor-p2720dc-1",
+    "devgadgets_cloudinary/dell-monitor-p2720dc-2",
+    "devgadgets_cloudinary/dell-monitor-p2720dc-3",
+    "devgadgets_cloudinary/dell-monitor-p2720dc-4",
+    "devgadgets_cloudinary/dell-monitor-p2720dc-5",
+    "devgadgets_cloudinary/dell-monitor-p2720dc-6",
+    "devgadgets_cloudinary/dell-monitor-p2720dc-7",
+    "devgadgets_cloudinary/dell-monitor-p2720dc-8",
+  ]
 author_image: waldo.jpg
 amazon_choice: false
 ratings_count: 120
@@ -28,4 +39,5 @@ export const metadata = {
   ],
 }
 
+<Carousel carousel={props.carousel} />
 <TechDetails metadata={metadata} />

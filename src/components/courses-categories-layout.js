@@ -10,8 +10,10 @@ import shortid from "shortid"
 const CoursesCategoriesLayout = () => {
   const data = useGetAllCoursesArticles()
   const [toogle, setToogle] = React.useState([])
+  // console.log("toogle: ", toogle)
   const [xlCategory, setXlCategory] = React.useState("AWS")
 
+  // This fn is meant to work on the mobile view
   const handleToogle = id => {
     setToogle(
       toogle.map(elem => {
@@ -78,6 +80,7 @@ const CoursesCategoriesLayout = () => {
   return (
     <div>
       <div>
+        {/* Mobile view */}
         <div className="sm:hidden border-b border-gray-400">
           <div className="w-full">
             {toogle.map(elem => (
@@ -112,6 +115,7 @@ const CoursesCategoriesLayout = () => {
           </div>
         </div>
       </div>
+      {/* Desktop view */}
       <div className="hidden sm:block">
         <div className="border-b border-gray-200">
           <nav className="-mb-px flex">

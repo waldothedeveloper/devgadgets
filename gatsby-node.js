@@ -8,6 +8,7 @@ exports.createPages = ({ actions, graphql }) => {
     `src/templates/instructorsTemplate.js`
   )
   const booksTemplate = path.resolve(`src/templates/booksTemplate.js`)
+  const coursesTemplate = path.resolve(`src/templates/coursesTemplate.js`)
 
   return graphql(`
     {
@@ -85,6 +86,15 @@ exports.createPages = ({ actions, graphql }) => {
           context: {
             slug: node.fields.slug,
             cloudinaryImage: node.frontmatter.cloudinaryBookImage,
+          },
+        })
+      } else if (node.frontmatter.article_category === "courses") {
+        createPage({
+          path: node.fields.slug,
+          component: coursesTemplate,
+          context: {
+            slug: node.fields.slug,
+            cloudinaryImage: node.frontmatter.cloudinaryImage,
           },
         })
       } else {

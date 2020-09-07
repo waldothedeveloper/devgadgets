@@ -4,6 +4,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import DevGadgetsChoice from "./devgadgets-choice"
 
+// Mobile view of articles
 const CoursesArticlesLayout = ({ cat }) => {
   return (
     <div>
@@ -12,7 +13,7 @@ const CoursesArticlesLayout = ({ cat }) => {
           <div className="grid gap-5 lg:grid-rows-3 overflow-x-scroll overflow-y-hidden">
             <div className="flex flex-no-wrap overflow-x-scroll overflow-y-hidden">
               {cat.length === 0 ? (
-                <div className="animate-pulse relative">
+                <div className="relative">
                   <img
                     className="h-72 w-full object-cover"
                     src="https://images.unsplash.com/photo-1470145318698-cb03732f5ddf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
@@ -40,11 +41,18 @@ const CoursesArticlesLayout = ({ cat }) => {
                     <div className="flex flex-col rounded-lg shadow-lg overflow-hidden h-full">
                       <div className="flex-shrink-0">
                         <Link className="flex-1" to={elem.node.fields.slug}>
-                          <img
-                            className="h-48 w-full object-cover"
-                            src={elem.node.frontmatter.featuredImage.publicURL}
-                            alt="featured image of the course"
-                          />
+                          {elem.node.frontmatter &&
+                          elem.node.frontmatter.featuredImage.publicURL ? (
+                            <img
+                              className="h-48 w-full object-cover object-center"
+                              src={
+                                elem.node.frontmatter.featuredImage.publicURL
+                              }
+                              alt="gadget"
+                            />
+                          ) : (
+                            <div className="animate-pulse h-48 w-full object-cover object-center bg-gray-400" />
+                          )}
                         </Link>
                       </div>
 

@@ -27,6 +27,7 @@ const variants = {
 }
 
 const Carousel = ({ carousel }) => {
+  // console.log("carousel: ", carousel)
   const [open, setOpen] = React.useState(false)
   const photos = carousel
   const [[page, direction], setPage] = React.useState([0, 0])
@@ -41,13 +42,12 @@ const Carousel = ({ carousel }) => {
       <div className="my-12">
         <div
           className="relative flex items-center content-center overflow-hidden"
-          style={{ height: "24rem" }}
+          style={{ maxhHight: "30rem" }}
         >
           <AnimatePresence initial={false} custom={direction}>
             <motion.img
               onClick={() => setOpen(true)}
-              className="w-screen absolute"
-              // className="rounded-lg shadow-lg object-cover object-center absolute inset-0 w-full h-full lg:static lg:h-auto"
+              className="rounded-lg shadow-lg object-cover object-center absolute inset-0 w-full h-full lg:static lg:h-auto"
               key={page}
               src={
                 photos[imageIndex].node

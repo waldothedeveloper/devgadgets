@@ -30,11 +30,16 @@ const BookArticlesLayout = ({ selectCategory }) => {
             >
               <Link to={elem.node.fields.slug}>
                 <div className="h-64">
-                  <img
-                    className="w-full h-full object-cover"
-                    src={elem.node.frontmatter.featuredImage.publicURL}
-                    alt="books"
-                  />
+                  {elem.node.frontmatter &&
+                  elem.node.frontmatter.featuredImage.publicURL ? (
+                    <img
+                      className="h-48 w-full object-cover object-center"
+                      src={elem.node.frontmatter.featuredImage.publicURL}
+                      alt="gadget"
+                    />
+                  ) : (
+                    <div className="animate-pulse h-48 w-full object-cover object-center bg-gray-400" />
+                  )}
                 </div>
               </Link>
               <div className="flex-1 bg-white p-4 flex flex-col justify-evenly">

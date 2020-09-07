@@ -40,11 +40,16 @@ const ArticlesGadgetsLayout = ({ data, articleCat }) => {
             className="flex flex-col rounded-lg shadow-lg overflow-hidden"
           >
             <div className="flex-shrink-0">
-              <img
-                className="h-48 w-full object-cover object-center"
-                src={elem.node.frontmatter.featuredImage.publicURL}
-                alt="gadget"
-              />
+              {elem.node.frontmatter &&
+              elem.node.frontmatter.featuredImage.publicURL ? (
+                <img
+                  className="h-48 w-full object-cover object-center"
+                  src={elem.node.frontmatter.featuredImage.publicURL}
+                  alt="gadget"
+                />
+              ) : (
+                <div className="animate-pulse h-48 w-full object-cover object-center bg-gray-400" />
+              )}
             </div>
             <div className="flex-1 bg-white p-5 md:p-6 flex flex-col justify-between">
               <div className="flex-1">

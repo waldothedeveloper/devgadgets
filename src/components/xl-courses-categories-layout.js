@@ -4,8 +4,9 @@ import { Link } from "gatsby"
 import Rating from "../templates/rating-template"
 import DevGadgetsChoice from "./devgadgets-choice"
 
-//
+// Desktop View of articles
 const XlCoursesCategories = ({ cat, xlCat }) => {
+  // console.log("cat: ", cat)
   const [data, setData] = React.useState([])
 
   React.useEffect(() => {

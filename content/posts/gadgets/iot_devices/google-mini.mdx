@@ -9,6 +9,14 @@ category_color: teal
 featured: false
 featuredImage: google-mini-1.jpg
 cloudinaryImage: devgadgets_cloudinary/google-mini-1
+cloudinaryCarousel:
+  [
+    "devgadgets_cloudinary/google-mini-1",
+    "devgadgets_cloudinary/google-mini-2",
+    "devgadgets_cloudinary/google-mini-3",
+    "devgadgets_cloudinary/google-mini-4",
+    "devgadgets_cloudinary/google_mini_white",
+  ]
 author_image: waldo.jpg
 amazon_choice: true
 ratings_count: 2210
@@ -21,9 +29,11 @@ buy_link: https://www.amazon.com/dp/B07S395RWD/?coliid=I24L3DP5L4C817&colid=1V9G
 
 import google_1 from "./google-mini-1.jpg"
 import google_2 from "./google-mini-2.jpg"
+import google_3 from "./google-mini-3.jpg"
+import google_4 from "./google-mini-4.webp"
 
 export const metadata = {
-  photos: [google_1, google_2],
+  photos: [google_1, google_2, google_3, google_4],
   technical_details: [
     "Diameter: 3.85 in (98 mm) Height: 1.65 in (42 mm) Power cable: 1.5 m",
     "Weight: Device: 181 g",
@@ -33,4 +43,5 @@ export const metadata = {
   ],
 }
 
+<Carousel carousel={props.carousel} />
 <TechDetails metadata={metadata} />

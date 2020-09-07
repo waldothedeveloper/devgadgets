@@ -4,6 +4,7 @@ import Response from "./src/templates/response"
 import Carousel from "./src/templates/carousel"
 import TechDetails from "./src/templates/tech-details"
 import Question from "./src/templates/question"
+
 //
 const shortcodes = {
   Response,
