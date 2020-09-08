@@ -40,7 +40,7 @@ const TheGist = ({ frontmatter, image }) => {
 
           {/* Ratings */}
           {frontmatter.ratings_count !== null ? (
-            <div className="flex flex-col items-center">
+            <div className="flex items-center justify-center">
               <span className="mx-2 text-center text-sm">
                 {frontmatter.rating}
               </span>
@@ -50,7 +50,7 @@ const TheGist = ({ frontmatter, image }) => {
               </span>
             </div>
           ) : (
-            <div className="flex flex-col items-center -mt-1 ml-4"></div>
+            <div className="flex items-center justify-center"></div>
           )}
         </div>
 

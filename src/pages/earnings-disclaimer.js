@@ -163,11 +163,11 @@ const EarningsDisclaimer = () => {
               </a>
             </button> */}
 
-            <h3>
+            <p>
               Our goal with this blog is to provide our personal experience and
               expertise on a wide variety of technology products that we have
               tested, such as gadgets, books or courses.
-            </h3>
+            </p>
             <p>
               As much as we love to share all this info totally free, writing a
               trillion of articles on a gazillion topics all day is a harsh
@@ -175,9 +175,9 @@ const EarningsDisclaimer = () => {
               affiliate links for certain products/courses/services.
             </p>
 
-            <h3>
+            <p>
               We recommend only the products or services we think are the best.
-            </h3>
+            </p>
             <p className="text-orange-600">
               Please do not spend money on any products, courses, books or
               services mentioned on the site unless you feel you need them or

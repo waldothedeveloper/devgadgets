@@ -27,7 +27,7 @@ export const UseReturnCategory = section => {
         setSecCategory({
           title: "Gadgets",
           content:
-            "Explore the universe of amazing gadgets. Choose your flavor on the right column.",
+            "Explore the universe of amazing gadgets. Our reviews are self experience based, never blindly trying to sell something we haven't even touched.",
           image: man_and_woman_gadgets,
           article_category: "gadgets",
         })

@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 
 const StarRating = ({ value }) => {
   const [rating, setRating] = React.useState(0)
-  console.log("rating: ", rating)
+  // console.log("rating: ", rating)
 
   React.useEffect(() => {
     setRating((value / 5) * 100)
@@ -24,7 +24,7 @@ const StarRating = ({ value }) => {
             fill="currentColor"
             viewBox="0 0 24 24"
             stroke="none"
-            className="w-8 h-8"
+            className="w-6 h-6 md:w-8 md:h-8"
           >
             <path
               strokeLinecap="round"
@@ -39,7 +39,7 @@ const StarRating = ({ value }) => {
             fill="currentColor"
             viewBox="0 0 24 24"
             stroke="none"
-            className="w-8 h-8"
+            className="w-6 h-6 md:w-8 md:h-8"
           >
             <path
               strokeLinecap="round"
@@ -54,7 +54,7 @@ const StarRating = ({ value }) => {
             fill="currentColor"
             viewBox="0 0 24 24"
             stroke="none"
-            className="w-8 h-8"
+            className="w-6 h-6 md:w-8 md:h-8"
           >
             <path
               strokeLinecap="round"
@@ -69,7 +69,7 @@ const StarRating = ({ value }) => {
             fill="currentColor"
             viewBox="0 0 24 24"
             stroke="none"
-            className="w-8 h-8"
+            className="w-6 h-6 md:w-8 md:h-8"
           >
             <path
               strokeLinecap="round"
@@ -84,7 +84,7 @@ const StarRating = ({ value }) => {
             fill="currentColor"
             viewBox="0 0 24 24"
             stroke="none"
-            className="w-8 h-8"
+            className="w-6 h-6 md:w-8 md:h-8"
           >
             <path
               strokeLinecap="round"
@@ -101,7 +101,7 @@ const StarRating = ({ value }) => {
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
-        className="w-8 h-8"
+        className="w-6 h-6 md:w-8 md:h-8"
       >
         <path
           strokeLinecap="round"
@@ -116,7 +116,7 @@ const StarRating = ({ value }) => {
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
-        className="w-8 h-8"
+        className="w-6 h-6 md:w-8 md:h-8"
       >
         <path
           strokeLinecap="round"
@@ -131,7 +131,7 @@ const StarRating = ({ value }) => {
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
-        className="w-8 h-8"
+        className="w-6 h-6 md:w-8 md:h-8"
       >
         <path
           strokeLinecap="round"
@@ -146,7 +146,7 @@ const StarRating = ({ value }) => {
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
-        className="w-8 h-8"
+        className="w-6 h-6 md:w-8 md:h-8"
       >
         <path
           strokeLinecap="round"
@@ -161,7 +161,7 @@ const StarRating = ({ value }) => {
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
-        className="w-8 h-8"
+        className="w-6 h-6 md:w-8 md:h-8"
       >
         <path
           strokeLinecap="round"
