@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { motion } from "framer-motion"
 import PropTypes from "prop-types"
+import { getAllCloudinaryImages } from "../hooks/get-all-cloudinary-images"
 
 //
 const variants = {
@@ -11,6 +12,7 @@ const variants = {
 
 const ArticlesGadgetsLayout = ({ data, articleCat }) => {
   const [filterArticles, setFilterArticles] = React.useState([])
+  const allCloudinaryImg = getAllCloudinaryImages()
 
   React.useEffect(() => {
     if (articleCat === "All") {
@@ -44,11 +46,18 @@ const ArticlesGadgetsLayout = ({ data, articleCat }) => {
               elem.node.frontmatter.featuredImage.publicURL ? (
                 <img
                   className="h-48 w-full object-cover object-center"
-                  src={elem.node.frontmatter.featuredImage.publicURL}
-                  alt="gadget"
+                  src={
+                    allCloudinaryImg.filter(photo =>
+                      photo.node.secure_url.includes(
+                        elem.node.frontmatter.cloudinaryImage
+                      )
+                    )[0].node.secure_url ||
+                    elem.node.frontmatter.featuredImage.publicURL
+                  }
+                  alt="gadgets preview"
                 />
               ) : (
-                <div className="animate-pulse h-48 w-full object-cover object-center bg-gray-400" />
+                <div className="animate-pulse h-48 w-full object-cover object-center bg-cool-gray-400" />
               )}
             </div>
             <div className="flex-1 bg-white p-5 md:p-6 flex flex-col justify-between">

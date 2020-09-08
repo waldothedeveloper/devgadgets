@@ -2,9 +2,11 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useGetAllBookArticles } from "../hooks/use-get-all-book-articles"
 import { Link } from "gatsby"
+import { getAllCloudinaryImages } from "../hooks/get-all-cloudinary-images"
 
 //
 const BookArticlesLayout = ({ selectCategory }) => {
+  const allCloudinaryImg = getAllCloudinaryImages()
   const [filteredArticles, setFilteredArticles] = React.useState([])
   const data = useGetAllBookArticles()
 
@@ -29,16 +31,23 @@ const BookArticlesLayout = ({ selectCategory }) => {
               className="flex flex-col rounded-lg shadow-lg overflow-hidden"
             >
               <Link to={elem.node.fields.slug}>
-                <div className="h-64">
+                <div>
                   {elem.node.frontmatter &&
                   elem.node.frontmatter.featuredImage.publicURL ? (
                     <img
-                      className="h-48 w-full object-cover object-center"
-                      src={elem.node.frontmatter.featuredImage.publicURL}
-                      alt="gadget"
+                      className="h-72 w-full object-cover object-center"
+                      src={
+                        allCloudinaryImg.filter(photo =>
+                          photo.node.secure_url.includes(
+                            elem.node.frontmatter.cloudinaryBookImage
+                          )
+                        )[0].node.secure_url ||
+                        elem.node.frontmatter.featuredImage.publicURL
+                      }
+                      alt="gadgets preview"
                     />
                   ) : (
-                    <div className="animate-pulse h-48 w-full object-cover object-center bg-gray-400" />
+                    <div className="animate-pulse h-48 w-full object-cover object-center bg-cool-gray-400" />
                   )}
                 </div>
               </Link>

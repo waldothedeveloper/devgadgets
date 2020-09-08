@@ -69,7 +69,7 @@ const FeaturedGadgets = () => {
                     </p>
                   </Link>
                 </div>
-                <div className="mt-6 flex items-center">
+                {/* <div className="mt-6 flex items-center">
                   <div className="flex-shrink-0">
                     <button>
                       <img
@@ -93,7 +93,7 @@ const FeaturedGadgets = () => {
                       <span>{content.node.fields.readingTime.text}</span>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </motion.div>
           ))}

@@ -4,7 +4,7 @@ import Footer from "../pages/Footer/Footer"
 import { graphql } from "gatsby"
 import DevGadgetsChoice from "../components/devgadgets-choice"
 import { Link } from "gatsby"
-import Rating from "../templates/rating-template"
+import StarRating from "../templates/star-rating"
 import ShareArticle from "./share-article-template"
 import { useGetAllCoursesArticles } from "../hooks/use-get-all-courses-articles"
 import JoinNewsletter from "../pages/Newsletter/JoinNewsletter"
@@ -170,7 +170,7 @@ const InstructorsTemplate = ({ data, pageContext }) => {
                             <span className="font-bold text-base text-yellow-500 pr-1">
                               {elem.node.frontmatter.rating}
                             </span>
-                            <Rating frontmatter={elem.node.frontmatter} />
+                            <StarRating value={elem.node.frontmatter.rating} />
                             <span className="ml-1 text-sm text-gray-400">
                               {elem.node.frontmatter.rating_count !== 0
                                 ? `(` + elem.node.frontmatter.rating_count + `)`

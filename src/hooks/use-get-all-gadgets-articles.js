@@ -13,6 +13,7 @@ export const useGetAllGadgetsArticles = () => {
               title
               the_gist
               author
+              cloudinaryImage
               featuredImage {
                 publicURL
               }

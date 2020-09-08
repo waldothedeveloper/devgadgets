@@ -14,11 +14,11 @@ export const useGetAllCoursesArticles = () => {
               rating
               rating_count
               bestseller
-              cloudinaryImage
               category_color
               last_updated(formatString: "ddd DD MMMM YYYY")
               title
               author
+              cloudinaryImage
               featuredImage {
                 publicURL
               }

@@ -26,7 +26,7 @@ const Instructors = () => {
             return (
               <li
                 key={elem.node.id}
-                className="bg-gray-50 col-span-1 flex flex-col text-center rounded-lg shadow"
+                className="bg-cool-gray-50 col-span-1 flex flex-col text-center rounded-lg shadow"
               >
                 <div className="flex-1 flex flex-col p-8">
                   <img

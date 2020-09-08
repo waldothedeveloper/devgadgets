@@ -1,11 +1,13 @@
 import React from "react"
-import Rating from "../templates/rating-template"
+import StarRating from "../templates/star-rating"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import DevGadgetsChoice from "./devgadgets-choice"
+import { getAllCloudinaryImages } from "../hooks/get-all-cloudinary-images"
 
 // Mobile view of articles
 const CoursesArticlesLayout = ({ cat }) => {
+  const allCloudinaryImg = getAllCloudinaryImages()
   return (
     <div>
       <div className="mt-2 py-2w px-4 sm:px-6 lg:pb-28 lg:px-8">
@@ -46,12 +48,17 @@ const CoursesArticlesLayout = ({ cat }) => {
                             <img
                               className="h-48 w-full object-cover object-center"
                               src={
+                                allCloudinaryImg.filter(photo =>
+                                  photo.node.secure_url.includes(
+                                    elem.node.frontmatter.cloudinaryImage
+                                  )
+                                )[0].node.secure_url ||
                                 elem.node.frontmatter.featuredImage.publicURL
                               }
-                              alt="gadget"
+                              alt="featured image of the course"
                             />
                           ) : (
-                            <div className="animate-pulse h-48 w-full object-cover object-center bg-gray-400" />
+                            <div className="animate-pulse h-48 w-full object-cover object-center bg-cool-gray-400" />
                           )}
                         </Link>
                       </div>
@@ -75,7 +82,9 @@ const CoursesArticlesLayout = ({ cat }) => {
                               <span className="font-bold text-base text-yellow-500 pr-1">
                                 {elem.node.frontmatter.rating}
                               </span>
-                              <Rating frontmatter={elem.node.frontmatter} />
+                              <StarRating
+                                value={elem.node.frontmatter.rating}
+                              />
                               <span className="ml-1 text-sm text-gray-400">
                                 {elem.node.frontmatter.rating_count !== 0
                                   ? `(` +

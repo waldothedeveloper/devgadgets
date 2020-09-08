@@ -1,12 +1,13 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import Rating from "../templates/rating-template"
+import StarRating from "../templates/star-rating"
 import DevGadgetsChoice from "./devgadgets-choice"
+import { getAllCloudinaryImages } from "../hooks/get-all-cloudinary-images"
 
 // Desktop View of articles
 const XlCoursesCategories = ({ cat, xlCat }) => {
-  // console.log("cat: ", cat)
+  const allCloudinaryImg = getAllCloudinaryImages()
   const [data, setData] = React.useState([])
 
   React.useEffect(() => {
@@ -52,8 +53,15 @@ const XlCoursesCategories = ({ cat, xlCat }) => {
                   <div className="flex-shrink-0">
                     <Link className="flex-1" to={elem.node.fields.slug}>
                       <img
-                        className="h-48 w-full object-cover"
-                        src={elem.node.frontmatter.featuredImage.publicURL}
+                        className="h-48 w-full object-cover object-center"
+                        src={
+                          allCloudinaryImg.filter(photo =>
+                            photo.node.secure_url.includes(
+                              elem.node.frontmatter.cloudinaryImage
+                            )
+                          )[0].node.secure_url ||
+                          elem.node.frontmatter.featuredImage.publicURL
+                        }
                         alt="featured image of the course"
                       />
                     </Link>
@@ -78,7 +86,7 @@ const XlCoursesCategories = ({ cat, xlCat }) => {
                           <span className="font-bold text-base text-yellow-500 pr-1">
                             {elem.node.frontmatter.rating}
                           </span>
-                          <Rating frontmatter={elem.node.frontmatter} />
+                          <StarRating value={elem.node.frontmatter.rating} />
                           <span className="ml-1 text-sm text-gray-400">
                             {elem.node.frontmatter.rating_count !== 0
                               ? `(` + elem.node.frontmatter.rating_count + `)`

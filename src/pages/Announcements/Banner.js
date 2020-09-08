@@ -21,7 +21,7 @@ const Banner = () => {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="mt-24 relative bg-gray-900">
+          <div className="mt-24 relative bg-cool-gray-900">
             <div className="max-w-screen-xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
               <div className="pr-16 sm:text-center sm:px-16">
                 <p className="font-medium text-white">

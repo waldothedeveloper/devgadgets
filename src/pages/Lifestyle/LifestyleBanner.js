@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 
 const LifestyleBanner = () => {
   return (
-    <div className="relative bg-gray-800 pt-20 md:pt-2 lg:pt-0">
+    <div className="relative bg-cool-gray-800 pt-20 md:pt-2 lg:pt-0">
       <div className="h-56 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
         <img
           className="w-full h-full object-cover"
@@ -48,7 +48,7 @@ const LifestyleBanner = () => {
 
 export default LifestyleBanner
 
-// <div className="relative bg-gray-800">
+// <div className="relative bg-cool-gray-800">
 //   <div className="h-56 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
 //     <img
 //       className="w-full h-full object-cover"

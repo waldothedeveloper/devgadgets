@@ -13,7 +13,7 @@ const BooksCategories = ({ handleCategory, selectCategory }) => {
       whileTap={{ scale: 0.8 }}
       className={
         selectCategory === elem.category
-          ? `focus:outline-none focus:shadow-outline inline-flex items-center px-4 py-0.5 mx-3 my-1 rounded-full text-md font-medium leading-5 bg-gray-800 text-gray-50`
+          ? `focus:outline-none focus:shadow-outline inline-flex items-center px-4 py-0.5 mx-3 my-1 rounded-full text-md font-medium leading-5 bg-cool-gray-800 text-gray-50`
           : `focus:outline-none inline-flex items-center px-3 py-0.5 mx-3 my-1 rounded-full text-sm font-medium leading-5 bg-${elem.category_color}-200 text-${elem.category_color}-800`
       }
     >

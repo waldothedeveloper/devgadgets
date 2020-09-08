@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { useGetFeaturedOnlineCourses } from "../../hooks/use-get-featured-online-courses"
-import Rating from "../../templates/rating-template"
+import StarRating from "../../templates/star-rating"
 import DevGadgetsChoice from "../../components/devgadgets-choice"
 import { getAllCloudinaryImages } from "../../hooks/get-all-cloudinary-images"
 
@@ -69,7 +69,7 @@ const FeaturedOnlineCourses = () => {
                           <span className="font-bold text-base text-yellow-500 pr-1">
                             {elem.node.frontmatter.rating}
                           </span>
-                          <Rating frontmatter={elem.node.frontmatter} />
+                          <StarRating value={elem.node.frontmatter.rating} />
                           <span className="ml-1 text-sm text-gray-400">
                             {elem.node.frontmatter.rating_count !== 0
                               ? `(` + elem.node.frontmatter.rating_count + `)`

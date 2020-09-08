@@ -46,7 +46,7 @@ const JoinNewsletter = () => {
                 value={email}
                 type="email"
                 aria-label="Email address"
-                className="appearance-none w-full px-5 py-3 text-base leading-6 rounded-md text-gray-900 bg-gray-100 placeholder-gray-500 focus:placeholder-gray-400 transition duration-150 ease-in-out "
+                className="appearance-none w-full px-5 py-3 text-base leading-6 rounded-md text-gray-900 bg-cool-gray-100 placeholder-gray-500 focus:placeholder-gray-400 transition duration-150 ease-in-out "
                 placeholder="Enter your email"
               />
 
@@ -113,7 +113,7 @@ const JoinNewsletter = () => {
                 value={email}
                 type="email"
                 aria-label="Email address"
-                className="appearance-none w-full px-5 py-3 text-base leading-6 rounded-md text-gray-900 bg-gray-100 placeholder-gray-500 focus:placeholder-gray-400 focus:outline-none transition duration-150 ease-in-out "
+                className="appearance-none w-full px-5 py-3 text-base leading-6 rounded-md text-gray-900 bg-cool-gray-100 placeholder-gray-500 focus:placeholder-gray-400 focus:outline-none transition duration-150 ease-in-out "
                 placeholder="Enter your email"
               />
               {errors.message.length > 0 && (

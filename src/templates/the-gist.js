@@ -1,6 +1,6 @@
 import React from "react"
 import amazon from "../images/amazon-logo.svg"
-import Rating from "./rating-template"
+import StarRating from "./star-rating"
 import PropTypes from "prop-types"
 import DevGadgetsChoice from "../components/devgadgets-choice"
 //
@@ -23,7 +23,7 @@ const TheGist = ({ frontmatter, image }) => {
             ) : frontmatter.amazon_choice ? (
               <div className="pr-2">
                 <div
-                  className="bg-gray-900 pl-3 pr-8 py-0.5"
+                  className="bg-cool-gray-900 pl-3 pr-8 py-0.5"
                   style={{
                     clipPath: `polygon(0 0, 100% 0%, 87% 100%, 0% 100%)`,
                   }}
@@ -41,8 +41,11 @@ const TheGist = ({ frontmatter, image }) => {
           {/* Ratings */}
           {frontmatter.ratings_count !== null ? (
             <div className="flex flex-col items-center">
-              <Rating frontmatter={frontmatter} />
-              <span className="text-center text-sm">
+              <span className="mx-2 text-center text-sm">
+                {frontmatter.rating}
+              </span>
+              <StarRating value={frontmatter.rating} />
+              <span className="mx-2 text-center text-sm">
                 {frontmatter.ratings_count} ratings
               </span>
             </div>
@@ -60,7 +63,7 @@ const TheGist = ({ frontmatter, image }) => {
             ) : frontmatter.amazon_choice ? (
               <div className="mt-2">
                 <div
-                  className="bg-gray-900 pl-3 pr-8 py-0.5"
+                  className="bg-cool-gray-900 pl-3 pr-8 py-0.5"
                   style={{
                     clipPath: `polygon(0 0, 100% 0%, 87% 100%, 0% 100%)`,
                   }}
@@ -83,9 +86,12 @@ const TheGist = ({ frontmatter, image }) => {
 
           {/* Ratings */}
           {frontmatter.ratings_count !== null ? (
-            <div className="flex flex-col items-center">
-              <Rating frontmatter={frontmatter} />
-              <span className="text-center text-sm">
+            <div className="flex items-center">
+              <span className="mx-2 text-center text-sm">
+                {frontmatter.rating}
+              </span>
+              <StarRating value={frontmatter.rating} />
+              <span className="mx-2 text-center text-sm">
                 {frontmatter.ratings_count} ratings
               </span>
             </div>

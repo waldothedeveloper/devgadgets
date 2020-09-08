@@ -14,6 +14,7 @@ export const useGetAllBookArticles = () => {
               author
               book_author
               price
+              cloudinaryBookImage
               featuredImage {
                 publicURL
               }

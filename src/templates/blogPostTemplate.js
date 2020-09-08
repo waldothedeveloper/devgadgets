@@ -13,7 +13,7 @@ import JoinNewsletter from "../pages/Newsletter/JoinNewsletter"
 
 //
 export default ({ data }) => {
-  console.log("data: ", data)
+  // console.log("data: ", data)
   const image = data && data.cloudinaryMedia ? data.cloudinaryMedia : ""
   const carousel =
     data && data.allCloudinaryMedia ? data.allCloudinaryMedia.edges : []

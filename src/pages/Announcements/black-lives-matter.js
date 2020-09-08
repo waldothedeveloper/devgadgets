@@ -33,9 +33,9 @@ const BlackLivesMattter = () => {
     setMenuMobile(!menuMobile)
   }
   return (
-    <div className="bg-gray-900">
+    <div className="bg-cool-gray-900">
       {/* Duplicated Nav but just for this page only, once this page will not be needed, this dup navigation component will not be of any issue */}
-      <div className="z-30 fixed w-full top-0 bg-gray-900">
+      <div className="z-30 fixed w-full top-0 bg-cool-gray-900">
         <div className="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
           <div>
             <Link to="/" className="flex">
@@ -250,7 +250,7 @@ const BlackLivesMattter = () => {
                     <div className="rounded-lg shadow-lg">
                       <div className="rounded-lg shadow-xs overflow-hidden">
                         <div className="z-20 relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                          <button className="-m-3 p-3 block space-y-1 rounded-md hover:bg-gray-50 transition ease-in-out duration-150">
+                          <button className="-m-3 p-3 block space-y-1 rounded-md hover:bg-cool-gray-50 transition ease-in-out duration-150">
                             <p className="text-base leading-6 font-medium text-gray-900">
                               Blog
                             </p>
@@ -259,7 +259,7 @@ const BlackLivesMattter = () => {
                               culture.
                             </p>
                           </button>
-                          <button className="-m-3 p-3 block space-y-1 rounded-md hover:bg-gray-50 transition ease-in-out duration-150">
+                          <button className="-m-3 p-3 block space-y-1 rounded-md hover:bg-cool-gray-50 transition ease-in-out duration-150">
                             <p className="text-base leading-6 font-medium text-gray-900">
                               Help Center
                             </p>
@@ -268,7 +268,7 @@ const BlackLivesMattter = () => {
                               of contact support.
                             </p>
                           </button>
-                          <button className="-m-3 p-3 block space-y-1 rounded-md hover:bg-gray-50 transition ease-in-out duration-150">
+                          <button className="-m-3 p-3 block space-y-1 rounded-md hover:bg-cool-gray-50 transition ease-in-out duration-150">
                             <p className="text-base leading-6 font-medium text-gray-900">
                               Guides
                             </p>
@@ -277,7 +277,7 @@ const BlackLivesMattter = () => {
                               out of it.
                             </p>
                           </button>
-                          <button className="-m-3 p-3 block space-y-1 rounded-md hover:bg-gray-50 transition ease-in-out duration-150">
+                          <button className="-m-3 p-3 block space-y-1 rounded-md hover:bg-cool-gray-50 transition ease-in-out duration-150">
                             <p className="text-base leading-6 font-medium text-gray-900">
                               Events
                             </p>
@@ -286,7 +286,7 @@ const BlackLivesMattter = () => {
                               our annual conference.
                             </p>
                           </button>
-                          <button className="-m-3 p-3 block space-y-1 rounded-md hover:bg-gray-50 transition ease-in-out duration-150">
+                          <button className="-m-3 p-3 block space-y-1 rounded-md hover:bg-cool-gray-50 transition ease-in-out duration-150">
                             <p className="text-base leading-6 font-medium text-gray-900">
                               Security
                             </p>
@@ -348,7 +348,7 @@ const BlackLivesMattter = () => {
                   </div>
                   <div>
                     <nav className="grid gap-6">
-                      <button className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+                      <button className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-cool-gray-50 transition ease-in-out duration-150">
                         {/* keyboard mobile */}
                         <img
                           src={keyboard}
@@ -359,7 +359,7 @@ const BlackLivesMattter = () => {
                           Keyboards
                         </div>
                       </button>
-                      <button className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+                      <button className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-cool-gray-50 transition ease-in-out duration-150">
                         {/* headphones mobile */}
                         <img
                           src={headphones}
@@ -370,7 +370,7 @@ const BlackLivesMattter = () => {
                           Headphones
                         </div>
                       </button>
-                      <button className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+                      <button className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-cool-gray-50 transition ease-in-out duration-150">
                         {/* monitors mobile */}
                         <img
                           src={computer_display}
@@ -381,21 +381,21 @@ const BlackLivesMattter = () => {
                           Monitors
                         </div>
                       </button>
-                      <button className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+                      <button className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-cool-gray-50 transition ease-in-out duration-150">
                         {/*  IOT Devices mobile */}
                         <img src={robot} alt="robot" className="h-12 w-auto" />
                         <div className="text-base leading-6 font-medium text-gray-900">
                           IOT Devices
                         </div>
                       </button>
-                      <button className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+                      <button className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-cool-gray-50 transition ease-in-out duration-150">
                         {/* Desk Chairs mobile */}
                         <img src={truck} alt="truck" className="h-12 w-auto" />
                         <div className="text-base leading-6 font-medium text-gray-900">
                           Office Desk & Chairs
                         </div>
                       </button>
-                      <button className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+                      <button className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-cool-gray-50 transition ease-in-out duration-150">
                         {/* USB devices mobile */}
                         <img
                           src={plug}

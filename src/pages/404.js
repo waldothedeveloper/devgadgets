@@ -23,7 +23,7 @@ const NotFoundPage = () => (
         </p>
         <Link
           to="/"
-          className="mx-6 flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-gray-50 bg-gray-800 hover:bg-gray-900 focus:outline-none focus:border-gray-700 focus:shadow-outline-gray transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
+          className="mx-6 flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-gray-50 bg-cool-gray-800 hover:bg-cool-gray-900 focus:outline-none focus:border-gray-700 focus:shadow-outline-gray transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
         >
           BACK HOME
         </Link>
