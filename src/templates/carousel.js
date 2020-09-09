@@ -27,7 +27,6 @@ const variants = {
 }
 
 const Carousel = ({ carousel }) => {
-  // console.log("carousel: ", carousel)
   const [open, setOpen] = React.useState(false)
   const photos = carousel
   const [[page, direction], setPage] = React.useState([0, 0])
@@ -42,12 +41,13 @@ const Carousel = ({ carousel }) => {
       <div className="my-12">
         <div
           className="relative flex items-center content-center overflow-hidden"
-          style={{ maxhHight: "30rem" }}
+          // style={{ height: "30rem" }}
         >
           <AnimatePresence initial={false} custom={direction}>
             <motion.img
               onClick={() => setOpen(true)}
-              className="rounded-lg shadow-lg object-cover object-center absolute inset-0 w-full h-full lg:static lg:h-auto"
+              className="rounded-lg w-full h-72 shadow-lg object-cover object-center"
+              // className="rounded-lg shadow-lg object-cover object-center absolute inset-0 w-full h-full lg:static lg:h-auto"
               key={page}
               src={
                 photos[imageIndex].node
@@ -60,7 +60,7 @@ const Carousel = ({ carousel }) => {
               animate="center"
               exit="exit"
               transition={{
-                x: { type: "spring", stiffness: 300, damping: 200 },
+                x: { type: "spring", stiffness: 5000, damping: 300 },
                 opacity: { duration: 0.2 },
               }}
               drag="x"
@@ -134,7 +134,7 @@ const Carousel = ({ carousel }) => {
   )
 }
 
-const swipeConfidenceThreshold = 10000
+const swipeConfidenceThreshold = 300
 const swipePower = (offset, velocity) => {
   return Math.abs(offset) * velocity
 }

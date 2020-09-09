@@ -34,7 +34,6 @@ exports.createPages = ({ actions, graphql }) => {
             ratings_count
             amazon_choice
             price
-            down_the_line
             buy_link
             category_color
             featured

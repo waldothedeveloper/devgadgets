@@ -4,22 +4,22 @@ import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Nav from "../pages/Menu/Nav"
 import TitleAndAuthorTemplate from "./title-and-author"
+import RatingWrapper from "./rating-wrapper-template"
 import TheGist from "./the-gist"
 import Footer from "../pages/Footer/Footer"
 import ShareArticle from "./share-article-template"
 import BuyIt from "./buy-it"
 import SEO from "../components/seo"
 import JoinNewsletter from "../pages/Newsletter/JoinNewsletter"
+import Price from "./price"
 
 //
 export default ({ data }) => {
-  // console.log("data: ", data)
   const image = data && data.cloudinaryMedia ? data.cloudinaryMedia : ""
   const carousel =
     data && data.allCloudinaryMedia ? data.allCloudinaryMedia.edges : []
   const { frontmatter, body, fields } = data.mdx
 
-  //! TODO: REMEMBER TO CREATE KEYWORDS FOR EVERY MDX ARTICLE
   return (
     <>
       <SEO
@@ -30,14 +30,21 @@ export default ({ data }) => {
         author={frontmatter.author}
       />
       <Nav />
-      <div className="">
+      <div>
         <div className="mt-12 mx-3 md:mx-32 lg:mx-64 lg:mt-24 xl:mx-72">
           <TitleAndAuthorTemplate frontmatter={frontmatter} fields={fields} />
         </div>
         <div className="mt-12 mx-6 md:mx-32 lg:mx-64 xl:mx-72">
+          <RatingWrapper frontmatter={frontmatter} />
           <TheGist frontmatter={frontmatter} image={image} />
+          <div className="flex items-center justify-between my-12">
+            <Price frontmatter={frontmatter} />
+            <BuyIt frontmatter={frontmatter} />
+          </div>
           <MDXRenderer carousel={carousel}>{body}</MDXRenderer>
-          <BuyIt frontmatter={frontmatter} />
+          <div className="my-12">
+            <BuyIt frontmatter={frontmatter} />
+          </div>
           <JoinNewsletter />
           <ShareArticle frontmatter={frontmatter} fields={fields} />
         </div>
@@ -80,7 +87,6 @@ export const query = graphql`
         image_captions
         rating
         price
-        down_the_line
         buy_link
         category_color
         featured

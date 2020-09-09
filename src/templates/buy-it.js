@@ -6,18 +6,8 @@ import PropTypes from "prop-types"
 const BuyIt = ({ frontmatter }) => {
   return (
     <div className="">
-      <div className="max-w-screen-xl mx-auto py-12 lg:py-16 lg:flex lg:items-center">
-        {/* a */}
-        <div className="flex flex-col md:w-3/4 md:pr-12">
-          <div className="text-xl leading-9 font-bold text-gray-900 sm:text-2xl sm:leading-10">
-            So why should I buy it?
-          </div>
-          <div className="mt-6 text-lg leading-7 text-gray-500">
-            {frontmatter.down_the_line}
-          </div>
-        </div>
-        {/* b */}
-        <div className="mt-8 w-48 md:px-4">
+      <div className="max-w-screen-xl mx-auto lg:flex lg:items-center">
+        <div className="w-48 md:px-4">
           {/* Amazon button buy */}
           <a
             target="_blank"

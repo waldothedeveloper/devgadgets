@@ -18,7 +18,7 @@ module.exports = {
       "The #1 gadgets resource for developers and technology enthusiasts.",
     author: "@waldothedeveloper",
     copyright: `Copyright © 2020 Dev Gadgets. All rights reserved`,
-    siteUrl: "https://devgadgets.io",
+    siteUrl: siteUrl,
     keywords: [
       "Technology Gadgets",
       "Gadgets",
@@ -89,7 +89,6 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
         trackingId: process.env.GOOGLE_TRACKING_ID,
         head: false,
       },
@@ -147,11 +146,12 @@ module.exports = {
         name: "dev gadgets",
         short_name: "devgadgets",
         start_url: "/",
-        background_color: "#663399",
-        theme_color: "#663399",
+        background_color: "#16bdca",
+        theme_color: "#16bdca",
         display: "minimal-ui",
         icon: "src/images/devgadgets-icon-black.png", // This path is relative to the root of the site.
       },
     },
+    "gatsby-plugin-offline",
   ],
 }

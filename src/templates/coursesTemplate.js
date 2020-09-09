@@ -4,10 +4,8 @@ import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Nav from "../pages/Menu/Nav"
 import TitleAndAuthorTemplate from "./title-and-author"
-// import TheGist from "./the-gist"
 import Footer from "../pages/Footer/Footer"
 import ShareArticle from "./share-article-template"
-// import BuyIt from "./buy-it"
 import SEO from "../components/seo"
 import JoinNewsletter from "../pages/Newsletter/JoinNewsletter"
 
@@ -35,9 +33,7 @@ export default ({ data }) => {
           <TitleAndAuthorTemplate frontmatter={frontmatter} fields={fields} />
         </div>
         <div className="mt-12 mx-6 md:mx-32 lg:mx-64 xl:mx-72">
-          {/* <TheGist frontmatter={frontmatter} image={image} /> */}
           <MDXRenderer carousel={carousel}>{body}</MDXRenderer>
-          {/* <BuyIt frontmatter={frontmatter} /> */}
           <JoinNewsletter />
           <ShareArticle frontmatter={frontmatter} fields={fields} />
         </div>
@@ -69,7 +65,6 @@ export const query = graphql`
         image_captions
         rating
         price
-        down_the_line
         buy_link
         category_color
         featured
