@@ -21,7 +21,7 @@ const Hero = () => {
               Welcome to
               <span className="sm:hidden xl:inline">{` `}</span>
               <br className="xl:hidden" />
-              <span className="text-teal-400">
+              <span className="text-teal-500">
                 {`<`}Dev{`/>`} Gadgets
               </span>
             </h2>
@@ -32,13 +32,13 @@ const Hero = () => {
                 <motion.button
                   whileTap={{ scale: 0.9 }}
                   onClick={() => setOpen(!open)}
-                  className="inline-block text-orange-500 font-semibold underline focus:outline-none"
+                  className="inline-block text-orange-600 font-semibold underline focus:outline-none"
                 >
                   technology blog
                 </motion.button>{" "}
               </span>
               that developers & technology enthusiasts{` `}
-              <span className="text-orange-500 font-semibold">#love</span>
+              <span className="text-orange-600 font-semibold">#love</span>
               <span className="-mb-2 inline-block align-baseline">
                 <video
                   className="h-8 w-8"

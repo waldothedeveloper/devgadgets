@@ -21,7 +21,8 @@ const IndexPage = () => {
 
   return (
     <>
-      <Nav open={open} handleBanner={handleBanner} />
+      <Nav role="navigation" open={open} handleBanner={handleBanner} />
+
       <Layout>
         <SEO title="Dev Gadgets is the #1 gadgets resource blog for developers and technology enthusiasts" />
         <Banner />
@@ -34,7 +35,10 @@ const IndexPage = () => {
         {/* This is for future marketing campaigns */}
         {/* <GiveAways /> */}
       </Layout>
-      <Footer />
+
+      <footer>
+        <Footer />
+      </footer>
     </>
   )
 }

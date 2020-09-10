@@ -60,7 +60,7 @@ const JoinNewsletter = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 type="submit"
-                className="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 rounded-md text-white font-semibold bg-teal-500 hover:bg-teal-400 focus:outline-none focus:bg-teal-400"
+                className="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 rounded-md text-white font-semibold bg-teal-400 hover:bg-teal-300 focus:outline-none focus:bg-teal-300"
               >
                 Subscribe
               </motion.button>
@@ -126,7 +126,7 @@ const JoinNewsletter = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 type="submit"
-                className="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 rounded-md text-white font-semibold bg-teal-500 hover:bg-teal-400 focus:outline-none focus:bg-teal-400"
+                className="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 rounded-md text-white font-semibold bg-teal-400 hover:bg-teal-300 focus:outline-none focus:bg-teal-300"
               >
                 Subscribe
               </motion.button>

@@ -54,7 +54,7 @@ const Nav = () => {
       <InstantSearch searchClient={searchClient} indexName="devgadgets_prod">
         <div className="z-30 fixed w-full top-0 bg-white">
           <div className="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
-            <div>
+            <div role="menuitem">
               <Link to="/" className="flex">
                 <img
                   className="h-8 w-auto sm:h-10"
