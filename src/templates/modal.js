@@ -34,11 +34,13 @@ const Modal = ({ open, setOpen, photos }) => {
           <div role="dialog" aria-modal="true" aria-labelledby="modal-headline">
             <div
               style={{
-                // marginTop: 88,
                 padding: "1rem",
                 background: `linear-gradient(rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%)`,
+                transform: `translateY(0px)`,
+                transition: `transform 500ms ease-out 0s`,
               }}
-              className="w-full absolute top-0 left-0 z-40"
+              // className="w-full absolute top-0 left-0 z-40"
+              className="fixed top-0 left-0 w-full mb-0 z-40"
             >
               <button
                 onClick={() => setOpen(false)}
@@ -61,32 +63,37 @@ const Modal = ({ open, setOpen, photos }) => {
                 </svg>
               </button>
             </div>
-            <div className="bg-white h-screen w-screen overflow-y-scroll overflow-x-hidden">
-              <ul
+            <div className="bg-white mt-4 h-screen w-screen overflow-y-scroll overflow-x-hidden">
+              <div
+                className="mt-12 md:mt-0"
                 style={{
                   display: `grid`,
                   gridGap: `4px`,
                   gridAutoColumns: `1fr`,
-                  margin: `0 auto`,
+                  // marginTop: "19.5%",
+                  // margin: `0 auto`,
+                  width: `calc(100% + 4px)`,
+                  minHeight: `30% !important`,
                 }}
               >
                 {photos.map((photo, id) => (
-                  <li
+                  <div
                     key={id}
                     style={{
                       height: `calc(100vw * 3 / 4)`,
-                      border: `2px solid #eee`,
+                      // border: `2px solid #eee`,
                     }}
                   >
                     <img
+                      style={{ margin: `0px !important` }}
                       key={id}
                       className="w-full h-full object-cover object-center"
                       src={photo.node.secure_url}
                       alt="products"
                     />
-                  </li>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
           </div>
         </Transition>

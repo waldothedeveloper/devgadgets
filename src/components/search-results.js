@@ -19,7 +19,7 @@ const Hits = ({ hits }) => {
       leaveFrom="opacity-100 translate-y-0"
       leaveTo="opacity-0 translate-y-1"
     >
-      <div className="absolute w-screen md:max-w-lg transform md:-translate-x-3/12 lg:translate-x-5/12 lg:max-w-xl md:-ml-56 mt-3 px-2 sm:px-0">
+      <div className="absolute w-screen md:max-w-lg transform md:-translate-x-8/12 md:translate-y-7/12 md:-ml-56 lg:max-w-xl lg:-translate-x-9/12 px-2 sm:px-0">
         <div className="rounded-lg shadow-lg">
           <div className="rounded-lg shadow-xs overflow-hidden">
             <div className="z-50 relative bg-white px-5 py-6">

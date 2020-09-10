@@ -5,7 +5,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import Nav from "../pages/Menu/Nav"
 import TitleAndAuthorTemplate from "./title-and-author"
 import RatingWrapper from "./rating-wrapper-template"
-import TheGist from "./the-gist"
+import BlogFeaturedImage from "./blog-featured-image"
 import Footer from "../pages/Footer/Footer"
 import ShareArticle from "./share-article-template"
 import BuyIt from "./buy-it"
@@ -36,7 +36,7 @@ export default ({ data }) => {
         </div>
         <div className="mt-12 mx-6 md:mx-32 lg:mx-64 xl:mx-72">
           <RatingWrapper frontmatter={frontmatter} />
-          <TheGist frontmatter={frontmatter} image={image} />
+          <BlogFeaturedImage frontmatter={frontmatter} image={image} />
           <div className="flex items-center justify-between my-12">
             <Price frontmatter={frontmatter} />
             <BuyIt frontmatter={frontmatter} />

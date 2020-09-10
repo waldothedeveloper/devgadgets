@@ -85,8 +85,8 @@ const Nav = () => {
               </button>
             </div>
             {/* Desktop view */}
-            <div className="hidden md:flex-1 md:flex md:items-center md:space-x-12">
-              <nav className="flex space-x-10 items-center">
+            <div className="hidden md:flex-1 md:flex md:items-center md:justify-between md:space-x-12">
+              <nav className="flex space-x-10">
                 <div className="relative">
                   <button
                     ref={ref}
@@ -580,7 +580,7 @@ const Nav = () => {
               </nav>
 
               {/* Desktop Search Algolia here */}
-              <div className="relative">
+              <div className="flex items-center space-x-8">
                 {/* <Search /> */}
                 <CustomSearchBox />
                 <CustomHits />

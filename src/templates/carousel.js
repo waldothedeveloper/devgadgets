@@ -40,14 +40,13 @@ const Carousel = ({ carousel }) => {
     <>
       <div className="my-12">
         <div
-          className="relative flex items-center content-center overflow-hidden"
-          // style={{ height: "30rem" }}
+          className="h-72 relative flex items-center content-center overflow-hidden"
+          // style={{ height: "234px" }}
         >
           <AnimatePresence initial={false} custom={direction}>
             <motion.img
               onClick={() => setOpen(true)}
-              className="rounded-lg w-full h-72 shadow-lg object-cover object-center"
-              // className="rounded-lg shadow-lg object-cover object-center absolute inset-0 w-full h-full lg:static lg:h-auto"
+              className="rounded-lg w-full h-full object-cover"
               key={page}
               src={
                 photos[imageIndex].node
@@ -83,10 +82,10 @@ const Carousel = ({ carousel }) => {
           <div className="w-0 flex-1 flex">
             <button
               onClick={() => paginate(-1)}
-              className="-mt-px border-t-2 border-transparent pt-4 pr-1 inline-flex items-center text-sm leading-5 font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-400 transition ease-in-out duration-150"
+              className="-mt-px border-t-2 group border-transparent pt-4 pr-1 inline-flex items-center text-sm leading-5 font-medium text-cool-gray-500 hover:text-teal-400 hover:border-teal-400 focus:outline-none focus:text-teal-500 focus:border-teal-500 transition ease-in-out duration-150"
             >
               <svg
-                className="mr-3 h-5 w-5 text-gray-400"
+                className="mr-3 h-5 w-5 text-cool-gray-400 group-hover:text-teal-400 group-focus:text-teal-500"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >
@@ -101,7 +100,7 @@ const Carousel = ({ carousel }) => {
           </div>
           <div>
             {photos.length > 0 && (
-              <p className="text-sm leading-5 text-gray-700">
+              <p className="text-sm leading-5 text-cool-gray-700">
                 <span className="px-2 font-medium">{imageIndex + 1}</span>
                 of
                 <span className="px-2 font-medium">{photos.length}</span>
@@ -111,11 +110,11 @@ const Carousel = ({ carousel }) => {
           <div className="w-0 flex-1 flex justify-end">
             <button
               onClick={() => paginate(1)}
-              className="-mt-px border-t-2 border-transparent pt-4 pl-1 inline-flex items-center text-sm leading-5 font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-400 transition ease-in-out duration-150"
+              className="-mt-px border-t-2 group border-transparent pt-4 pl-1 inline-flex items-center text-sm leading-5 font-medium text-cool-gray-500 hover:text-teal-400 hover:border-teal-400 focus:outline-none focus:text-teal-500 focus:border-teal-500 transition ease-in-out duration-150"
             >
               Next
               <svg
-                className="ml-3 h-5 w-5 text-gray-400"
+                className="ml-3 h-5 w-5 text-cool-gray-400 group-hover:text-teal-400 group-focus:text-teal-500"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >

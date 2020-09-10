@@ -2,9 +2,9 @@ import React from "react"
 import PropTypes from "prop-types"
 
 //
-const TheGist = ({ frontmatter, image }) => {
+const BlogFeaturedImage = ({ frontmatter, image }) => {
   return (
-    <div className="mt-6 relative bg-white">
+    <div className="mt-6 relative">
       <div className="relative text-base mx-auto max-w-prose lg:max-w-none">
         <figure>
           <div className="pb-7/12 lg:pb-0">
@@ -37,8 +37,10 @@ const TheGist = ({ frontmatter, image }) => {
     </div>
   )
 }
-TheGist.propTypes = {
+
+//
+BlogFeaturedImage.propTypes = {
   frontmatter: PropTypes.object,
   image: PropTypes.object,
 }
-export default TheGist
+export default BlogFeaturedImage
