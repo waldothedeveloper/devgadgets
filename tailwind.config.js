@@ -27,6 +27,16 @@ module.exports = {
   },
   theme: {
     extend: {
+      typography: {
+        default: {
+          css: {
+            img: {
+              marginTop: `0.15rem`,
+              marginBottom: `0.15rem`,
+            },
+          },
+        },
+      },
       fontFamily: {
         sans: ["Inter var", ...defaultTheme.fontFamily.sans],
       },
@@ -35,5 +45,5 @@ module.exports = {
   variants: {
     backgroundColor: ["responsive", "hover", "focus", "active", "group-hover"],
   },
-  plugins: [require("@tailwindcss/ui")],
+  plugins: [require("@tailwindcss/ui"), require("@tailwindcss/typography")],
 }

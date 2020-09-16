@@ -41,6 +41,8 @@ export default ({ data }) => {
             <Price frontmatter={frontmatter} />
             <BuyIt frontmatter={frontmatter} />
           </div>
+          {/* Amazon Native Ads */}
+          <div id="amzn-assoc-ad-8967ded1-0ff1-4045-9571-d4063bddb450" />
           <MDXRenderer carousel={carousel}>{body}</MDXRenderer>
           <div className="my-12">
             <BuyIt frontmatter={frontmatter} />

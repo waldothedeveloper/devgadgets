@@ -12,10 +12,13 @@ const BlogSecondaryImage = ({ carousel }) => {
   }, [carousel])
 
   return (
-    <div className="my-8 max-w-xs mx-auto lg:max-w-2xl">
+    <div className="my-8 max-w-6xl mx-auto lg:max-w-none">
       <img
         className="rounded-lg shadow-lg object-cover object-center w-full h-full"
-        src={selected}
+        src={selected.replace(
+          "q_auto,f_auto/",
+          "q_auto,f_auto/h_442,ar_16:9,c_fill/"
+        )}
       />
     </div>
   )

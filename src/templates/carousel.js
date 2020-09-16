@@ -40,41 +40,44 @@ const Carousel = ({ carousel }) => {
     <>
       <div className="my-12">
         <div
-          className="h-72 relative flex items-center content-center overflow-hidden"
-          // style={{ height: "234px" }}
+          className="relative flex items-center content-center overflow-hidden"
+          // style={{ height: 442 }}
         >
           <AnimatePresence initial={false} custom={direction}>
-            <motion.img
-              onClick={() => setOpen(true)}
-              className="rounded-lg w-full h-full object-cover"
-              key={page}
-              src={
-                photos[imageIndex].node
-                  ? photos[imageIndex].node.secure_url
-                  : `https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80`
-              }
-              custom={direction}
-              variants={variants}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              transition={{
-                x: { type: "spring", stiffness: 5000, damping: 300 },
-                opacity: { duration: 0.2 },
-              }}
-              drag="x"
-              dragConstraints={{ left: 0, right: 0 }}
-              dragElastic={1}
-              onDragEnd={(e, { offset, velocity }) => {
-                const swipe = swipePower(offset.x, velocity.x)
+            {photos[imageIndex].node ? (
+              <motion.img
+                onClick={() => setOpen(true)}
+                className="rounded-lg"
+                key={page}
+                src={photos[imageIndex].node.secure_url.replace(
+                  "q_auto,f_auto/",
+                  "q_auto,f_auto/ar_16:9,c_fill/w_1.4/"
+                )}
+                custom={direction}
+                variants={variants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{
+                  x: { type: "spring", stiffness: 5000, damping: 300 },
+                  opacity: { duration: 0.2 },
+                }}
+                drag="x"
+                dragConstraints={{ left: 0, right: 0 }}
+                dragElastic={1}
+                onDragEnd={(e, { offset, velocity }) => {
+                  const swipe = swipePower(offset.x, velocity.x)
 
-                if (swipe < -swipeConfidenceThreshold) {
-                  paginate(1)
-                } else if (swipe > swipeConfidenceThreshold) {
-                  paginate(-1)
-                }
-              }}
-            />
+                  if (swipe < -swipeConfidenceThreshold) {
+                    paginate(1)
+                  } else if (swipe > swipeConfidenceThreshold) {
+                    paginate(-1)
+                  }
+                }}
+              />
+            ) : (
+              <div style={{ width: 849 }} className="pulse bg-cool-gray-400" />
+            )}
           </AnimatePresence>
         </div>
         {/* pagination */}

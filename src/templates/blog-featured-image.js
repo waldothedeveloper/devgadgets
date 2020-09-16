@@ -11,7 +11,10 @@ const BlogFeaturedImage = ({ frontmatter, image }) => {
             <img
               src={
                 image && image.secure_url
-                  ? image.secure_url
+                  ? image.secure_url.replace(
+                      "q_auto,f_auto/",
+                      "q_auto,f_auto/h_442,ar_16:9,c_fill/"
+                    )
                   : `http://placehold.jp/24/cccccc/ffffff/250x50.png?text=image_not_found`
               }
               alt={frontmatter.image_captions}

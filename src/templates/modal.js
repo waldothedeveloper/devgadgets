@@ -39,7 +39,6 @@ const Modal = ({ open, setOpen, photos }) => {
                 transform: `translateY(0px)`,
                 transition: `transform 500ms ease-out 0s`,
               }}
-              // className="w-full absolute top-0 left-0 z-40"
               className="fixed top-0 left-0 w-full mb-0 z-40"
             >
               <button
@@ -63,32 +62,23 @@ const Modal = ({ open, setOpen, photos }) => {
                 </svg>
               </button>
             </div>
-            <div className="bg-white mt-4 h-screen w-screen overflow-y-scroll overflow-x-hidden">
-              <div
-                className="mt-12 md:mt-0"
-                style={{
-                  display: `grid`,
-                  gridGap: `4px`,
-                  gridAutoColumns: `1fr`,
-                  // marginTop: "19.5%",
-                  // margin: `0 auto`,
-                  width: `calc(100% + 4px)`,
-                  minHeight: `30% !important`,
-                }}
-              >
+            <div className="bg-cool-gray-800 mt-4 h-screen w-screen overflow-y-scroll overflow-x-hidden">
+              <div className="mt-12 md:mt-0">
                 {photos.map((photo, id) => (
                   <div
                     key={id}
+                    className="flex justify-center items-center lg:max-w-6xl lg:mx-auto"
                     style={{
-                      height: `calc(100vw * 3 / 4)`,
-                      // border: `2px solid #eee`,
+                      margin: `0px !important`,
                     }}
                   >
                     <img
-                      style={{ margin: `0px !important` }}
+                      style={{ margin: `0.5rem !important` }}
                       key={id}
-                      className="w-full h-full object-cover object-center"
-                      src={photo.node.secure_url}
+                      src={photo.node.secure_url.replace(
+                        "q_auto,f_auto/",
+                        "q_auto,f_auto/w_1000,h_1000,c_limit/"
+                      )}
                       alt="products"
                     />
                   </div>
