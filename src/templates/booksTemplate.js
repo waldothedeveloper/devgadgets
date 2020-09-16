@@ -94,8 +94,15 @@ BooksTemplate.propTypes = {
 export default BooksTemplate
 
 export const query = graphql`
-  query getAllBooks($slug: String, $cloudinaryImage: String) {
+  query getAllBooks(
+    $slug: String
+    $authorImage: String
+    $cloudinaryImage: String
+  ) {
     cloudinaryMedia(public_id: { eq: $cloudinaryImage }) {
+      secure_url
+    }
+    authorImage: cloudinaryMedia(public_id: { eq: $authorImage }) {
       secure_url
     }
     mdx(fields: { slug: { eq: $slug } }) {

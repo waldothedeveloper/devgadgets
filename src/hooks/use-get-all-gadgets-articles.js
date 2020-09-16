@@ -17,9 +17,6 @@ export const useGetAllGadgetsArticles = () => {
               featuredImage {
                 publicURL
               }
-              author_image {
-                publicURL
-              }
             }
             fields {
               slug

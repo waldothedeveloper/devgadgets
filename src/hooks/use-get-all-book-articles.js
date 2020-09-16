@@ -18,9 +18,6 @@ export const useGetAllBookArticles = () => {
               featuredImage {
                 publicURL
               }
-              author_image {
-                publicURL
-              }
             }
             fields {
               slug

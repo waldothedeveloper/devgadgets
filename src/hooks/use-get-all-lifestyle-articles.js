@@ -17,9 +17,6 @@ export const useGetAllLifeStyleArticles = () => {
               featuredImage {
                 publicURL
               }
-              author_image {
-                publicURL
-              }
             }
             fields {
               slug

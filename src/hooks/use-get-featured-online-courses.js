@@ -25,9 +25,6 @@ export const useGetFeaturedOnlineCourses = () => {
               featuredImage {
                 publicURL
               }
-              author_image {
-                publicURL
-              }
             }
             fields {
               slug

@@ -14,8 +14,11 @@ import JoinNewsletter from "../pages/Newsletter/JoinNewsletter"
 import Price from "./price"
 
 //
-export default ({ data }) => {
+export default ({ data, pageContext }) => {
   const image = data && data.cloudinaryMedia ? data.cloudinaryMedia : ""
+  const authorImage =
+    data && data.authorImage ? data.authorImage.secure_url : ""
+
   const carousel =
     data && data.allCloudinaryMedia ? data.allCloudinaryMedia.edges : []
   const { frontmatter, body, fields } = data && data.mdx
@@ -32,7 +35,11 @@ export default ({ data }) => {
       <Nav />
       <div>
         <div className="mt-12 mx-3 md:mx-32 lg:mx-64 lg:mt-24 xl:mx-72">
-          <TitleAndAuthorTemplate frontmatter={frontmatter} fields={fields} />
+          <TitleAndAuthorTemplate
+            frontmatter={frontmatter}
+            fields={fields}
+            authorImage={authorImage}
+          />
         </div>
         <div className="mt-12 mx-6 md:mx-32 lg:mx-64 xl:mx-72">
           <RatingWrapper frontmatter={frontmatter} />
@@ -61,9 +68,13 @@ export const query = graphql`
   query BlogPostQuery(
     $slug: String
     $cloudinaryImage: String
+    $authorImage: String
     $cloudinaryCarousel: [String]
   ) {
     cloudinaryMedia(public_id: { eq: $cloudinaryImage }) {
+      secure_url
+    }
+    authorImage: cloudinaryMedia(public_id: { eq: $authorImage }) {
       secure_url
     }
     allCloudinaryMedia(filter: { public_id: { in: $cloudinaryCarousel } }) {
@@ -80,9 +91,6 @@ export const query = graphql`
         title
         last_updated(formatString: "YYYY MMMM Do")
         author
-        author_image {
-          publicURL
-        }
         article_category
         category
         the_gist

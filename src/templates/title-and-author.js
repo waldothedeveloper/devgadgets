@@ -1,9 +1,8 @@
 import React from "react"
-import waldo from "../images/waldo.jpg"
 import PropTypes from "prop-types"
 
 //
-const TitleAndAuthorTemplate = ({ frontmatter, fields }) => {
+const TitleAndAuthorTemplate = ({ frontmatter, fields, authorImage }) => {
   return (
     <div className="flex flex-col justify-center md:flex-row md:items-end mx-6 mt-24 md:my-32 md:mx-0">
       {/* picture of author */}
@@ -12,7 +11,7 @@ const TitleAndAuthorTemplate = ({ frontmatter, fields }) => {
           <button>
             <img
               className="h-10 w-10 rounded-full"
-              src={waldo}
+              src={authorImage}
               alt="Waldo Lavaut"
             />
           </button>
@@ -46,5 +45,6 @@ const TitleAndAuthorTemplate = ({ frontmatter, fields }) => {
 TitleAndAuthorTemplate.propTypes = {
   frontmatter: PropTypes.object,
   fields: PropTypes.object,
+  authorImage: PropTypes.string.isRequired,
 }
 export default TitleAndAuthorTemplate
