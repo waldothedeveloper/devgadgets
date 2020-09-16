@@ -1,0 +1,53 @@
+---
+title: This headphones can change the way you listen to music
+gadget_name: Beats Solo 3 by Dr. Dre
+last_updated: 2020-07-25
+author: Waldo Lavaut
+article_category: gadgets
+category: headphones
+category_color: red
+featured: false
+featuredImage: beats_4.jpeg
+cloudinaryImage: devgadgets_cloudinary/beats-4
+cloudinaryCarousel:
+  [
+    "devgadgets_cloudinary/beats_1",
+    "devgadgets_cloudinary/beats_2",
+    "devgadgets_cloudinary/beats_3",
+    "devgadgets_cloudinary/beats_4",
+    "devgadgets_cloudinary/beats_5",
+    "devgadgets_cloudinary/beats_6",
+    "devgadgets_cloudinary/beats_7",
+  ]
+author_image: waldo.jpg
+amazon_choice: true
+ratings_count: 2210
+price: 199.95
+rating: 4.6
+image_captions: the Beats Solo3 by Dr. Dre
+the_gist: Make it loud. Embrace bold sound and even bolder colors with the Beats Club Collection. With up to 40 hours of battery life and award-winning Beats sound, Beats Solo3 Wireless headphones are perfect for staying inspired. So go ahead, pick your color, push play, and show the world who you really are.
+buy_link: https://www.amazon.com/dp/B07S395RWD/?coliid=I24L3DP5L4C817&colid=1V9GLAJK5MOMA&psc=1&ref_=lv_ov_lig_dp_it
+---
+
+import beats_1 from "./beats_1.jpeg"
+import beats_2 from "./beats_2.jpeg"
+import beats_3 from "./beats_3.jpeg"
+import beats_4 from "./beats_4.jpeg"
+import beats_5 from "./beats_5.jpeg"
+import beats_6 from "./beats_6.jpeg"
+import beats_7 from "./beats_7.jpeg"
+export const metadata = {
+  photos: [beats_1, beats_2, beats_3, beats_4, beats_5, beats_6, beats_7],
+  technical_details: [
+    "Connect via Class 1 Bluetooth with your device for wireless listening",
+    "The award-winning sound and design you’ve come to love from Beats",
+    "Up to 40 hours of battery life for multi-day use",
+    "With Fast Fuel, 5 minutes of charging gives you 3 hours of playback when battery is low",
+    "Adjustable fit with comfort-cushioned ear cups made for everyday use",
+    "Sleek, streamlined design that’s durable and foldable to go everywhere you do",
+    "Take calls, control your music, and activate Siri with the multifunction on-ear controls",
+  ],
+}
+
+<Carousel carousel={props.carousel} />
+<TechDetails metadata={metadata} />

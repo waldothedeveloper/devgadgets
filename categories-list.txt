@@ -1,0 +1,37 @@
+gadgets cat:
+ const subCategory = ["All, Keyboards, Headphones, Monitors, IOT, Office, usb"]
+
+-Keyboards
+-Headphones
+-Monitors
+-IOT Devices
+-Office (Desks, Chairs)
+-USB Devices
+
+coming soon...
+
+-Appliances
+-Cameras
+-Laptops
+-Phones
+-Smart Home
+-Wearables
+-random
+
+
+
+
+
+books cat:
+
+-Javascript
+-Python
+-Ruby
+
+
+
+online-courses cat:
+
+-React
+-Javascript
+-AWS
