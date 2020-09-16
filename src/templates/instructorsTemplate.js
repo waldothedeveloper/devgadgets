@@ -229,11 +229,15 @@ export const query = graphql`
   query getAllInstructors(
     $slug: String
     $cloudinaryImage: String
+    $authorImage: String
     $cloudinaryInstructorMedia: [String]
   ) {
     cloudinaryMedia(public_id: { eq: $cloudinaryImage }) {
       secure_url
       id
+    }
+    authorImage: cloudinaryMedia(public_id: { eq: $authorImage }) {
+      secure_url
     }
     allCloudinaryMedia(
       filter: { public_id: { in: $cloudinaryInstructorMedia } }

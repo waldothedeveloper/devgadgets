@@ -45,9 +45,7 @@ exports.createPages = ({ actions, graphql }) => {
             featuredImage {
               publicURL
             }
-            author_image {
-              publicURL
-            }
+            author_image
           }
           fields {
             slug
@@ -85,6 +83,7 @@ exports.createPages = ({ actions, graphql }) => {
           context: {
             slug: node.fields.slug,
             cloudinaryImage: node.frontmatter.cloudinaryBookImage,
+            authorImage: node.frontmatter.author_image,
           },
         })
       } else if (node.frontmatter.article_category === "courses") {
@@ -94,6 +93,7 @@ exports.createPages = ({ actions, graphql }) => {
           context: {
             slug: node.fields.slug,
             cloudinaryImage: node.frontmatter.cloudinaryImage,
+            authorImage: node.frontmatter.author_image,
           },
         })
       } else {
@@ -104,6 +104,7 @@ exports.createPages = ({ actions, graphql }) => {
             slug: node.fields.slug,
             cloudinaryImage: node.frontmatter.cloudinaryImage,
             cloudinaryCarousel: node.frontmatter.cloudinaryCarousel,
+            authorImage: node.frontmatter.author_image,
           },
         })
       }

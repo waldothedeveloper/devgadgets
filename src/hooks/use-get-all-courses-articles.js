@@ -22,9 +22,6 @@ export const useGetAllCoursesArticles = () => {
               featuredImage {
                 publicURL
               }
-              author_image {
-                publicURL
-              }
             }
             fields {
               slug

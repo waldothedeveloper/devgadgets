@@ -45,8 +45,15 @@ export default ({ data }) => {
 
 //
 export const query = graphql`
-  query coursesQuery($slug: String, $cloudinaryImage: String) {
+  query coursesQuery(
+    $slug: String
+    $authorImage: String
+    $cloudinaryImage: String
+  ) {
     cloudinaryMedia(public_id: { eq: $cloudinaryImage }) {
+      secure_url
+    }
+    authorImage: cloudinaryMedia(public_id: { eq: $authorImage }) {
       secure_url
     }
     mdx(fields: { slug: { eq: $slug } }) {
