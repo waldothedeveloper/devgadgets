@@ -18,7 +18,7 @@ export default ({ data }) => {
   const image = data && data.cloudinaryMedia ? data.cloudinaryMedia : ""
   const carousel =
     data && data.allCloudinaryMedia ? data.allCloudinaryMedia.edges : []
-  const { frontmatter, body, fields } = data.mdx
+  const { frontmatter, body, fields } = data && data.mdx
 
   return (
     <>
@@ -80,6 +80,9 @@ export const query = graphql`
         title
         last_updated(formatString: "YYYY MMMM Do")
         author
+        author_image {
+          publicURL
+        }
         article_category
         category
         the_gist
