@@ -69,31 +69,6 @@ const FeaturedGadgets = () => {
                     </p>
                   </Link>
                 </div>
-                {/* <div className="mt-6 flex items-center">
-                  <div className="flex-shrink-0">
-                    <button>
-                      <img
-                        className="h-10 w-10 rounded-full"
-                        src={content.node.frontmatter.author_image.publicURL}
-                        alt="waldo lavaut"
-                      />
-                    </button>
-                  </div>
-                  <div className="ml-3">
-                    <p className="text-sm leading-5 font-medium text-gray-900">
-                      <button className="hover:underline">
-                        {content.node.frontmatter.author}
-                      </button>
-                    </p>
-                    <div className="flex text-sm leading-5 text-gray-500">
-                      <time dateTime="2020-03-16">
-                        {content.node.frontmatter.date}
-                      </time>
-                      <span className="mx-1">&middot;</span>
-                      <span>{content.node.fields.readingTime.text}</span>
-                    </div>
-                  </div>
-                </div> */}
               </div>
             </motion.div>
           ))}
