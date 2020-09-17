@@ -34,14 +34,14 @@ export default ({ data, pageContext }) => {
       />
       <Nav />
       <div>
-        <div className="mt-12 mx-3 md:mx-32 lg:mx-64 lg:mt-24 xl:mx-72">
+        <div className="mt-12 mx-auto max-w-sm md:max-w-2xl lg:max-w-3xl">
           <TitleAndAuthorTemplate
             frontmatter={frontmatter}
             fields={fields}
             authorImage={authorImage}
           />
         </div>
-        <div className="mt-12 mx-6 md:mx-32 lg:mx-64 xl:mx-72">
+        <div className="mt-12 mx-auto max-w-sm md:max-w-2xl lg:max-w-3xl">
           <RatingWrapper frontmatter={frontmatter} />
           <BlogFeaturedImage frontmatter={frontmatter} image={image} />
           <div className="flex items-center justify-between my-12">

@@ -7,8 +7,8 @@ const RatingWrapper = ({ frontmatter }) => {
   return (
     <div className="mb-6 md:mb-4">
       {/* Small screens only */}
-      <div className="flex justify-between md:hidden">
-        <div className="flex flex-col">
+      <div className="flex md:hidden">
+        <div className="flex flex-col w-2/4">
           {/* DevGadgets choice */}
           <div className="mt-2 pr-2">
             <DevGadgetsChoice
@@ -38,7 +38,7 @@ const RatingWrapper = ({ frontmatter }) => {
 
         {/* Ratings */}
         {frontmatter.ratings_count !== null ? (
-          <div className="flex flex-wrap items-center justify-center">
+          <div className="flex flex-wrap items-center justify-center w-2/4">
             <span className="mx-2 text-center text-sm">
               {frontmatter.rating}
             </span>
