@@ -19,7 +19,7 @@ const BooksTemplate = ({ data, pageContext }) => {
       <SEO
         title={frontmatter.title}
         description={frontmatter.the_gist}
-        // image={image}
+        image={image}
         pathname={fields.slug}
         author={frontmatter.author}
       />

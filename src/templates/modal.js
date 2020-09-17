@@ -6,7 +6,6 @@ import PropTypes from "prop-types"
 const Modal = ({ open, setOpen, photos }) => {
   React.useEffect(() => {
     if (open) {
-      // console.log("body overflow hidden")
       document.body.style.overflow = "hidden"
     }
 

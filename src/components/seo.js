@@ -23,8 +23,8 @@ function SEO({ description, lang, image, title, pathname }) {
   const metaDescription = description || site.siteMetadata.description
   const images =
     image && image.secure_url
-      ? `${site.siteMetadata.siteUrl}${image.secure_url}`
-      : null
+      ? `${image.secure_url}`
+      : "http://placehold.jp/24/cccccc/ffffff/768x442.png?text=image+not+found"
 
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
 
