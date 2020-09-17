@@ -39,10 +39,7 @@ const Carousel = ({ carousel }) => {
   return (
     <>
       <div className="my-12">
-        <div
-          className="relative flex items-center content-center overflow-hidden"
-          // style={{ height: 442 }}
-        >
+        <div className="relative flex items-center content-center overflow-hidden">
           <AnimatePresence initial={false} custom={direction}>
             {photos[imageIndex].node ? (
               <motion.img
@@ -51,7 +48,7 @@ const Carousel = ({ carousel }) => {
                 key={page}
                 src={photos[imageIndex].node.secure_url.replace(
                   "q_auto,f_auto/",
-                  "q_auto,f_auto/ar_16:9,c_fill/w_1.4/"
+                  "q_auto,f_auto/ar_16:9,c_crop/c_fit,h_442/"
                 )}
                 custom={direction}
                 variants={variants}

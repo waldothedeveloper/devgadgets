@@ -13,7 +13,10 @@ import SEO from "../components/seo"
 import PropTypes from "prop-types"
 //
 const InstructorsTemplate = ({ data, pageContext }) => {
-  const image = data && data.cloudinaryMedia ? data.cloudinaryMedia : ""
+  const image =
+    data && data.cloudinaryMedia
+      ? data.cloudinaryMedia
+      : "http://placehold.jp/24/cccccc/ffffff/768x442.png?text=image+not+found"
 
   const cloudinaryCourses =
     data && data.allCloudinaryMedia ? data.allCloudinaryMedia.edges : []
@@ -36,7 +39,7 @@ const InstructorsTemplate = ({ data, pageContext }) => {
       <SEO
         title={frontmatter.instructor_name}
         description={frontmatter.the_gist}
-        // image={image}
+        image={image}
         pathname={fields.slug}
         author={frontmatter.author}
       />
