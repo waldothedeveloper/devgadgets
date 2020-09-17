@@ -7,7 +7,7 @@ const BlogFeaturedImage = ({ frontmatter, image }) => {
     <div className="mt-6 relative">
       <div className="relative text-base mx-auto max-w-prose lg:max-w-none">
         <figure>
-          <div className="pb-7/12 lg:pb-0">
+          <div className="flex items-center justify-center">
             <img
               src={
                 image && image.secure_url
@@ -18,7 +18,7 @@ const BlogFeaturedImage = ({ frontmatter, image }) => {
                   : `http://placehold.jp/24/cccccc/ffffff/250x50.png?text=image_not_found`
               }
               alt={frontmatter.image_captions}
-              className="rounded-lg shadow-lg object-cover object-center absolute inset-0 w-full h-full lg:static lg:h-auto"
+              className="rounded-lg shadow-lg"
             />
           </div>
           <figcaption className="flex mt-3 text-sm text-cool-gray-500">
