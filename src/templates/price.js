@@ -12,6 +12,10 @@ const Price = ({ frontmatter }) => {
               ${frontmatter.price}{" "}
               <span className="text-sm font-semibold">USD</span>
             </p>
+            <p className="text-sm text-gray-400">
+              Prices change over time. <br /> Click the button to see the latest
+              price.
+            </p>
           </div>
         </div>
       </div>
