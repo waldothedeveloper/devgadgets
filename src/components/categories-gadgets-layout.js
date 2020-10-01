@@ -10,7 +10,6 @@ import {
   textColorMapDiv2,
 } from "../utils/colors"
 
-console.log("subCategoryGadgets: ", subCategoryGadgets)
 //
 const CategoriesGadgetsLayout = ({ articleCat, handleCategory }) => {
   const variants = {
