@@ -4,6 +4,10 @@
 
 @tailwind utilities;
 
+body {
+  @apply font-sans;
+}
+
 .btn-active {
   @apply w-1/4 py-4 px-1 text-center border-b-2 border-teal-300 font-medium text-sm leading-5 text-teal-500;
 }
