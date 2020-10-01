@@ -17,7 +17,10 @@ const Hero = () => {
       <div>
         <div className="flex items-center justify-around px-6 sm:px-6 lg:py-16 lg:px-8">
           <div className="pt-12 flex flex-col">
-            <h2 className="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl lg:text-center">
+            <h2
+              // style={{ fontFamily: "Inter" }}
+              className="font-sans text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl lg:text-center"
+            >
               Welcome to
               <span className="sm:hidden xl:inline">{` `}</span>
               <br className="xl:hidden" />
