@@ -23,10 +23,11 @@ const FeaturedGadgets = () => {
               backgroundClip: "text",
               color: "transparent",
             }}
-            className="text-left md:text-center pb-2 px-2 text-4xl leading-9 tracking-tight text-transparent font-extrabold sm:text-5xl sm:leading-10"
+            className="text-left md:text-center pb-2 px-2 leading-10 text-4xl text-transparent font-extrabold sm:text-5xl"
           >
-            Meet your next
-            <br /> favorites gadgets
+            Meet you next
+            <br />
+            favorite gadgets
           </h2>
           <p className="text-left md:text-center px-2 mt-3 max-w-2xl mx-auto text-lg leading-7 text-gray-400 sm:mt-4">
             Discover amazing products to make your productivity 200% better.
