@@ -1,14 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
 import { getCloudinaryFeaturedImages } from "../../hooks/get-cloudinary-featured-images"
-// import smartwatch from "../../images/smart-watch.gif"
-// import coffee from "../../images/coffee.gif"
-// import ebook from "../../images/ebook-reader.gif"
-// import computer from "../../images/computer-display.gif"
 
 const Features = () => {
   const data = getCloudinaryFeaturedImages()
-  // console.log("data: ", data)
+
   return (
     <div className="py-12 bg-white">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,7 +16,7 @@ const Features = () => {
             You’ve got questions, we’ve got answers.
           </h2>
           <p className="mt-4 max-w-2xl text-xl leading-7 text-gray-500 lg:mx-auto">
-            Tech stuff help people help people, so we&apos;ve put our best
+            Technology often comes to the rescue, so we&apos;ve put our best
             effort in a curated, distilled, amazing spectrum of technology that
             will leave you roaring.
           </p>
