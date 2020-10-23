@@ -29,7 +29,7 @@ const BooksTemplate = ({ data, pageContext }) => {
           <div className="flex flex-col justify-center lg:flex-row">
             <div className="max-w-sm mx-auto md:max-w-none lg:w-5/6">
               <div className="mt-12 mb-8">
-                <p className="text-base leading-6 text-teal-600 font-semibold tracking-wide uppercase">
+                <p className="text-xs leading-6 text-teal-600 font-semibold tracking-wide uppercase">
                   {frontmatter.category}
                 </p>
                 <h1 className="my-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
