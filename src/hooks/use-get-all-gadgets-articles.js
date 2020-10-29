@@ -3,7 +3,14 @@ import { useStaticQuery, graphql } from "gatsby"
 export const useGetAllGadgetsArticles = () => {
   const data = useStaticQuery(graphql`
     query allGadgetsArticles {
-      allMdx(filter: { frontmatter: { article_category: { eq: "gadgets" } } }) {
+      allMdx(
+        filter: {
+          frontmatter: {
+            article_category: { eq: "gadgets" }
+            active: { eq: true }
+          }
+        }
+      ) {
         edges {
           node {
             frontmatter {

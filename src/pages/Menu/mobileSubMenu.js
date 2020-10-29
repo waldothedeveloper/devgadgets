@@ -216,13 +216,14 @@ const MobileSubMenus = () => {
           >
             Books
           </Link>
-          <Link
+          {/* Courses will be coming soon */}
+          {/* <Link
             to="/courses/all"
             state={{ featCategory: "courses" }}
             className="text-base leading-6 font-medium text-gray-900 hover:text-teal-400 transition ease-in-out duration-150"
           >
             Courses
-          </Link>
+          </Link> */}
           <Link
             to="/privacy-policy"
             className="text-base leading-6 font-medium text-gray-900 hover:text-teal-400 transition ease-in-out duration-150"

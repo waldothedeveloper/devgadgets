@@ -6,10 +6,10 @@ import Hero from "./hero-section/Hero"
 import JoinNewsletter from "./Newsletter/JoinNewsletter"
 import Features from "./features-section/Features"
 import FeaturedGadgets from "./gadgets/Featured-Gadgets"
-import Banner from "./announcements/Banner"
+// import Banner from "./announcements/Banner"
 // import GiveAways from "./GiveAways/GiveAways"
 import FeaturedBooks from "./books/FeaturedBooks"
-import FeaturedOnlineCourses from "./courses/Featured-Online-Courses"
+// import FeaturedOnlineCourses from "./courses/Featured-Online-Courses"
 import Footer from "./Footer/Footer"
 
 const IndexPage = () => {
@@ -25,12 +25,14 @@ const IndexPage = () => {
 
       <Layout>
         <SEO title="Dev Gadgets is the #1 gadgets resource blog for developers and technology enthusiasts" />
-        <Banner />
+        {/* <Banner /> */}
+        {/* This is a temporary dummy div until we display announcements */}
+        <div className="mt-24" />
         <Hero />
         <Features />
         <JoinNewsletter />
         <FeaturedGadgets />
-        <FeaturedOnlineCourses />
+        {/* <FeaturedOnlineCourses /> */}
         <FeaturedBooks />
         {/* This is for future marketing campaigns */}
         {/* <GiveAways /> */}
