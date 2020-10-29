@@ -2,12 +2,12 @@ import React from "react"
 import logo from "../../images/logo-teal-3.svg"
 import { Link } from "gatsby"
 import { motion } from "framer-motion"
-import { useGetInstructors } from "../../hooks/use-get-instructors"
+// import { useGetInstructors } from "../../hooks/use-get-instructors"
 import PropTypes from "prop-types"
 
 //
 const Footer = () => {
-  const data = useGetInstructors()
+  // const data = useGetInstructors()
 
   return (
     <div className="bg-cool-gray-800">
