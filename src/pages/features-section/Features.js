@@ -24,7 +24,7 @@ const Features = () => {
 
         <div className="py-12 bg-white">
           <div className="max-w-xl lg:mx-auto px-4 sm:px-6 lg:max-w-screen-xl lg:px-8">
-            <div className="lg:grid lg:grid-cols-3 lg:gap-8">
+            <div className="lg:grid lg:grid-cols-2 lg:gap-8">
               <div>
                 <div className="flex items-start justify-start">
                   <video
@@ -106,7 +106,8 @@ const Features = () => {
                   </div>
                 </div>
               </div>
-              <div className="mt-10 lg:mt-0">
+              {/* Courses will come SOON */}
+              {/* <div className="mt-10 lg:mt-0">
                 <div className="flex items-start justify-start">
                   <video
                     className="h-16 w-16"
@@ -145,7 +146,7 @@ const Features = () => {
                     </Link>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

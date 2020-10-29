@@ -8,13 +8,13 @@ const FeaturedBooks = () => {
   const cloudImg = getAllCloudinaryImages()
   const data = useGetFeaturedBooks()
   return (
-    <div className="bg-white pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
+    <div className="bg-teal-800 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
       <div className="relative mx-auto lg:max-w-7xl">
         <div>
-          <h2 className="text-3xl leading-9 tracking-tight font-extrabold sm:text-4xl sm:leading-10 text-teal-500">
+          <h2 className="text-3xl leading-9 tracking-tight font-extrabold sm:text-4xl sm:leading-10 text-teal-50">
             Books worth reading
           </h2>
-          <p className="mt-3 text-xl leading-7 sm:mt-4 max-w-2xl text-gray-400">
+          <p className="mt-3 text-xl leading-7 sm:mt-4 max-w-2xl text-teal-200">
             The following are a{" "}
             <span className="text-orange-400 font-medium">must-read</span>{" "}
             selection of books that every programmer should read. Regardless of
