@@ -3,15 +3,17 @@ import BookArticlesLayout from "./books-articles-layout"
 import BooksCategories from "./books-categories"
 import PropTypes from "prop-types"
 //
-const BooksSectionLayout = ({ section }) => {
+const BooksSectionLayout = ({ category }) => {
+  console.log("category: ", category)
   const [selectCategory, setSelectCategory] = React.useState("All")
+  console.log("selectCategory: ", selectCategory)
 
   const handleCategory = elem => {
     setSelectCategory(elem.category)
   }
 
   React.useEffect(() => {
-    const sub = section.subCategory ? section.subCategory : "All"
+    const sub = category.subCategory ? category.subCategory : "All"
 
     if (sub && sub === "Javascript") {
       setSelectCategory(sub)
@@ -28,7 +30,7 @@ const BooksSectionLayout = ({ section }) => {
     } else {
       setSelectCategory("All")
     }
-  }, [section])
+  }, [category])
 
   return (
     <div className="mt-24 mb-12 mx-4">
@@ -42,6 +44,6 @@ const BooksSectionLayout = ({ section }) => {
 }
 
 BooksSectionLayout.propTypes = {
-  section: PropTypes.object.isRequired,
+  category: PropTypes.object.isRequired,
 }
 export default BooksSectionLayout
