@@ -399,7 +399,6 @@ const Nav = () => {
                   </Transition>
                 </div>
                 <Link
-                  state={{ featCategory: "books" }}
                   to="/books/all"
                   className="text-base leading-6 font-medium text-gray-500 hover:text-teal-400 focus:outline-none focus:text-teal-500 transition ease-in-out duration-150"
                 >
@@ -408,7 +407,6 @@ const Nav = () => {
                 {/* Courses will be coming soon */}
                 {/* <Link
                     to="/courses/all"
-                    state={{ featCategory: "courses" }}
                     className="inline-block relative text-base leading-6 font-medium text-gray-500 hover:text-teal-400 focus:outline-none focus:text-teal-500 transition ease-in-out duration-150"
                   >
                     Courses

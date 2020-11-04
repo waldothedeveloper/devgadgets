@@ -7,15 +7,31 @@ import Footer from "../pages/Footer/Footer"
 import PropTypes from "prop-types"
 //
 const Sections = ({ section }) => {
-  const category =
-    section && section.featCategory ? section.featCategory : "gadgets"
+  console.log("section on Sections: ", section)
+  const [category, setCategory] = React.useState({})
 
-  switch (category) {
+  React.useEffect(() => {
+    if (section && section.pathname === "/books/all") {
+      setCategory({
+        category: "books",
+        subCategory: section.state ? section.state.subCategory : "",
+      })
+    }
+
+    if (section && section.pathname === "/gadgets/all") {
+      setCategory({
+        category: "gadgets",
+        subCategory: section.state ? section.state.subCategory : "",
+      })
+    }
+  }, [section])
+
+  switch (category.category) {
     case "gadgets":
       return (
         <>
           <Nav />
-          <SectionGadgetsLayout section={section} />
+          <SectionGadgetsLayout category={category} />
           <Footer />
         </>
       )
@@ -23,7 +39,7 @@ const Sections = ({ section }) => {
       return (
         <>
           <Nav />
-          <BooksSectionLayout section={section} />
+          <BooksSectionLayout category={category} />
           <Footer />
         </>
       )

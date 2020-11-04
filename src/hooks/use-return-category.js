@@ -6,13 +6,16 @@ import man_and_woman_gadgets from "../images/man_and_woman_gadgets.svg"
 
 //
 export const UseReturnCategory = section => {
+  console.log("section on UseReturnCategory: ", section)
   const [secCategory, setSecCategory] = React.useState({
     title: "",
     content: "",
   })
+  //
+  console.log("secCategory", secCategory)
 
   React.useEffect(() => {
-    switch (section.featCategory || section.navCategory) {
+    switch (section) {
       case "books":
         setSecCategory({
           title: "Books",
@@ -52,8 +55,8 @@ export const UseReturnCategory = section => {
         break
       default:
         setSecCategory({
-          title: "...Loading",
-          content: "...Loading",
+          title: "",
+          content: "",
           image: "",
         })
         break

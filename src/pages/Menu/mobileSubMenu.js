@@ -211,7 +211,6 @@ const MobileSubMenus = () => {
         <div className="grid grid-cols-2 gap-4">
           <Link
             to="/books/all"
-            state={{ featCategory: "books" }}
             className="text-base leading-6 font-medium text-gray-900 hover:text-teal-400 transition ease-in-out duration-150"
           >
             Books

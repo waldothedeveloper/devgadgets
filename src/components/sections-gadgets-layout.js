@@ -5,9 +5,10 @@ import { useGetAllGadgetsArticles } from "../hooks/use-get-all-gadgets-articles"
 import { UseReturnCategory } from "../hooks/use-return-category"
 import PropTypes from "prop-types"
 //
-const SectionGadgetsLayout = ({ section }) => {
+const SectionGadgetsLayout = ({ category }) => {
+  console.log("section on SectionGadgetsLayout: ", category)
   const data = useGetAllGadgetsArticles()
-  const secCategory = UseReturnCategory(section)
+  const secCategory = UseReturnCategory(category)
   const [articleCat, setArticleCat] = React.useState("All")
 
   const handleCategory = cat => {
@@ -19,7 +20,7 @@ const SectionGadgetsLayout = ({ section }) => {
   }
 
   React.useEffect(() => {
-    const sub = section.subCategory ? section.subCategory : "All"
+    const sub = category.subCategory ? category.subCategory : "All"
 
     if (sub && sub === "Keyboards") {
       setArticleCat(sub)
@@ -36,7 +37,7 @@ const SectionGadgetsLayout = ({ section }) => {
     } else {
       setArticleCat("All")
     }
-  }, [section])
+  }, [category])
 
   //
   return (
@@ -84,6 +85,6 @@ const SectionGadgetsLayout = ({ section }) => {
 }
 
 SectionGadgetsLayout.propTypes = {
-  section: PropTypes.object,
+  category: PropTypes.object.isRequired,
 }
 export default SectionGadgetsLayout
