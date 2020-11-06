@@ -47,6 +47,10 @@ function SEO({ description, lang, image, title, pathname }) {
       }
       meta={[
         {
+          name: "purpleads-verification",
+          content: "1be8d3ae0c5fb836d67967f4",
+        },
+        {
           name: `description`,
           content: metaDescription,
         },
