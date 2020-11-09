@@ -2,15 +2,15 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import Nav from "../pages/Menu/Nav"
+import Nav from "../pages/menu/Nav"
 import TitleAndAuthorTemplate from "./title-and-author"
 import RatingWrapper from "./rating-wrapper-template"
 import BlogFeaturedImage from "./blog-featured-image"
-import Footer from "../pages/Footer/Footer"
+import Footer from "../pages/footer/Footer"
 import ShareArticle from "./share-article-template"
 import BuyIt from "./buy-it"
 import SEO from "../components/seo"
-import JoinNewsletter from "../pages/Newsletter/JoinNewsletter"
+import JoinNewsletter from "../pages/newsletter/JoinNewsletter"
 import Price from "./price"
 
 //

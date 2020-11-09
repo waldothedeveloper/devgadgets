@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import React from "react"
 import { connectHits } from "react-instantsearch-dom"
 import PropTypes from "prop-types"
-import MobileSubMenus from "../pages/Menu/mobileSubMenu"
+import MobileSubMenus from "../pages/menu/mobileSubMenu"
 
 const SearchResultsMobile = ({ hits }) => {
   return (
