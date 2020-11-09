@@ -1,16 +1,16 @@
 import React from "react"
 import Layout from "../components/layout"
-import Nav from "./Menu/Nav"
+import Nav from "./menu/Nav"
 import SEO from "../components/seo"
 import Hero from "./hero-section/Hero"
-import JoinNewsletter from "./Newsletter/JoinNewsletter"
+import JoinNewsletter from "./newsletter/JoinNewsletter"
 import Features from "./features-section/Features"
-import FeaturedGadgets from "./Gadgets/Featured-Gadgets"
+import FeaturedGadgets from "./gadgets/Featured-Gadgets"
 // import Banner from "./announcements/Banner"
 // import GiveAways from "./GiveAways/GiveAways"
-import FeaturedBooks from "./Books/FeaturedBooks"
+import FeaturedBooks from "./books/FeaturedBooks"
 // import FeaturedOnlineCourses from "./courses/Featured-Online-Courses"
-import Footer from "./Footer/Footer"
+import Footer from "./footer/Footer"
 
 const IndexPage = () => {
   const [open, setOpen] = React.useState(true)
