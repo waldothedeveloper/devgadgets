@@ -125,7 +125,11 @@ const Nav = () => {
                               to="/gadgets/all"
                               className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                             >
-                              <video
+                              <img
+                                className="h-12 w-auto"
+                                src={data.keyboard.secure_url}
+                              />
+                              {/* <video
                                 className="h-12 w-auto"
                                 playsInline
                                 autoPlay
@@ -151,7 +155,7 @@ const Nav = () => {
                                   )}
                                 />
                                 Your browser does not support HTML5 video tag.
-                              </video>
+                              </video> */}
                               <div className="space-y-1">
                                 <p className="text-base leading-6 font-medium text-gray-900">
                                   Keyboards
@@ -171,7 +175,11 @@ const Nav = () => {
                               to="/gadgets/all"
                               className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                             >
-                              <video
+                              <img
+                                className="h-12 w-auto"
+                                src={data.headphones.secure_url}
+                              />
+                              {/* <video
                                 className="h-12 w-auto"
                                 playsInline
                                 autoPlay
@@ -197,7 +205,7 @@ const Nav = () => {
                                   )}
                                 />
                                 Your browser does not support HTML5 video tag.
-                              </video>
+                              </video> */}
                               <div className="space-y-1">
                                 <p className="text-base leading-6 font-medium text-gray-900">
                                   Headphones
@@ -217,7 +225,11 @@ const Nav = () => {
                               to="/gadgets/all"
                               className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                             >
-                              <video
+                              <img
+                                className="h-12 w-auto"
+                                src={data.computer_display.secure_url}
+                              />
+                              {/* <video
                                 className="h-12 w-auto"
                                 playsInline
                                 autoPlay
@@ -243,7 +255,7 @@ const Nav = () => {
                                   )}
                                 />
                                 Your browser does not support HTML5 video tag.
-                              </video>
+                              </video> */}
                               <div className="space-y-1">
                                 <p className="text-base leading-6 font-medium text-gray-900">
                                   Monitors
@@ -263,7 +275,11 @@ const Nav = () => {
                               to="/gadgets/all"
                               className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                             >
-                              <video
+                              <img
+                                className="h-12 w-auto"
+                                src={data.robot.secure_url}
+                              />
+                              {/* <video
                                 className="h-12 w-auto"
                                 playsInline
                                 autoPlay
@@ -289,7 +305,7 @@ const Nav = () => {
                                   )}
                                 />
                                 Your browser does not support HTML5 video tag.
-                              </video>
+                              </video> */}
                               <div className="space-y-1">
                                 <p className="text-base leading-6 font-medium text-gray-900">
                                   IOT Devices
@@ -309,7 +325,11 @@ const Nav = () => {
                               to="/gadgets/all"
                               className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                             >
-                              <video
+                              <img
+                                className="h-12 w-auto"
+                                src={data.truck.secure_url}
+                              />
+                              {/* <video
                                 className="h-12 w-auto"
                                 playsInline
                                 autoPlay
@@ -335,7 +355,7 @@ const Nav = () => {
                                   )}
                                 />
                                 Your browser does not support HTML5 video tag.
-                              </video>
+                              </video> */}
                               <div className="space-y-1">
                                 <p className="text-base leading-6 font-medium text-gray-900">
                                   Office
@@ -355,7 +375,11 @@ const Nav = () => {
                               to="/gadgets/all"
                               className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                             >
-                              <video
+                              <img
+                                className="h-12 w-auto"
+                                src={data.plug.secure_url}
+                              />
+                              {/* <video
                                 className="h-12 w-auto"
                                 playsInline
                                 autoPlay
@@ -381,7 +405,7 @@ const Nav = () => {
                                   )}
                                 />
                                 Your browser does not support HTML5 video tag.
-                              </video>
+                              </video> */}
                               <div className="space-y-1">
                                 <p className="text-base leading-6 font-medium text-gray-900">
                                   USB Devices
