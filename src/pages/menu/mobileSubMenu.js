@@ -23,7 +23,8 @@ const MobileSubMenus = () => {
           }}
         >
           {/* keyboard mobile */}
-          <video
+          <img className="h-12 w-auto" src={data.keyboard.secure_url} />
+          {/* <video
             className="h-12 w-auto"
             playsInline
             autoPlay
@@ -40,7 +41,7 @@ const MobileSubMenus = () => {
               src={data.keyboard.secure_url.replace("gif", "mp4")}
             />
             Your browser does not support HTML5 video tag.
-          </video>
+          </video> */}
 
           <div className="text-base leading-6 font-medium text-gray-900">
             Keyboards
@@ -55,7 +56,8 @@ const MobileSubMenus = () => {
           className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
         >
           {/* headphones mobile */}
-          <video
+          <img className="h-12 w-auto" src={data.headphones.secure_url} />
+          {/* <video
             className="h-12 w-auto"
             playsInline
             autoPlay
@@ -72,7 +74,7 @@ const MobileSubMenus = () => {
               src={data.headphones.secure_url.replace("gif", "mp4")}
             />
             Your browser does not support HTML5 video tag.
-          </video>
+          </video> */}
 
           <div className="text-base leading-6 font-medium text-gray-900">
             Headphones
@@ -87,7 +89,8 @@ const MobileSubMenus = () => {
           className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
         >
           {/* monitors mobile */}
-          <video
+          <img className="h-12 w-auto" src={data.computer_display.secure_url} />
+          {/* <video
             className="h-12 w-auto"
             playsInline
             autoPlay
@@ -104,7 +107,7 @@ const MobileSubMenus = () => {
               src={data.computer_display.secure_url.replace("gif", "mp4")}
             />
             Your browser does not support HTML5 video tag.
-          </video>
+          </video> */}
 
           <div className="text-base leading-6 font-medium text-gray-900">
             Monitors
@@ -119,7 +122,8 @@ const MobileSubMenus = () => {
           className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
         >
           {/*  IOT Devices mobile */}
-          <video
+          <img className="h-12 w-auto" src={data.robot.secure_url} />
+          {/* <video
             className="h-12 w-auto"
             playsInline
             autoPlay
@@ -136,7 +140,7 @@ const MobileSubMenus = () => {
               src={data.robot.secure_url.replace("gif", "mp4")}
             />
             Your browser does not support HTML5 video tag.
-          </video>
+          </video> */}
 
           <div className="text-base leading-6 font-medium text-gray-900">
             IOT Devices
@@ -151,7 +155,8 @@ const MobileSubMenus = () => {
           className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
         >
           {/* Desk Chairs mobile */}
-          <video
+          <img className="h-12 w-auto" src={data.truck.secure_url} />
+          {/* <video
             className="h-12 w-auto"
             playsInline
             autoPlay
@@ -168,7 +173,7 @@ const MobileSubMenus = () => {
               src={data.truck.secure_url.replace("gif", "mp4")}
             />
             Your browser does not support HTML5 video tag.
-          </video>
+          </video> */}
 
           <div className="text-base leading-6 font-medium text-gray-900">
             Office
@@ -183,7 +188,8 @@ const MobileSubMenus = () => {
           className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
         >
           {/* USB devices mobile */}
-          <video
+          <img className="h-12 w-auto" src={data.plug.secure_url} />
+          {/* <video
             className="h-12 w-auto"
             playsInline
             autoPlay
@@ -200,7 +206,7 @@ const MobileSubMenus = () => {
               src={data.plug.secure_url.replace("gif", "mp4")}
             />
             Your browser does not support HTML5 video tag.
-          </video>
+          </video> */}
 
           <div className="text-base leading-6 font-medium text-gray-900">
             USB Devices

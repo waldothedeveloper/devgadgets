@@ -39,8 +39,11 @@ const Hero = () => {
               </span>
               that developers & technology enthusiasts{` `}
               <span className="text-orange-600 font-semibold">#love</span>
+              <span className="inline-block md:hidden align-baseline -mb-2">
+                <img className="h-8 w-8" src={data.loveheart.secure_url} />
+              </span>
               <span className="-mb-2 inline-block align-baseline">
-                <video
+                {/* <video
                   className="h-8 w-8"
                   playsInline
                   autoPlay
@@ -57,7 +60,7 @@ const Hero = () => {
                     src={data.loveheart.secure_url.replace("gif", "mp4")}
                   />
                   Your browser does not support HTML5 video tag.
-                </video>
+                </video> */}
               </span>
             </p>
             <TechnologyBlogDefinition open={open} />

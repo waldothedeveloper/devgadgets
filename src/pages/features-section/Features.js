@@ -27,8 +27,12 @@ const Features = () => {
             <div className="lg:grid lg:grid-cols-2 lg:gap-8">
               <div>
                 <div className="flex items-start justify-start">
-                  <video
-                    className="h-16 w-16"
+                  {/* small screens */}
+                  <img className="h-16 w-16" src={data.smartwatch.secure_url} />
+
+                  {/* medium and large screens */}
+                  {/* <video
+                    className="h-16 w-16 hidden lg:block"
                     playsInline
                     autoPlay
                     loop
@@ -44,7 +48,7 @@ const Features = () => {
                       src={data.smartwatch.secure_url.replace("gif", "mp4")}
                     />
                     Your browser does not support HTML5 video tag.
-                  </video>
+                  </video> */}
                 </div>
                 <div className="mt-5">
                   <h5 className="text-lg leading-6 font-medium text-gray-900">
@@ -67,8 +71,11 @@ const Features = () => {
               </div>
               <div className="mt-10 lg:mt-0">
                 <div className="flex items-start justify-start">
-                  <video
-                    className="h-16 w-16"
+                  {/* small & medium screens */}
+                  <img className="h-16 w-16" src={data.ebook.secure_url} />
+                  {/* large screens */}
+                  {/* <video
+                    className="h-16 w-16 hidden lg:block"
                     playsInline
                     autoPlay
                     loop
@@ -84,7 +91,7 @@ const Features = () => {
                       src={data.ebook.secure_url.replace("gif", "mp4")}
                     />
                     Your browser does not support HTML5 video tag.
-                  </video>
+                  </video> */}
                 </div>
                 <div className="mt-5">
                   <h5 className="text-lg leading-6 font-medium text-gray-900">
