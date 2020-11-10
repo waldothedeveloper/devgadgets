@@ -9,6 +9,13 @@ import { InstantSearch } from "react-instantsearch-dom"
 import algoliasearch from "algoliasearch/lite"
 import useOnClickOutside from "../../hooks/use-on-click-outside"
 import { getCloudinaryNavImages } from "../../hooks/get-cloudinary-nav-images"
+import keyboard from "../../images/keyboard.gif"
+import headphones from "../../images/headphones.gif"
+import computer_display from "../../images/computer-display.gif"
+import robot from "../../images/robot.gif"
+import truck from "../../images/truck.gif"
+import plug from "../../images/plug.gif"
+
 //
 const searchClient = algoliasearch(
   process.env.GATSBY_ALGOLIA_APP_ID,
@@ -125,10 +132,7 @@ const Nav = () => {
                               to="/gadgets/all"
                               className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                             >
-                              <img
-                                className="h-12 w-auto"
-                                src={data.keyboard.secure_url}
-                              />
+                              <img className="h-12 w-auto" src={keyboard} />
                               {/* <video
                                 className="h-12 w-auto"
                                 playsInline
@@ -175,10 +179,7 @@ const Nav = () => {
                               to="/gadgets/all"
                               className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                             >
-                              <img
-                                className="h-12 w-auto"
-                                src={data.headphones.secure_url}
-                              />
+                              <img className="h-12 w-auto" src={headphones} />
                               {/* <video
                                 className="h-12 w-auto"
                                 playsInline
@@ -227,7 +228,7 @@ const Nav = () => {
                             >
                               <img
                                 className="h-12 w-auto"
-                                src={data.computer_display.secure_url}
+                                src={computer_display}
                               />
                               {/* <video
                                 className="h-12 w-auto"
@@ -275,10 +276,7 @@ const Nav = () => {
                               to="/gadgets/all"
                               className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                             >
-                              <img
-                                className="h-12 w-auto"
-                                src={data.robot.secure_url}
-                              />
+                              <img className="h-12 w-auto" src={robot} />
                               {/* <video
                                 className="h-12 w-auto"
                                 playsInline
@@ -325,10 +323,7 @@ const Nav = () => {
                               to="/gadgets/all"
                               className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                             >
-                              <img
-                                className="h-12 w-auto"
-                                src={data.truck.secure_url}
-                              />
+                              <img className="h-12 w-auto" src={truck} />
                               {/* <video
                                 className="h-12 w-auto"
                                 playsInline
@@ -375,10 +370,7 @@ const Nav = () => {
                               to="/gadgets/all"
                               className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                             >
-                              <img
-                                className="h-12 w-auto"
-                                src={data.plug.secure_url}
-                              />
+                              <img className="h-12 w-auto" src={plug} />
                               {/* <video
                                 className="h-12 w-auto"
                                 playsInline

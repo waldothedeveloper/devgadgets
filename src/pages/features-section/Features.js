@@ -1,6 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 import { getCloudinaryFeaturedImages } from "../../hooks/get-cloudinary-featured-images"
+import smartWatch from "../../images/smart-watch.gif"
+import ebook from "../../images/ebook-reader.gif"
 
 const Features = () => {
   const data = getCloudinaryFeaturedImages()
@@ -28,7 +30,7 @@ const Features = () => {
               <div>
                 <div className="flex items-start justify-start">
                   {/* small screens */}
-                  <img className="h-16 w-16" src={data.smartwatch.secure_url} />
+                  <img className="h-16 w-16" src={smartWatch} />
 
                   {/* medium and large screens */}
                   {/* <video
@@ -72,7 +74,7 @@ const Features = () => {
               <div className="mt-10 lg:mt-0">
                 <div className="flex items-start justify-start">
                   {/* small & medium screens */}
-                  <img className="h-16 w-16" src={data.ebook.secure_url} />
+                  <img className="h-16 w-16" src={ebook} />
                   {/* large screens */}
                   {/* <video
                     className="h-16 w-16 hidden lg:block"
