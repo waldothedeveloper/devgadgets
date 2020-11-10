@@ -1,6 +1,6 @@
 import React from "react"
 // import hero_img from "../../images/hero-gadgets.svg"
-// import love_heart from "../../images/love-heart.gif"
+import love_heart from "../../images/love-heart.gif"
 import TechnologyBlogDefinition from "./technology-blog-definition"
 import useOnClickOutside from "../../hooks/use-on-click-outside"
 import { getCloudinaryHeroImages } from "../../hooks/get-cloudinary-hero-images"
@@ -39,17 +39,17 @@ const Hero = () => {
               </span>
               that developers & technology enthusiasts{` `}
               <span className="text-orange-600 font-semibold">#love</span>
-              <span className="inline-block md:hidden align-baseline -mb-2">
-                <img className="h-8 w-8" src={data.loveheart.secure_url} />
+              <span className="inline-block align-baseline -mb-2">
+                <img className="h-8 w-8" src={love_heart} />
               </span>
-              <span className="-mb-2 inline-block align-baseline">
-                {/* <video
+              {/* <span className="-mb-2 inline-block align-baseline">
+                <video
                   className="h-8 w-8"
                   playsInline
                   autoPlay
                   loop
                   muted="muted"
-                  poster={data.loveheart.secure_url.replace("gif", "jpg")}
+                  poster={data.loveheart.secure_url.replace("gif", "webm")}
                 >
                   <source
                     type="video/webm"
@@ -60,8 +60,8 @@ const Hero = () => {
                     src={data.loveheart.secure_url.replace("gif", "mp4")}
                   />
                   Your browser does not support HTML5 video tag.
-                </video> */}
-              </span>
+                </video>
+              </span> */}
             </p>
             <TechnologyBlogDefinition open={open} />
           </div>

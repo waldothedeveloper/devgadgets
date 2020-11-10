@@ -1,15 +1,15 @@
 import React from "react"
 import { Link } from "gatsby"
-import { getCloudinaryNavImages } from "../../hooks/get-cloudinary-nav-images"
-// import keyboard from "../../images/keyboard.gif"
-// import headphones from "../../images/headphones.gif"
-// import computer_display from "../../images/computer-display.gif"
-// import robot from "../../images/robot.gif"
-// import truck from "../../images/truck.gif"
-// import plug from "../../images/plug.gif"
+// import { getCloudinaryNavImages } from "../../hooks/get-cloudinary-nav-images"
+import keyboard from "../../images/keyboard.gif"
+import headphones from "../../images/headphones.gif"
+import computer_display from "../../images/computer-display.gif"
+import robot from "../../images/robot.gif"
+import truck from "../../images/truck.gif"
+import plug from "../../images/plug.gif"
 
 const MobileSubMenus = () => {
-  const data = getCloudinaryNavImages()
+  // const data = getCloudinaryNavImages()
 
   return (
     <>
@@ -23,7 +23,7 @@ const MobileSubMenus = () => {
           }}
         >
           {/* keyboard mobile */}
-          <img className="h-12 w-auto" src={data.keyboard.secure_url} />
+          <img className="h-12 w-auto" src={keyboard} />
           {/* <video
             className="h-12 w-auto"
             playsInline
@@ -56,7 +56,7 @@ const MobileSubMenus = () => {
           className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
         >
           {/* headphones mobile */}
-          <img className="h-12 w-auto" src={data.headphones.secure_url} />
+          <img className="h-12 w-auto" src={headphones} />
           {/* <video
             className="h-12 w-auto"
             playsInline
@@ -89,7 +89,7 @@ const MobileSubMenus = () => {
           className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
         >
           {/* monitors mobile */}
-          <img className="h-12 w-auto" src={data.computer_display.secure_url} />
+          <img className="h-12 w-auto" src={computer_display} />
           {/* <video
             className="h-12 w-auto"
             playsInline
@@ -122,7 +122,7 @@ const MobileSubMenus = () => {
           className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
         >
           {/*  IOT Devices mobile */}
-          <img className="h-12 w-auto" src={data.robot.secure_url} />
+          <img className="h-12 w-auto" src={robot} />
           {/* <video
             className="h-12 w-auto"
             playsInline
@@ -155,7 +155,7 @@ const MobileSubMenus = () => {
           className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
         >
           {/* Desk Chairs mobile */}
-          <img className="h-12 w-auto" src={data.truck.secure_url} />
+          <img className="h-12 w-auto" src={truck} />
           {/* <video
             className="h-12 w-auto"
             playsInline
@@ -188,7 +188,7 @@ const MobileSubMenus = () => {
           className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
         >
           {/* USB devices mobile */}
-          <img className="h-12 w-auto" src={data.plug.secure_url} />
+          <img className="h-12 w-auto" src={plug} />
           {/* <video
             className="h-12 w-auto"
             playsInline
