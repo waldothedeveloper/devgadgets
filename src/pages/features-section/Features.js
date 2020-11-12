@@ -1,14 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
-import { getCloudinaryFeaturedImages } from "../../hooks/get-cloudinary-featured-images"
+// import { getCloudinaryFeaturedImages } from "../../hooks/get-cloudinary-featured-images"
 import smartWatch from "../../images/smart-watch.gif"
 import ebook from "../../images/ebook-reader.gif"
 
 const Features = () => {
-  const data = getCloudinaryFeaturedImages()
+  // const data = getCloudinaryFeaturedImages()
 
   return (
-    <div className="py-12 bg-white">
+    <div className="py-6 bg-white">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
           <p className="text-base leading-6 text-teal-600 font-semibold tracking-wide uppercase">
@@ -24,7 +24,7 @@ const Features = () => {
           </p>
         </div>
 
-        <div className="py-12 bg-white">
+        <div className="py-6 bg-white">
           <div className="max-w-xl lg:mx-auto px-4 sm:px-6 lg:max-w-screen-xl lg:px-8">
             <div className="lg:grid lg:grid-cols-2 lg:gap-8">
               <div>

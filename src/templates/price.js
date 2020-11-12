@@ -2,7 +2,10 @@ import React from "react"
 import PropTypes from "prop-types"
 
 const Price = ({ frontmatter }) => {
-  return (
+  console.log("frontmatter: ", frontmatter)
+  return frontmatter.price === null || frontmatter.price === 0 ? (
+    <div className="relative"></div>
+  ) : (
     <div className="relative">
       <div className="flex flex-col">
         <div className="mt-2">
