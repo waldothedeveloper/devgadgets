@@ -37,5 +37,20 @@ export const onRenderBody = ({ setHeadComponents }) => {
       `,
       }}
     />,
+    <script
+      key="Google Ads: 966379702"
+      type="text/javascript"
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-966379702"
+      dangerouslySetInnerHTML={{
+        __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-966379702');
+          gtag('event', 'conversion', {'send_to': 'AW-966379702/8L7vCLnFoOkBELaR58wD'});
+`,
+      }}
+    />,
   ])
 }
