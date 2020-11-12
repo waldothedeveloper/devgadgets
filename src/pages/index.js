@@ -10,6 +10,7 @@ import FeaturedGadgets from "./gadgets/Featured-Gadgets"
 // import GiveAways from "./GiveAways/GiveAways"
 import FeaturedBooks from "./books/FeaturedBooks"
 // import FeaturedOnlineCourses from "./courses/Featured-Online-Courses"
+import HolidayDash from "./holidays/holidayDash"
 import Footer from "./footer/Footer"
 
 const IndexPage = () => {
@@ -33,6 +34,7 @@ const IndexPage = () => {
         <JoinNewsletter />
         <FeaturedGadgets />
         {/* <FeaturedOnlineCourses /> */}
+        <HolidayDash />
         <FeaturedBooks />
         {/* This is for future marketing campaigns */}
         {/* <GiveAways /> */}
