@@ -6,7 +6,7 @@ import man_and_woman_gadgets from "../images/man_and_woman_gadgets.svg"
 
 //
 export const UseReturnCategory = section => {
-  console.log("section on UseReturnCategory: ", section)
+  // console.log("section on UseReturnCategory: ", section)
   const [secCategory, setSecCategory] = React.useState({
     title: "",
     content: "",

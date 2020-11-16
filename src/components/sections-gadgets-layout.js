@@ -6,7 +6,7 @@ import { UseReturnCategory } from "../hooks/use-return-category"
 import PropTypes from "prop-types"
 //
 const SectionGadgetsLayout = ({ category }) => {
-  console.log("section on SectionGadgetsLayout: ", category)
+  // console.log("section on SectionGadgetsLayout: ", category)
   const data = useGetAllGadgetsArticles()
   const secCategory = UseReturnCategory(category)
   const [articleCat, setArticleCat] = React.useState("All")

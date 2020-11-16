@@ -7,7 +7,7 @@ import Footer from "../pages/footer/Footer"
 import PropTypes from "prop-types"
 //
 const Sections = ({ section }) => {
-  console.log("section on Sections: ", section)
+  // console.log("section on Sections: ", section)
   const [category, setCategory] = React.useState({})
 
   React.useEffect(() => {
