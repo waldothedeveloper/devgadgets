@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 const Price = ({ frontmatter }) => {
-  console.log("frontmatter: ", frontmatter)
+  // console.log("frontmatter: ", frontmatter)
   return frontmatter.price === null || frontmatter.price === 0 ? (
     <div className="relative"></div>
   ) : (

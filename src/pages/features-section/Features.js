@@ -30,7 +30,11 @@ const Features = () => {
               <div>
                 <div className="flex items-start justify-start">
                   {/* small screens */}
-                  <img className="h-16 w-16" src={smartWatch} />
+                  <img
+                    className="h-16 w-16"
+                    src={smartWatch}
+                    alt="smart-watch"
+                  />
 
                   {/* medium and large screens */}
                   {/* <video
@@ -74,7 +78,7 @@ const Features = () => {
               <div className="mt-10 lg:mt-0">
                 <div className="flex items-start justify-start">
                   {/* small & medium screens */}
-                  <img className="h-16 w-16" src={ebook} />
+                  <img className="h-16 w-16" src={ebook} alt="ebook" />
                   {/* large screens */}
                   {/* <video
                     className="h-16 w-16 hidden lg:block"

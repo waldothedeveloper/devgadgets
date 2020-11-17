@@ -4,6 +4,13 @@
 
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: Inter;
+    src: url("../../static/fonts/Inter-Regular-slnt=0.ttf") format("ttf");
+  }
+}
+
 body {
   @apply font-sans;
 }
