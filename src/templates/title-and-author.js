@@ -8,13 +8,11 @@ const TitleAndAuthorTemplate = ({ frontmatter, fields, authorImage }) => {
       {/* picture of author */}
       <div className="mt-8 md:mt-0 flex flex-col md:w-3/4">
         <div className="flex-shrink-0">
-          <button>
-            <img
-              className="h-10 w-10 rounded-full"
-              src={authorImage}
-              alt="Waldo Lavaut"
-            />
-          </button>
+          <img
+            className="h-10 w-10 rounded-full"
+            src={authorImage}
+            alt="Waldo Lavaut"
+          />
         </div>
         <div className="mb-2">
           <p className="text-sm leading-5 font-medium text-gray-900">

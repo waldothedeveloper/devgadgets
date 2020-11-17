@@ -40,7 +40,7 @@ const Hero = () => {
               that developers & technology enthusiasts{` `}
               <span className="text-orange-600 font-semibold">#love</span>
               <span className="inline-block align-baseline -mb-2">
-                <img className="h-8 w-8" src={love_heart} />
+                <img className="h-8 w-8" src={love_heart} alt="logo heart" />
               </span>
               {/* <span className="-mb-2 inline-block align-baseline">
                 <video
