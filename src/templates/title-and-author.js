@@ -2,7 +2,9 @@ import React from "react"
 import PropTypes from "prop-types"
 
 //
+
 const TitleAndAuthorTemplate = ({ frontmatter, fields, authorImage }) => {
+  // console.log("authorImage: ", authorImage)
   return (
     <div className="flex flex-col justify-center md:flex-row md:items-end mx-6 mt-24 md:my-32 md:mx-0">
       {/* picture of author */}
@@ -10,7 +12,14 @@ const TitleAndAuthorTemplate = ({ frontmatter, fields, authorImage }) => {
         <div className="flex-shrink-0">
           <img
             className="h-10 w-10 rounded-full"
-            src={authorImage}
+            src={
+              authorImage.includes("trevis24")
+                ? authorImage.replace(
+                    "q_auto,f_auto",
+                    "w_1000,c_fill,ar_1:1,g_auto,r_max,b_rgb:262c35"
+                  )
+                : authorImage
+            }
             alt="Waldo Lavaut"
           />
         </div>
