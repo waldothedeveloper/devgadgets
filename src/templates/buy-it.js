@@ -5,7 +5,7 @@ import PropTypes from "prop-types"
 //
 const BuyIt = ({ frontmatter }) => {
   return (
-    <div className="">
+    <div>
       <div className="max-w-screen-xl mx-auto lg:flex lg:items-center">
         <div className="w-48 md:px-4">
           {/* Amazon button buy */}

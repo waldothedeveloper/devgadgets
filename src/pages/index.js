@@ -11,6 +11,7 @@ import FeaturedGadgets from "./gadgets/Featured-Gadgets"
 import FeaturedBooks from "./books/FeaturedBooks"
 // import FeaturedOnlineCourses from "./courses/Featured-Online-Courses"
 import HolidayDash from "./holidays/holidayDash"
+import AudibleCallOut from "./audible/audible-callout"
 import Footer from "./footer/Footer"
 
 const IndexPage = () => {
@@ -38,6 +39,7 @@ const IndexPage = () => {
         <FeaturedBooks />
         {/* This is for future marketing campaigns */}
         {/* <GiveAways /> */}
+        <AudibleCallOut />
       </Layout>
 
       <footer>
