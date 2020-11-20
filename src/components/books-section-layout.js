@@ -4,9 +4,9 @@ import BooksCategories from "./books-categories"
 import PropTypes from "prop-types"
 //
 const BooksSectionLayout = ({ category }) => {
-  console.log("category: ", category)
+  // console.log("category: ", category)
   const [selectCategory, setSelectCategory] = React.useState("All")
-  console.log("selectCategory: ", selectCategory)
+  // console.log("selectCategory: ", selectCategory)
 
   const handleCategory = elem => {
     setSelectCategory(elem.category)
