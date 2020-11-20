@@ -15,14 +15,15 @@ import Price from "./price"
 
 //
 export default ({ data, pageContext }) => {
-  const image =
-    data && data.cloudinaryMedia
-      ? data.cloudinaryMedia
-      : "http://placehold.jp/24/cccccc/ffffff/768x442.png?text=image+not+found"
+  const image = data.cloudinaryMedia
+
   const authorImage =
     data && data.authorImage
       ? data.authorImage.secure_url
-      : "http://placehold.jp/24/cccccc/ffffff/768x442.png?text=image+not+found"
+      : {
+          secure_url:
+            "http://placehold.jp/24/cccccc/ffffff/768x442.png?text=image+not+found",
+        }
 
   const carousel =
     data && data.allCloudinaryMedia ? data.allCloudinaryMedia.edges : []

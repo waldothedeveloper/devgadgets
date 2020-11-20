@@ -12,7 +12,7 @@ export const UseReturnCategory = section => {
     content: "",
   })
   //
-  console.log("secCategory", secCategory)
+  // console.log("secCategory", secCategory)
 
   React.useEffect(() => {
     switch (section) {
