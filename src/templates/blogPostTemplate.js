@@ -47,15 +47,14 @@ export default ({ data, pageContext }) => {
             authorImage={authorImage}
           />
         </div>
-        <div className="mt-12 mx-auto max-w-sm md:max-w-2xl lg:max-w-3xl">
+        <div className="mt-12 mx-auto max-w-xs sm:max-w-sm md:max-w-2xl lg:max-w-3xl">
           <RatingWrapper frontmatter={frontmatter} />
           <BlogFeaturedImage frontmatter={frontmatter} image={image} />
           <div className="flex items-center justify-between my-12">
             <Price frontmatter={frontmatter} />
             <BuyIt frontmatter={frontmatter} />
           </div>
-          {/* Amazon Native Ads */}
-          <div id="amzn-assoc-ad-8967ded1-0ff1-4045-9571-d4063bddb450" />
+
           <MDXRenderer carousel={carousel}>{body}</MDXRenderer>
           <div className="my-12">
             <BuyIt frontmatter={frontmatter} />

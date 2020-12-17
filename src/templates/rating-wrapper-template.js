@@ -85,11 +85,11 @@ const RatingWrapper = ({ frontmatter }) => {
         {/* Ratings */}
         {frontmatter.ratings_count !== null ? (
           <div className="flex items-center">
-            <span className="mx-2 text-center text-sm">
+            <span className="mx-1 text-center text-sm">
               {frontmatter.rating}
             </span>
             <StarRating value={frontmatter.rating} />
-            <span className="mx-2 text-center text-sm">
+            <span className="mx-1 text-center text-sm">
               {frontmatter.ratings_count} ratings
             </span>
           </div>

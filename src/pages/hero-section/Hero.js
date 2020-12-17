@@ -19,8 +19,7 @@ const Hero = () => {
           <div className="pt-12 flex flex-col">
             <h2 className="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 md:text-6xl lg:text-center">
               Welcome to
-              <span className="sm:hidden xl:inline">{` `}</span>
-              <br className="xl:hidden" />
+              <div className="p-0 md:pb-8" />
               <span className="text-teal-500">
                 {`<`}Dev{`/>`} Gadgets
               </span>

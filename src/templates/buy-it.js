@@ -7,7 +7,7 @@ const BuyIt = ({ frontmatter }) => {
   return (
     <div>
       <div className="max-w-screen-xl mx-auto lg:flex lg:items-center">
-        <div className="w-48 md:px-4">
+        <div className="w-32 md:w-48 md:px-4">
           {/* Amazon button buy */}
           <a
             target="_blank"

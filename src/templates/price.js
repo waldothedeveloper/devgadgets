@@ -16,8 +16,7 @@ const Price = ({ frontmatter }) => {
               <span className="text-sm font-semibold">USD</span>
             </p>
             <p className="text-sm text-gray-400">
-              Prices change over time. <br /> Click the button to see the latest
-              price.
+              Prices change over time. <br /> Check the latest price online.
             </p>
           </div>
         </div>
