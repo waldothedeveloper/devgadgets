@@ -9,12 +9,24 @@ import { InstantSearch } from "react-instantsearch-dom"
 import algoliasearch from "algoliasearch/lite"
 import useOnClickOutside from "../../hooks/use-on-click-outside"
 import { getCloudinaryNavImages } from "../../hooks/get-cloudinary-nav-images"
-import keyboard from "../../images/keyboard.gif"
-import headphones from "../../images/headphones.gif"
-import computer_display from "../../images/computer-display.gif"
-import robot from "../../images/robot.gif"
-import truck from "../../images/truck.gif"
-import plug from "../../images/plug.gif"
+// import keyboard from "../../images/keyboard.gif"
+import keyboardWebM from "../../images/keyboard.webm"
+import keyboardMp4 from "../../images/keyboard.mp4"
+// import headphones from "../../images/headphones.gif"
+import headphonesWebM from "../../images/headphones.webm"
+import headphonesMp4 from "../../images/headphones.mp4"
+// import computer_display from "../../images/computer-display.gif"
+import computer_display_WebM from "../../images/computer-display.webm"
+import computer_display_Mp4 from "../../images/computer-display.mp4"
+// import robot from "../../images/robot.gif"
+import robotWebM from "../../images/robot.webm"
+import robotMp4 from "../../images/robot.mp4"
+// import truck from "../../images/truck.gif"
+import truckWebM from "../../images/truck.webm"
+import truckMp4 from "../../images/truck.mp4"
+// import plug from "../../images/plug.gif"
+import plugWebM from "../../images/plug.webm"
+import plugMp4 from "../../images/plug.mp4"
 
 //
 const searchClient = algoliasearch(
@@ -132,34 +144,18 @@ const Nav = () => {
                               to="/gadgets/all"
                               className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                             >
-                              <img className="h-12 w-auto" src={keyboard} />
-                              {/* <video
+                              {/* Keyboard */}
+                              {/* <img className="h-12 w-auto" src={keyboard} /> */}
+                              <video
                                 className="h-12 w-auto"
-                                playsInline
                                 autoPlay
                                 loop
-                                muted="muted"
-                                poster={data.keyboard.secure_url.replace(
-                                  "gif",
-                                  "jpg"
-                                )}
+                                muted
+                                playsInline
                               >
-                                <source
-                                  type="video/webm"
-                                  src={data.keyboard.secure_url.replace(
-                                    "gif",
-                                    "webm"
-                                  )}
-                                />
-                                <source
-                                  type="video/mp4"
-                                  src={data.keyboard.secure_url.replace(
-                                    "gif",
-                                    "mp4"
-                                  )}
-                                />
-                                Your browser does not support HTML5 video tag.
-                              </video> */}
+                                <source src={keyboardWebM} type="video/webm" />
+                                <source src={keyboardMp4} type="video/mp4" />
+                              </video>
                               <div className="space-y-1">
                                 <p className="text-base leading-6 font-medium text-gray-900">
                                   Keyboards
@@ -179,34 +175,21 @@ const Nav = () => {
                               to="/gadgets/all"
                               className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                             >
-                              <img className="h-12 w-auto" src={headphones} />
-                              {/* <video
+                              {/* <img className="h-12 w-auto" src={headphones} /> */}
+                              <video
                                 className="h-12 w-auto"
-                                playsInline
                                 autoPlay
                                 loop
-                                muted="muted"
-                                poster={data.headphones.secure_url.replace(
-                                  "gif",
-                                  "jpg"
-                                )}
+                                muted
+                                playsInline
                               >
                                 <source
+                                  src={headphonesWebM}
                                   type="video/webm"
-                                  src={data.headphones.secure_url.replace(
-                                    "gif",
-                                    "webm"
-                                  )}
                                 />
-                                <source
-                                  type="video/mp4"
-                                  src={data.headphones.secure_url.replace(
-                                    "gif",
-                                    "mp4"
-                                  )}
-                                />
-                                Your browser does not support HTML5 video tag.
-                              </video> */}
+                                <source src={headphonesMp4} type="video/mp4" />
+                              </video>
+
                               <div className="space-y-1">
                                 <p className="text-base leading-6 font-medium text-gray-900">
                                   Headphones
@@ -226,37 +209,27 @@ const Nav = () => {
                               to="/gadgets/all"
                               className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                             >
-                              <img
+                              {/* <img
                                 className="h-12 w-auto"
                                 src={computer_display}
-                              />
-                              {/* <video
+                              /> */}
+
+                              <video
                                 className="h-12 w-auto"
-                                playsInline
                                 autoPlay
                                 loop
-                                muted="muted"
-                                poster={data.computer_display.secure_url.replace(
-                                  "gif",
-                                  "jpg"
-                                )}
+                                muted
+                                playsInline
                               >
                                 <source
+                                  src={computer_display_WebM}
                                   type="video/webm"
-                                  src={data.computer_display.secure_url.replace(
-                                    "gif",
-                                    "webm"
-                                  )}
                                 />
                                 <source
+                                  src={computer_display_Mp4}
                                   type="video/mp4"
-                                  src={data.computer_display.secure_url.replace(
-                                    "gif",
-                                    "mp4"
-                                  )}
                                 />
-                                Your browser does not support HTML5 video tag.
-                              </video> */}
+                              </video>
                               <div className="space-y-1">
                                 <p className="text-base leading-6 font-medium text-gray-900">
                                   Monitors
@@ -276,34 +249,19 @@ const Nav = () => {
                               to="/gadgets/all"
                               className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                             >
-                              <img className="h-12 w-auto" src={robot} />
-                              {/* <video
+                              {/* <img className="h-12 w-auto" src={robot} /> */}
+
+                              <video
                                 className="h-12 w-auto"
-                                playsInline
                                 autoPlay
                                 loop
-                                muted="muted"
-                                poster={data.robot.secure_url.replace(
-                                  "gif",
-                                  "jpg"
-                                )}
+                                muted
+                                playsInline
                               >
-                                <source
-                                  type="video/webm"
-                                  src={data.robot.secure_url.replace(
-                                    "gif",
-                                    "webm"
-                                  )}
-                                />
-                                <source
-                                  type="video/mp4"
-                                  src={data.robot.secure_url.replace(
-                                    "gif",
-                                    "mp4"
-                                  )}
-                                />
-                                Your browser does not support HTML5 video tag.
-                              </video> */}
+                                <source src={robotWebM} type="video/webm" />
+                                <source src={robotMp4} type="video/mp4" />
+                              </video>
+
                               <div className="space-y-1">
                                 <p className="text-base leading-6 font-medium text-gray-900">
                                   IOT Devices
@@ -323,34 +281,19 @@ const Nav = () => {
                               to="/gadgets/all"
                               className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                             >
-                              <img className="h-12 w-auto" src={truck} />
-                              {/* <video
+                              {/* <img className="h-12 w-auto" src={truck} /> */}
+
+                              <video
                                 className="h-12 w-auto"
-                                playsInline
                                 autoPlay
                                 loop
-                                muted="muted"
-                                poster={data.truck.secure_url.replace(
-                                  "gif",
-                                  "jpg"
-                                )}
+                                muted
+                                playsInline
                               >
-                                <source
-                                  type="video/webm"
-                                  src={data.truck.secure_url.replace(
-                                    "gif",
-                                    "webm"
-                                  )}
-                                />
-                                <source
-                                  type="video/mp4"
-                                  src={data.truck.secure_url.replace(
-                                    "gif",
-                                    "mp4"
-                                  )}
-                                />
-                                Your browser does not support HTML5 video tag.
-                              </video> */}
+                                <source src={truckWebM} type="video/webm" />
+                                <source src={truckMp4} type="video/mp4" />
+                              </video>
+
                               <div className="space-y-1">
                                 <p className="text-base leading-6 font-medium text-gray-900">
                                   Office
@@ -370,34 +313,19 @@ const Nav = () => {
                               to="/gadgets/all"
                               className="focus:outline-none -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-teal-100 transition ease-in-out duration-150"
                             >
-                              <img className="h-12 w-auto" src={plug} />
-                              {/* <video
+                              {/* <img className="h-12 w-auto" src={plug} /> */}
+
+                              <video
                                 className="h-12 w-auto"
-                                playsInline
                                 autoPlay
                                 loop
-                                muted="muted"
-                                poster={data.plug.secure_url.replace(
-                                  "gif",
-                                  "jpg"
-                                )}
+                                muted
+                                playsInline
                               >
-                                <source
-                                  type="video/webm"
-                                  src={data.plug.secure_url.replace(
-                                    "gif",
-                                    "webm"
-                                  )}
-                                />
-                                <source
-                                  type="video/mp4"
-                                  src={data.plug.secure_url.replace(
-                                    "gif",
-                                    "mp4"
-                                  )}
-                                />
-                                Your browser does not support HTML5 video tag.
-                              </video> */}
+                                <source src={plugWebM} type="video/webm" />
+                                <source src={plugMp4} type="video/mp4" />
+                              </video>
+
                               <div className="space-y-1">
                                 <p className="text-base leading-6 font-medium text-gray-900">
                                   USB Devices

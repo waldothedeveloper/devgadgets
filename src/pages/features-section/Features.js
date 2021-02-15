@@ -1,8 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
 // import { getCloudinaryFeaturedImages } from "../../hooks/get-cloudinary-featured-images"
-import smartWatch from "../../images/smart-watch.gif"
-import ebook from "../../images/ebook-reader.gif"
+// import smartWatch from "../../images/smart-watch.gif"
+import smartWatchWebM from "../../images/smart-watch.webm"
+import smartWatchMp4 from "../../images/smart-watch.mp4"
+// import ebook from "../../images/ebook-reader.gif"
+import eBookReaderWebM from "../../images/ebook-reader.webm"
+import eBookReaderMp4 from "../../images/ebook-reader.mp4"
 
 const Features = () => {
   // const data = getCloudinaryFeaturedImages()
@@ -29,32 +33,15 @@ const Features = () => {
             <div className="lg:grid lg:grid-cols-2 lg:gap-8">
               <div>
                 <div className="flex items-start justify-start">
-                  {/* small screens */}
-                  <img
+                  <video className="h-16 w-16" autoPlay loop muted playsInline>
+                    <source src={smartWatchWebM} type="video/webm" />
+                    <source src={smartWatchMp4} type="video/mp4" />
+                  </video>
+                  {/* <img
                     className="h-16 w-16"
                     src={smartWatch}
                     alt="smart-watch"
-                  />
-
-                  {/* medium and large screens */}
-                  {/* <video
-                    className="h-16 w-16 hidden lg:block"
-                    playsInline
-                    autoPlay
-                    loop
-                    muted="muted"
-                    poster={data.smartwatch.secure_url.replace("gif", "jpg")}
-                  >
-                    <source
-                      type="video/webm"
-                      src={data.smartwatch.secure_url.replace("gif", "webm")}
-                    />
-                    <source
-                      type="video/mp4"
-                      src={data.smartwatch.secure_url.replace("gif", "mp4")}
-                    />
-                    Your browser does not support HTML5 video tag.
-                  </video> */}
+                  /> */}
                 </div>
                 <div className="mt-5">
                   <h5 className="text-lg leading-6 font-medium text-gray-900">
@@ -77,27 +64,12 @@ const Features = () => {
               </div>
               <div className="mt-10 lg:mt-0">
                 <div className="flex items-start justify-start">
-                  {/* small & medium screens */}
-                  <img className="h-16 w-16" src={ebook} alt="ebook" />
-                  {/* large screens */}
-                  {/* <video
-                    className="h-16 w-16 hidden lg:block"
-                    playsInline
-                    autoPlay
-                    loop
-                    muted="muted"
-                    poster={data.ebook.secure_url.replace("gif", "jpg")}
-                  >
-                    <source
-                      type="video/webm"
-                      src={data.ebook.secure_url.replace("gif", "webm")}
-                    />
-                    <source
-                      type="video/mp4"
-                      src={data.ebook.secure_url.replace("gif", "mp4")}
-                    />
-                    Your browser does not support HTML5 video tag.
-                  </video> */}
+                  {/* <img className="h-16 w-16" src={ebook} alt="ebook" /> */}
+
+                  <video className="h-16 w-16" autoPlay loop muted playsInline>
+                    <source src={eBookReaderWebM} type="video/webm" />
+                    <source src={eBookReaderMp4} type="video/mp4" />
+                  </video>
                 </div>
                 <div className="mt-5">
                   <h5 className="text-lg leading-6 font-medium text-gray-900">
