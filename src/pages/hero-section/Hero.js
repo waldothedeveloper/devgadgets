@@ -1,6 +1,8 @@
 import React from "react"
 // import hero_img from "../../images/hero-gadgets.svg"
-import love_heart from "../../images/love-heart.gif"
+// import love_heart from "../../images/love-heart.gif"
+import loveHeartWebM from "../../images/love-heart.webm"
+import loveHeartMp4 from "../../images/love-heart.mp4"
 import TechnologyBlogDefinition from "./technology-blog-definition"
 import useOnClickOutside from "../../hooks/use-on-click-outside"
 import { getCloudinaryHeroImages } from "../../hooks/get-cloudinary-hero-images"
@@ -38,29 +40,21 @@ const Hero = () => {
               </span>
               that developers & technology enthusiasts{` `}
               <span className="text-orange-600 font-semibold">#love</span>
-              <span className="inline-block align-baseline -mb-2">
+              {/* <span className="inline-block align-baseline -mb-2">
                 <img className="h-8 w-8" src={love_heart} alt="logo heart" />
-              </span>
-              {/* <span className="-mb-2 inline-block align-baseline">
+              </span> */}
+              <span className="-mb-2 inline-block align-baseline">
                 <video
                   className="h-8 w-8"
                   playsInline
                   autoPlay
                   loop
                   muted="muted"
-                  poster={data.loveheart.secure_url.replace("gif", "webm")}
                 >
-                  <source
-                    type="video/webm"
-                    src={data.loveheart.secure_url.replace("gif", "webm")}
-                  />
-                  <source
-                    type="video/mp4"
-                    src={data.loveheart.secure_url.replace("gif", "mp4")}
-                  />
-                  Your browser does not support HTML5 video tag.
+                  <source type="video/webm" src={loveHeartWebM} />
+                  <source type="video/mp4" src={loveHeartMp4} />
                 </video>
-              </span> */}
+              </span>
             </p>
             <TechnologyBlogDefinition open={open} />
           </div>

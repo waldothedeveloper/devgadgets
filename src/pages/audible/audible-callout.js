@@ -6,7 +6,9 @@ const AudibleCallOut = () => {
     <div>
       <div className="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-24 lg:px-8 lg:flex lg:items-center lg:justify-between">
         <h2 className="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 md:text-4xl md:leading-10">
-          <span className="block">Why the Amazon Audible is so worthy?</span>
+          <span className="block">
+            Why the Amazon Audible Membership is so worthy?
+          </span>
           {/* <span className="block text-teal-600 text-2xl">
             Start your free trial today.
           </span> */}
