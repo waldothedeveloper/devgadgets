@@ -5,13 +5,8 @@ import { Link } from "gatsby"
 import ThankYouForSubscribing from "./thank-you-for-subscribing"
 //
 const JoinNewsletter = () => {
-  const {
-    email,
-    mailChimpResponse,
-    handleEmailChange,
-    handleSubmit,
-    errors,
-  } = useJoinNewsletter()
+  const { email, mailChimpResponse, handleEmailChange, handleSubmit, errors } =
+    useJoinNewsletter()
 
   return mailChimpResponse.result === "error" ? (
     <div className="bg-teal-800 mt-12">
